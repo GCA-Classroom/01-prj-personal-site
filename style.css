@@ -46,6 +46,14 @@
 </body>
 </html>
 
+/* This sets a cute pastel gradient background for the whole page */
+body {
+  background: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
+  /* Light pink to light blue gradient */
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif; /* Simple, readable font */
+}
+
 /* Centers the main title in the header */
 header h1 {
   text-align: center; /* This puts the title in the middle */
@@ -179,12 +187,4 @@ main {
   letter-spacing: 0.5px;
   font-family: 'Trebuchet MS', 'Segoe UI', Arial, sans-serif;
   text-shadow: 0 1px 0 #fff;
-}
-
-/* Set a pastel gradient background for the whole page */
-body {
-  /* This is a simple pastel gradient background */
-  background: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif; /* Simple, readable font */
 }
