@@ -1,17 +1,23 @@
-/* This sets a cute pastel gradient background for the whole page */
+/* Pastel gradient background for the whole page */
 body {
   background: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Centers the main title in the header */
+/* Center the main title in the header */
 header h1 {
-  text-align: center; /* This puts the title in the middle */
-  font-size: 2.2rem;  /* Makes the title bigger */
-  color: #333366;     /* Dark blue for the title */
-  margin: 1.5rem 0 1rem 0; /* Adds space above and below */
-  font-family: Arial, Helvetica, sans-serif; /* Simple font */
+  text-align: center;
+  font-size: 2.2rem;
+  color: #333366;
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.hero-subtitle {
+  text-align: center;
+  color: #ad1457;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
 }
 
 /* 
@@ -89,8 +95,12 @@ main {
   font-weight: 800;
   letter-spacing: 1.5px;
   text-shadow: 0 1px 0 #fff;
-  border-bottom: 2px dashed #ad1457; /* Dashed pink border under the name */
-  padding-bottom: 0.5rem;            /* Adds space between text and border */
+  border-bottom: 1px dashed #ad1457; /* Thinner dashed border */
+  padding-bottom: 0.5rem;
+  width: 80%; /* Makes the border a bit shorter */
+  text-align: center; /* Keeps the text centered */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* 
@@ -127,149 +137,43 @@ main {
   box-shadow: 0 1px 4px rgba(102, 126, 234, 0.05);
 }
 
-/* 
-  Footer note styles:
-  - Small, light gray, centered text
-  - Letter spacing and subtle highlight for style
-  - Margin for spacing from content above
-*/
-.footer-note {
-  font-size: 0.85rem;
-  color: #888;
-  text-align: center;
-  margin: 2rem 0 0.5rem 0;
-  letter-spacing: 0.5px;
-  font-family: 'Trebuchet MS', 'Segoe UI', Arial, sans-serif;
-  text-shadow: 0 1px 0 #fff;
+/* Dashed separator line for sections and under the bio paragraph */
+.profile-separator {
+  border: none; /* Removes the default border */
+  height: 0; /* No solid height, we use border-style instead */
+  border-bottom: 1px dashed #ad1457; /* Thinner, dashed pink line */
+  width: 90%; /* Makes the line a bit longer */
+  margin: 1.5rem auto; /* Adds space above and below, centers the line */
 }
 
-/* This sets a cute pastel gradient background for the whole page */
-body {
-  background: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Centers the main title in the header */
-header h1 {
-  text-align: center; /* This puts the title in the middle */
-  font-size: 2.2rem;  /* Makes the title bigger */
-  color: #333366;     /* Dark blue for the title */
-  margin: 1.5rem 0 1rem 0; /* Adds space above and below */
-  font-family: Arial, Helvetica, sans-serif; /* Simple font */
-}
-
-/* 
-  Main content area:
-  - Flexbox to center content horizontally
-  - Align items to the top
-  - Take up remaining vertical space
-*/
-main {
-  flex: 1;
+/* List styles */
+.profile-card ul {
+  list-style: disc inside;
+  padding-left: 1.5rem;
+  margin: 1rem 0 0 0;
+  text-align: left;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  box-sizing: border-box;
 }
 
-/* 
-  Container styles (not used in this layout, but reset just in case):
-  - Remove background, shadow, padding, and border radius
-*/
-.container {
-  background: none;
-  box-shadow: none;
-  padding: 0;
-  border-radius: 0;
-}
-
-/* 
-  Profile card styles:
-  - White background for a "card" look
-  - Max width for readability
-  - Padding for space inside the card
-  - Rounded corners and soft shadow for a glassy effect
-  - Soft blue border for accent
-  - Flexbox to stack content vertically and center it
-  - Hide overflow for rounded corners
-*/
-.profile-card {
-  background: #fff;
-  max-width: 380px;
-  margin: 0 auto;
-  padding: 2.5rem 2rem 2rem 2rem;
-  border-radius: 22px;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 0 1.5px 6px rgba(0,0,0,0.09);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 2.5px solid #a5b4ff;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Make the profile image a circle */
-.profile-img {
-  width: 200px;              /* Set the image width */
-  height: 200px;             /* Set the image height */
-  border-radius: 50%;        /* Makes the image round */
-  object-fit: cover;         /* Ensures the image fills the circle */
-  display: block;            /* Makes sure margin auto works */
-  margin: 1.2rem auto 1rem auto; /* Centers the image */
-  box-shadow: 0 2px 8px rgba(101, 129, 255, 0.15); /* Soft shadow */
-}
-
-/* 
-  Name styles:
-  - Large, bold, dark blue with subtle highlight
-  - Spaced letters for style
-  - Dashed border under the name for a cute look
-  - Margin below for separation
-*/
-.profile-card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.7rem;
-  color: #1a237e;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  text-shadow: 0 1px 0 #fff;
-  border-bottom: 2px dashed #ad1457; /* Dashed pink border under the name */
-  padding-bottom: 0.5rem;            /* Adds space between text and border */
-}
-
-/* 
-  Role/title styles:
-  - Medium size, bold, soft purple color with highlight
-  - Spaced letters for style
-  - Margin below for separation
-*/
-.profile-card h3 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.25rem;
-  color: #667eea;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-shadow: 0 1px 0 #fff;
-}
-
-/* 
-  Bio paragraph styles:
-  - Slightly larger, readable text
-  - Increased line height for readability
-  - Centered text with a sheer, glassy background
-  - Rounded corners and subtle shadow for a soft look
-*/
-.profile-card p {
-  font-size: 1.13rem;
+.profile-card ul li {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
   line-height: 1.8;
-  color: #444;
-  margin: 0;
-  padding: 0 0.5rem;
-  text-align: center;
-  background: rgba(246, 246, 255, 0.7);
-  border-radius: 10px;
-  box-shadow: 0 1px 4px rgba(102, 126, 234, 0.05);
+  text-align: left;
+}
+
+.profile-card ul li:last-child {
+  margin-bottom: 0;
+}
+
+.profile-card h4 {
+  text-align: left;
+  width: 100%;
+  margin-left: 0;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #AD1457;
 }
 
 /* 
@@ -284,6 +188,6 @@ main {
   text-align: center;
   margin: 2rem 0 0.5rem 0;
   letter-spacing: 0.5px;
-  font-family: 'Trebuchet MS', 'Segoe UI', Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   text-shadow: 0 1px 0 #fff;
 }

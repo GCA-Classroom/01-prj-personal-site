@@ -2,74 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Junielys H.'s Profile Card</title>
+  <title>Junielys H. - Portfolio</title>
+  <!-- This line sets the website icon (favicon) -->
+  <link rel="icon" type="image/png" href="Portfolio.png">
   <link rel="stylesheet" href="style.css">
   <style>
     /* Add a simple colored border under the h2 name */
     .profile-card h2 {
       margin: 0 0 1rem 0;
       font-size: 1.7rem;
-      color: #1a237e;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      text-shadow: 0 1px 0 #fff;
-      border-bottom: 2px solid #ad1457; /* Adds a pink border under the name */
-      padding-bottom: 0.5rem;           /* Adds space between text and border */
     }
 
     /* Make the separator line dashed and cute */
     .profile-separator {
       border: none; /* Removes the default border */
       height: 0; /* No solid height, we use border-style instead */
-      border-bottom: 2px dashed #ad1457; /* Dashed pink line */
+      border-bottom: 1px dashed #ad1457; /* Dashed pink line */
       width: 80%; /* Makes the line shorter than the full width */
       margin: 1.5rem auto; /* Adds space above and below, centers the line */
     }
   </style>
 </head>
 <body>
-  <!-- The header contains the main title of the page -->
+  <!-- Hero Section -->
   <header>
-    <h1>Welcome to the Hernandez Webpage</h1>
+    <h1>Welcome to My Portfolio!</h1>
+    <p class="hero-subtitle">Aspiring Web Developer</p>
   </header>
 
-  <!-- Main section with the profile card -->
   <main>
+    <!-- Bio Section -->
     <section class="profile-card">
-      <!-- Profile image -->
-      <img src="img/IMG_1690.JPG" alt="Junielys Hernandez profile photo" class="profile-img">
-
-      <!-- Name and title -->
-      <h2>Junielys Hernandez</h2>
-      <!-- The border is added by CSS, so we do NOT need an extra <hr> here -->
-
-      <h3>Web Developer Student</h3>
-
-      <!-- Short description -->
+      <img src="img/IMG_1690.JPG" alt="Your profile photo" class="profile-img">
+      <h2>Junielys Hernandez Nieves</h2>
+      <h3>Web Development Student</h3>
       <p>
-        Passionate about learning and curious on how coding works.
-        Loves learning new things about how technology works and what creative things you can do with it.
+        Hi! I'm passionate about learning how coding works and love discovering creative things you can do with technology.
       </p>
-      <!-- This line adds a border under the paragraph -->
       <hr class="profile-separator">
 
-      <!-- Favorite websites list -->
-      <h4>My favorite websites:</h4>
+      <!-- Skills Section -->
+      <h4>My Skills:</h4>
+      <ul>
+        <li>HTML &amp; CSS</li>
+        <li>JavaScript (beginner)</li>
+        <li>Teamwork &amp; Communication</li>
+        <li>Problem Solving</li>
+      </ul>
+      <hr class="profile-separator">
+
+      <!-- Projects Section -->
+      <h4>Portfolio Projects:</h4>
+      <ul>
+        <li>Personal Website (this site!)</li>
+        <li>Coming soon: More projects from class</li>
+      </ul>
+      <hr class="profile-separator">
+
+      <!-- Favorite Websites Section -->
+      <h4>My Favorite Websites:</h4>
       <ul>
         <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
         <li><a href="https://www.canva.com/" target="_blank">Canva</a></li>
         <li><a href="https://www.picsart.com/" target="_blank">Picsart</a></li>
         <li><a href="https://procreate.com/" target="_blank">Procreate</a></li>
       </ul>
+      <hr class="profile-separator">
 
-      <!-- Social media section (can add links later) -->
-      <h5>Follow me on...:</h5>
+      <!-- Social Media Section -->
+      <h4>Find me on:</h4>
+      <ul>
+        <li><a href="https://profile.indeed.com/?hl=en_US&co=US&from=gnav-homepage" target="_blank">Indeed</a></li>
+        <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://app.joinhandshake.com/profiles/pmbp4z?utm_source=ios&utm_medium=share&utm_campaign=pasteboard_copy" target="_blank">Handshake</a></li>
+      </ul>
     </section>
   </main>
 
-  <!-- Footer with copyright -->
+  <!-- Footer -->
   <footer>
-    <p class="footer-note">&copy; 2025 My Webpage</p>
+    <p class="footer-note">&copy; 2025 Your Name</p>
   </footer>
 </body>
 </html>
