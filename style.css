@@ -79,6 +79,7 @@ main {
   Name styles:
   - Large, bold, dark blue with subtle highlight
   - Spaced letters for style
+  - Dashed border under the name for a cute look
   - Margin below for separation
 */
 .profile-card h2 {
@@ -88,6 +89,8 @@ main {
   font-weight: 800;
   letter-spacing: 1.5px;
   text-shadow: 0 1px 0 #fff;
+  border-bottom: 2px dashed #ad1457; /* Dashed pink border under the name */
+  padding-bottom: 0.5rem;            /* Adds space between text and border */
 }
 
 /* 
@@ -221,6 +224,7 @@ main {
   Name styles:
   - Large, bold, dark blue with subtle highlight
   - Spaced letters for style
+  - Dashed border under the name for a cute look
   - Margin below for separation
 */
 .profile-card h2 {
@@ -230,6 +234,8 @@ main {
   font-weight: 800;
   letter-spacing: 1.5px;
   text-shadow: 0 1px 0 #fff;
+  border-bottom: 2px dashed #ad1457; /* Dashed pink border under the name */
+  padding-bottom: 0.5rem;            /* Adds space between text and border */
 }
 
 /* 
