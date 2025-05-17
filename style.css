@@ -49,9 +49,8 @@
 /* This sets a cute pastel gradient background for the whole page */
 body {
   background: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
-  /* Light pink to light blue gradient */
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif; /* Simple, readable font */
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Centers the main title in the header */
