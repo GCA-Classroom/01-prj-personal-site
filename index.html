@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="style.css">
   <!-- Favicon for a personal touch -->
   <link rel="icon" type="image/png" href="img/favicon.png">
+  <!-- Load the Quicksand font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:700,500,400&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Hero section: Your name and a short tagline -->
@@ -24,6 +26,7 @@
     <div class="bio-container">
       <!-- Short bio about yourself -->
       <p>
+        ¡Hola! <span class="wave-emoji">👋</span>
         I’m a web development student with a passion for learning and growing — not just in code, but in purpose. I believe in using my skills to make a positive impact, and I’m excited to see where this journey leads as I follow God’s plan for my life.
       </p>
       <!-- Laptop image beside bio -->
@@ -62,9 +65,30 @@
     </p>
   </section>
 
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" title="Go to top">↑</button>
+
   <!-- Add a simple footer for a personal touch -->
   <footer>
     &copy; 2024 Carolis Medina &mdash; Thanks for visiting my site!
   </footer>
+
+  <!-- Simple script for scroll to top button -->
+  <script>
+    // Get the button
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    // Show button when scrolled down
+    window.onscroll = function() {
+      if (window.scrollY > 200) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    };
+    // Scroll to top when clicked
+    scrollBtn.onclick = function() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    };
+  </script>
 </body>
 </html>

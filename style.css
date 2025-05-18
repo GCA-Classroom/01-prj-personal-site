@@ -1,16 +1,24 @@
 /* Add you CSS here */
 
-/* Set a stylish gradient and add floral background image pattern */
+/* Set a stylish gradient and add Greenfloral.jpg as a background pattern */
 body {
-  background: 
-    linear-gradient(135deg, #f8e6ff 0%, #fff9f2 100%), /* soft gradient */
-    url('img/florals.png'); /* floral pattern image */
-  background-repeat: repeat;         /* repeat the floral image */
-  background-size: auto, 300px;      /* size for gradient and florals */
-  color: #1A237E; /* navy */
+  /* Remove duplicate backgrounds and keep only one */
+  background: #fff; /* plain white */
+  color: #1A237E;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  position: relative;
+}
+
+/* Remove the floral background, use a plain white background */
+body {
+  background: #fff; /* plain white */
+  color: #1A237E;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 
 /* Style for all section containers */
@@ -18,9 +26,19 @@ section {
   max-width: 600px; /* keeps content readable */
   margin: 40px auto; /* centers the section */
   padding: 24px;
-  background-color: #ffffff; /* white background for sections */
+  background: linear-gradient(135deg, #ede7f6 0%, #d1c4e9 100%); /* lavender gradient */
   border-radius: 12px; /* rounded corners */
   box-shadow: 0 2px 8px rgba(26,35,126,0.07); /* subtle shadow */
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+section:nth-of-type(2) { animation-delay: 0.3s; }
+section:nth-of-type(3) { animation-delay: 0.6s; }
+section:nth-of-type(4) { animation-delay: 0.9s; }
+
+@keyframes fadeIn {
+  to { opacity: 1; }
 }
 
 /* Hero section styles */
@@ -28,12 +46,26 @@ section {
   border-top: 8px solid #B39DDB; /* lavender highlight */
   text-align: center;
   background-color: #F3EFFF; /* light lavender */
+  box-shadow: 0 0 32px 4px #b39ddb44;
+  border: 2px solid #b39ddb;
 }
 
 /* Main heading style */
 .hero h1 {
   color: #1A237E; /* navy */
   margin-bottom: 8px;
+  position: relative;
+  display: inline-block;
+}
+
+.hero h1::after {
+  content: "";
+  display: block;
+  margin: 8px auto 0 auto;
+  width: 60%;
+  height: 4px;
+  background: linear-gradient(90deg, #B39DDB 0%, #6A1B9A 100%);
+  border-radius: 2px;
 }
 
 /* Tagline style */
@@ -46,6 +78,11 @@ section {
 h2 {
   color: #1A237E; /* navy */
   margin-top: 0;
+  transition: color 0.3s;
+}
+
+h2:hover {
+  color: #6A1B9A; /* lavender on hover */
 }
 
 /* Center the Skills section heading */
@@ -79,7 +116,9 @@ h2 {
 
 /* Stylish border for the skills section */
 .skills {
-  border: 3px dashed #B39DDB;      /* lavender dashed border */
+  border: 3px solid;
+  border-image: linear-gradient(90deg, #b39ddb 0%, #ede7f6 100%);
+  border-image-slice: 1;
   border-radius: 16px;             /* rounded corners */
   box-shadow: 0 2px 12px rgba(26,35,126,0.08); /* subtle shadow */
   padding: 24px;
@@ -125,6 +164,9 @@ section + section {
   margin: 0;
   flex: 1;
   text-align: left; /* uncenter the text */
+  background: rgba(179,157,219,0.08); /* very light lavender */
+  padding: 12px 16px;
+  border-radius: 10px;
 }
 
 /* Bio image styles: make laptop.jpg image slightly bigger */
@@ -146,6 +188,159 @@ section + section {
   height: 200px;
   border-radius: 50% / 60%;         /* oval shape */
   object-fit: cover;
-  border: 3px solid #B39DDB;
-  box-shadow: 0 4px 16px rgba(106,27,154,0.12); /* soft drop shadow */
+  border: 4px solid #b3e5fc; /* pastel blue border */
+  box-shadow: 0 8px 32px 0 #b39ddb55, 0 0 0 8px #ede7f6; /* pastel shadow and soft outer glow */
+  background: #fff;
+}
+
+/* Suggestion: Add a soft border and shadow to the footer for a finished look */
+footer {
+  text-align: center;
+  margin: 32px auto 0 auto;
+  padding: 16px 0;
+  color: #6A1B9A; /* deep lavender */
+  background: linear-gradient(90deg, #ede7f6 0%, #fff9f2 100%);
+  border-top: 2px solid #B39DDB;      /* lavender border */
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 2px 12px rgba(106,27,154,0.07);
+  font-size: 1em;
+}
+
+/* Suggestion: Make links in the Connect section more stylish */
+.connect a {
+  color: #6A1B9A;
+  text-decoration: none;
+  border-bottom: 1px dashed #B39DDB;
+  transition: color 0.2s, border-bottom 0.2s;
+}
+
+.connect a:hover {
+  color: #4A148C;
+  border-bottom: 2px solid #4A148C;
+}
+
+/* Use Google Font 'Quicksand' for headings */
+h1, h2 {
+  font-family: 'Quicksand', Arial, sans-serif;
+}
+
+/* Center and make the Connect with Me section smaller */
+.connect {
+  text-align: center;      /* center all content */
+  padding: 16px 0;         /* balanced padding */
+  max-width: 350px;        /* make section narrower */
+  margin: 0 auto;          /* center the section horizontally */
+  font-size: 0.98em;       /* slightly smaller text */
+  background: linear-gradient(135deg, #ede7f6 0%, #e0f7fa 100%);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(106,27,154,0.07);
+}
+
+.connect h2 {
+  font-size: 1.2em;        /* smaller heading */
+  margin-bottom: 12px;
+}
+
+.connect .icon {
+  font-size: 1.1em;        /* keep icons readable */
+}
+
+/* Scroll to Top Button styles */
+#scrollTopBtn {
+  display: none; /* hidden by default */
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 100;
+  background: #B39DDB; /* lavender */
+  color: #1A237E;      /* navy */
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.5em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(26,35,126,0.15);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+#scrollTopBtn:hover {
+  background: #6A1B9A; /* deeper lavender */
+  color: #fff;
+  transform: scale(1.1);
+  animation: bounce 0.4s;
+}
+
+@keyframes bounce {
+  0%   { transform: scale(1.1) translateY(0); }
+  50%  { transform: scale(1.15) translateY(-8px);}
+  100% { transform: scale(1.1) translateY(0);}
+}
+
+/* Use a soft pastel background color for the whole page */
+body {
+  background: #f6f7fb; /* very light pastel blue */
+  color: #1A237E;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* Floating sparkles animation */
+@keyframes sparkleFloat {
+  0% {
+    opacity: 0.7;
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-40px) scale(1.2);
+  }
+  100% {
+    opacity: 0.7;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.sparkle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  background: radial-gradient(circle, #fffbe9 60%, #b39ddb 100%);
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: sparkleFloat 3.5s ease-in-out infinite, sparkleFade 1.2s;
+}
+
+@keyframes sparkleFade {
+  from { opacity: 0; }
+  to   { opacity: 0.7; }
+}
+
+/* Position each sparkle at a different spot and with a different delay */
+.sparkle.s1 { left: 12%;  top: 22%; animation-delay: 0s; }
+.sparkle.s2 { left: 78%;  top: 28%; animation-delay: 1.2s; }
+.sparkle.s3 { left: 52%;  top: 62%; animation-delay: 2.1s; }
+.sparkle.s4 { left: 28%;  top: 78%; animation-delay: 1.7s; }
+.sparkle.s5 { left: 68%;  top: 72%; animation-delay: 0.7s; }
+
+/* Animated emoji wave for ¡Hola! */
+.wave-emoji {
+  display: inline-block;
+  animation: waveHand 1.5s infinite;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+@keyframes waveHand {
+  0% { transform: rotate(0deg);}
+  10% { transform: rotate(18deg);}
+  20% { transform: rotate(-10deg);}
+  30% { transform: rotate(18deg);}
+  40% { transform: rotate(-4deg);}
+  50% { transform: rotate(12deg);}
+  60% { transform: rotate(0deg);}
+  100% { transform: rotate(0deg);}
 }
