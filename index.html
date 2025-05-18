@@ -4,10 +4,14 @@
   <meta charset="UTF-8">
   <title>My Personal Site</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Favicon for a personal touch -->
+  <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 <body>
   <!-- Hero section: Your name and a short tagline -->
   <section class="hero">
+    <!-- Bio picture above name -->
+    <img src="img/Caro image.jpeg" alt="Your Bio Picture" width="200" class="bio-image">
     <!-- Your name -->
     <h1>Carolis Medina</h1>
     <!-- A short tagline or welcome message -->
@@ -17,15 +21,19 @@
   <!-- Bio section: A little about yourself -->
   <section class="bio">
     <h2>About Me</h2>
-    <!-- Short bio about yourself -->
-    <p>
-      I’m a web development student with a passion for learning and growing — not just in code, but in purpose. I believe in using my skills to make a positive impact, and I’m excited to see where this journey leads as I follow God’s plan for my life.
-    </p>
+    <div class="bio-container">
+      <!-- Short bio about yourself -->
+      <p>
+        I’m a web development student with a passion for learning and growing — not just in code, but in purpose. I believe in using my skills to make a positive impact, and I’m excited to see where this journey leads as I follow God’s plan for my life.
+      </p>
+      <!-- Laptop image beside bio -->
+      <img src="img/laptop.jpg" alt="Laptop" class="bio-image">
+    </div>
   </section>
 
   <!-- Skills section: List your skills -->
   <section class="skills">
-    <h2>Skills</h2>
+    <h2>Skills in the Making:</h2>
     <ul>
       <!-- List your skills below -->
       <li>HTML</li>
@@ -33,5 +41,30 @@
       <li>JavaScript</li>
     </ul>
   </section>
+
+  <!-- Connect with Me section -->
+  <section class="connect">
+    <h2>Connect with Me</h2>
+    <p>
+      <!-- Envelope icon and your school email -->
+      <span class="icon">✉️</span>
+      <a href="mailto:c_medina@uncg.edu">c_medina@uncg.edu</a>
+      <br>
+      <!-- IG icon and your Instagram handle with "Follow me" text -->
+      <span class="icon">📷</span>
+      <a href="https://instagram.com/kharolyss" target="_blank">
+        <span class="icon">➕</span>Follow me @kharolyss
+      </a>
+      <br>
+      <!-- LinkedIn icon and your LinkedIn profile -->
+      <span class="icon">🔗</span>
+      <a href="https://linkedin.com/in/your_linkedin" target="_blank">LinkedIn - Coming Soon!</a>
+    </p>
+  </section>
+
+  <!-- Add a simple footer for a personal touch -->
+  <footer>
+    &copy; 2024 Carolis Medina &mdash; Thanks for visiting my site!
+  </footer>
 </body>
 </html>

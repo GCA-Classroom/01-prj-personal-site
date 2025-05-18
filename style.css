@@ -1,8 +1,12 @@
 /* Add you CSS here */
 
-/* Set the background color to cream and text color to navy */
+/* Set a stylish gradient and add floral background image pattern */
 body {
-  background-color: #FFF9F2; /* cream */
+  background: 
+    linear-gradient(135deg, #f8e6ff 0%, #fff9f2 100%), /* soft gradient */
+    url('img/florals.png'); /* floral pattern image */
+  background-repeat: repeat;         /* repeat the floral image */
+  background-size: auto, 300px;      /* size for gradient and florals */
   color: #1A237E; /* navy */
   font-family: Arial, sans-serif;
   margin: 0;
@@ -44,10 +48,16 @@ h2 {
   margin-top: 0;
 }
 
-/* Skills list styles */
+/* Center the Skills section heading */
+.skills h2 {
+  text-align: center; /* centers the "Skills in the Making:" heading */
+}
+
+/* Center the skills list items */
 .skills ul {
   list-style-type: disc;
-  padding-left: 20px;
+  padding-left: 0;
+  text-align: center; /* center the list items */
 }
 
 .skills li {
@@ -56,9 +66,86 @@ h2 {
   padding: 6px 12px;
   border-radius: 6px;
   color: #1A237E; /* navy */
+  display: inline-block; /* allows centering and spacing */
+  margin-right: 8px;     /* space between items */
+  margin-left: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.skills li:hover {
+  background-color: #D1C4E9; /* slightly deeper lavender on hover */
+  color: #4A148C;            /* deeper purple text on hover */
+}
+
+/* Stylish border for the skills section */
+.skills {
+  border: 3px dashed #B39DDB;      /* lavender dashed border */
+  border-radius: 16px;             /* rounded corners */
+  box-shadow: 0 2px 12px rgba(26,35,126,0.08); /* subtle shadow */
+  padding: 24px;
+  background-color: #fff;          /* keep background white */
 }
 
 /* Add some spacing between sections */
 section + section {
   margin-top: 24px;
+}
+
+/* Bio section: remove border and shadow */
+.bio {
+  background: none;
+  box-shadow: none;
+  border: none;           /* remove border */
+  border-radius: 0;       /* remove rounded corners */
+  padding: 24px;
+  position: relative;
+}
+
+/* Center the About Me heading */
+.bio h2 {
+  text-align: center;
+}
+
+/* Container for bio text and image, places them side by side */
+.bio-container {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: center; /* center content horizontally */
+}
+
+/* Bio text styles: uncenter the text under About Me */
+.bio-container p {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  color: #1A237E;
+  margin: 0;
+  flex: 1;
+  text-align: left; /* uncenter the text */
+}
+
+/* Bio image styles: make laptop.jpg image slightly bigger */
+.bio-container .bio-image {
+  width: 150px;           /* slightly bigger image */
+  height: 150px;
+  border-radius: 16px;
+  object-fit: cover;      /* show full picture, keep aspect ratio */
+  box-shadow: 0 2px 8px rgba(26,35,126,0.10);
+  flex-shrink: 0;
+  display: block;
+}
+
+/* Style for the bio picture in the hero section */
+.hero .bio-image {
+  display: block;
+  margin: 0 auto 20px auto;         /* centers image and adds space below */
+  width: 160px;
+  height: 200px;
+  border-radius: 50% / 60%;         /* oval shape */
+  object-fit: cover;
+  border: 3px solid #B39DDB;
+  box-shadow: 0 4px 16px rgba(106,27,154,0.12); /* soft drop shadow */
 }
