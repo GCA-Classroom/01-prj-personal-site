@@ -1,1 +1,64 @@
 /* Add you CSS here */
+
+/* Set the background color to cream and text color to navy */
+body {
+  background-color: #FFF9F2; /* cream */
+  color: #1A237E; /* navy */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for all section containers */
+section {
+  max-width: 600px; /* keeps content readable */
+  margin: 40px auto; /* centers the section */
+  padding: 24px;
+  background-color: #ffffff; /* white background for sections */
+  border-radius: 12px; /* rounded corners */
+  box-shadow: 0 2px 8px rgba(26,35,126,0.07); /* subtle shadow */
+}
+
+/* Hero section styles */
+.hero {
+  border-top: 8px solid #B39DDB; /* lavender highlight */
+  text-align: center;
+  background-color: #F3EFFF; /* light lavender */
+}
+
+/* Main heading style */
+.hero h1 {
+  color: #1A237E; /* navy */
+  margin-bottom: 8px;
+}
+
+/* Tagline style */
+.hero p {
+  color: #6A1B9A; /* deep lavender */
+  font-size: 1.2em;
+}
+
+/* Section headings */
+h2 {
+  color: #1A237E; /* navy */
+  margin-top: 0;
+}
+
+/* Skills list styles */
+.skills ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.skills li {
+  background-color: #EDE7F6; /* very light lavender */
+  margin-bottom: 8px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: #1A237E; /* navy */
+}
+
+/* Add some spacing between sections */
+section + section {
+  margin-top: 24px;
+}
