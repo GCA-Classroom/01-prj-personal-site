@@ -46,7 +46,7 @@ section:nth-of-type(4) { animation-delay: 0.9s; }
   border-top: 8px solid #B39DDB; /* lavender highlight */
   text-align: center;
   background-color: #F3EFFF; /* light lavender */
-  box-shadow: 0 0 32px 4px #b39ddb44;
+  box-shadow: 0 0 32px 8px #b39ddb66, 0 0 80px 16px #ede7f6aa;
   border: 2px solid #b39ddb;
 }
 
@@ -72,6 +72,19 @@ section:nth-of-type(4) { animation-delay: 0.9s; }
 .hero p {
   color: #6A1B9A; /* deep lavender */
   font-size: 1.2em;
+}
+
+/* Add a glow effect to the bio picture in the hero section */
+.hero .bio-image {
+  display: block;
+  margin: 0 auto 20px auto;         /* centers image and adds space below */
+  width: 160px;
+  height: 200px;
+  border-radius: 50% / 60%;         /* oval shape */
+  object-fit: cover;
+  border: 4px solid #b3e5fc; /* pastel blue border */
+  box-shadow: 0 0 24px 8px #b39ddb88, 0 0 40px 12px #ede7f688;
+  background: #fff;
 }
 
 /* Section headings */
@@ -178,19 +191,6 @@ section + section {
   box-shadow: 0 2px 8px rgba(26,35,126,0.10);
   flex-shrink: 0;
   display: block;
-}
-
-/* Style for the bio picture in the hero section */
-.hero .bio-image {
-  display: block;
-  margin: 0 auto 20px auto;         /* centers image and adds space below */
-  width: 160px;
-  height: 200px;
-  border-radius: 50% / 60%;         /* oval shape */
-  object-fit: cover;
-  border: 4px solid #b3e5fc; /* pastel blue border */
-  box-shadow: 0 8px 32px 0 #b39ddb55, 0 0 0 8px #ede7f6; /* pastel shadow and soft outer glow */
-  background: #fff;
 }
 
 /* Suggestion: Add a soft border and shadow to the footer for a finished look */
