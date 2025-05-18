@@ -344,3 +344,55 @@ body {
   60% { transform: rotate(0deg);}
   100% { transform: rotate(0deg);}
 }
+
+/* Add a custom accent color variable for easy updates */
+:root {
+  --accent-color: #6A1B9A; /* deep lavender */
+}
+
+/* Define color variables for navbar */
+:root {
+  --primary-color: #ede7f6;   /* light lavender */
+  --secondary-color: #1A237E; /* navy */
+  --accent-color: #6A1B9A;    /* deep lavender */
+}
+
+/* Navbar styles */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: var(--primary-color);
+  padding: 10px 0;
+  z-index: 10; /* keep navbar above other content */
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-family: 'Quicksand', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.05em;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--accent-color);
+}
+
+/* Add hover effect for all links */
+a:hover {
+  color: var(--accent-color);
+  transition: color 0.3s ease;
+}
