@@ -2,10 +2,252 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
-  <link rel="stylesheet" href="style.css">
+  <title>My Personal Portfolio</title>
+  <!-- Link to FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Set a dark background and use a modern, easy-to-read font */
+    body {
+      background-color: #181a1b; /* dark background */
+      color: #f3f3f3; /* light text */
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Style the navigation bar */
+    nav {
+      background-color: #23272a; /* slightly lighter dark */
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: #00ffd0; /* vibrant cyan */
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #1e90ff; /* blue on hover */
+    }
+
+    /* Container for main content */
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #222326;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    /* Section titles */
+    h2 {
+      color: #00ffd0; /* vibrant cyan */
+      border-bottom: 2px solid #1e90ff; /* blue underline */
+      padding-bottom: 5px;
+    }
+
+    /* Bio section with a different background and more separation */
+    .bio {
+      margin-bottom: 40px;
+      background: #202d3a; /* blue-ish dark background */
+      border-radius: 12px;
+      padding: 30px 20px 20px 20px;
+      box-shadow: 0 2px 10px rgba(30,144,255,0.08);
+      text-align: center; /* center content */
+    }
+
+    /* Profile photo style */
+    .bio-photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%; /* makes the image round */
+      object-fit: cover;
+      border: 4px solid #00ffd0; /* cyan border */
+      margin-bottom: 15px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Fun icon style for bio */
+    .bio-icons {
+      margin-bottom: 15px;
+    }
+    .bio-icons i {
+      font-size: 2em;
+      margin-right: 10px;
+      color: #1e90ff; /* blue for icons */
+      vertical-align: middle;
+    }
+
+    /* Skills section */
+    .skills-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills-list li {
+      background: #292b2f;
+      border-radius: 8px;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      color: #fff;
+      font-size: 1.1em;
+      display: flex;
+      align-items: center;
+    }
+
+    .skills-list i {
+      font-size: 1.5em;
+      margin-right: 10px;
+      color: #00ffd0; /* cyan for icons */
+    }
+
+    /* Bilingual section */
+    .bilingual {
+      margin-top: 30px;
+      background: #23272a;
+      padding: 15px;
+      border-radius: 8px;
+      color: #00ffd0;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .bilingual i {
+      color: #1e90ff;
+      font-size: 1.3em;
+    }
+  </style>
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <!-- Navigation bar -->
+  <nav>
+    <!-- Navigation links to different sections of the page -->
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <!-- Bio Section -->
+    <section id="home" class="bio">
+      <!-- Add your photo here. The image will be centered and round -->
+      <img src="https://media.licdn.com/dms/image/v2/C4D03AQEoKXFKHQrblw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1633663546566?e=1753315200&v=beta&t=VPnjfZivDh8WSTz_y5aIfFzsAUB6APlf_TmxlR1w_cA"
+           alt="Javier Tellez Photo" class="bio-photo">
+      <!-- Fun icons to represent interests and personality -->
+      <div class="bio-icons">
+        <i class="fa-solid fa-gamepad" title="Gamer"></i>
+        <i class="fa-solid fa-laptop-code" title="Coding"></i>
+        <i class="fa-solid fa-earth-americas" title="Travel"></i>
+        <i class="fa-solid fa-dumbbell" title="Gym"></i>
+        <i class="fa-solid fa-people-group" title="Community"></i>
+        <i class="fa-solid fa-language" title="Languages"></i>
+      </div>
+      <!-- Personal bio -->
+      <p>
+        Hi! I’m <strong>Javier Tellez</strong>, a 23-year-old Guatemalan-American with a passion for coding, culture, and creativity.<br>
+        I’m currently studying Computer Science at Florida Gulf Coast University and loving every second of it—whether it’s building projects, connecting with friends, or getting involved on campus.
+      </p>
+      <p>
+        I’m a huge fan of video games like <strong>League of Legends</strong> and <strong>Persona 5</strong>, and I’m always fascinated by the storytelling, design, and strategy behind them. That curiosity naturally led me to coding, where I’ve found a space to create, solve problems, and bring ideas to life.
+      </p>
+      <p>
+        One of the highlights of my college experience so far has been studying abroad in <strong>Florence, Italy</strong>. Living and learning in another country not only broadened my perspective, but it also deepened my interest in travel and languages. I’ve also had the chance to explore <strong>Mexico</strong>, <strong>Panama</strong>, and <strong>Guatemala</strong>—each trip reminding me how much I love discovering new places and connecting with people from different backgrounds.
+      </p>
+      <p>
+        When I’m not coding or gaming, you’ll probably find me at the gym, hanging out with friends, or planning my next adventure. I’m passionate about helping others, especially first-gen and Hispanic students, find their own path in tech and global education—because I know how life-changing those opportunities can be.
+      </p>
+      <p>
+        Thanks for stopping by! Feel free to connect with me—whether you're into tech, games, or just looking for someone to chat about your next trip or project.
+      </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <!-- List of programming languages with icons -->
+      <ul class="skills-list">
+        <li>
+          <!-- Python icon -->
+          <i class="fa-brands fa-python"></i>
+          Python
+        </li>
+        <li>
+          <!-- C icon (using code icon as a simple representation) -->
+          <i class="fa-solid fa-code"></i>
+          C
+        </li>
+        <li>
+          <!-- C++ icon (using code icon as a simple representation) -->
+          <i class="fa-solid fa-code"></i>
+          C++
+        </li>
+        <li>
+          <!-- HTML5 icon -->
+          <i class="fa-brands fa-html5"></i>
+          HTML
+        </li>
+        <li>
+          <!-- CSS3 icon -->
+          <i class="fa-brands fa-css3-alt"></i>
+          CSS
+        </li>
+        <li>
+          <!-- JavaScript icon (for web development learning) -->
+          <i class="fa-brands fa-js"></i>
+          JavaScript
+        </li>
+      </ul>
+      <!-- Bilingual skill shown here, inside the skills section -->
+      <div class="bilingual" style="margin-top:20px;">
+        <!-- Language icon -->
+        <i class="fa-solid fa-language"></i>
+        Fluent in English &amp; Spanish
+      </div>
+      <!-- You can add more skills as you learn them! -->
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <!-- Add a link to your GitHub with an icon -->
+      <p>
+        <!-- The link opens in a new tab -->
+        <a href="https://github.com/javy-anthonyo" target="_blank" style="color:#00ffd0; text-decoration:none;">
+          <!-- GitHub icon from FontAwesome -->
+          <i class="fa-brands fa-github"></i>
+          Visit my GitHub for projects
+        </a>
+      </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <!-- Student email with an envelope icon -->
+      <p>
+        <i class="fa-solid fa-envelope"></i>
+        jatellez9964@eagle.fgcu.edu
+      </p>
+      <!-- Instagram with an Instagram icon -->
+      <p>
+        <a href="https://instagram.com/javy.anthonyo" target="_blank" style="color:#00ffd0; text-decoration:none;">
+          <i class="fa-brands fa-instagram"></i>
+          javy.anthonyo
+        </a>
+      </p>
+    </section>
+  </div>
 </body>
 </html>
