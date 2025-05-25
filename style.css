@@ -168,6 +168,18 @@ h1, h2 {
   font-weight: 500;
 }
 
+/* Circle photo style for the dog image at the top */
+.circle-photo {
+  display: block;
+  margin: 0 auto 18px auto; /* center and add space below */
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%; /* makes the image a circle */
+  border: 4px solid #64b5f6; /* blue border for accent */
+  box-shadow: 0 2px 8px rgba(100,181,246,0.15);
+}
+
 /* Responsive: make sure it looks good on phones */
 @media (max-width: 600px) {
   .section {
