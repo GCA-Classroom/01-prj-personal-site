@@ -1,1 +1,179 @@
 /* Add you CSS here */
+
+/* Use a clean, easy-to-read font */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  /* Soft blue background for a calm, cohesive look */
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  color: #263238; /* dark blue-grey for readability */
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove box backgrounds and borders from sections */
+.section {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 0 24px 0; /* more space above, less below */
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 0;
+}
+
+/* Add gentle spacing between sections */
+.section + .section {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+/* Section headings with a colored left border for unity */
+h1, h2 {
+  color: #1976d2; /* cohesive blue for headings */
+  margin-top: 0;
+  padding-left: 12px;
+  border-left: 4px solid #64b5f6; /* blue accent bar */
+  background: none;
+}
+
+/* Hero section: larger text and center alignment */
+.hero-section {
+  text-align: center;
+  padding-top: 56px;
+  padding-bottom: 32px;
+}
+.hero-section h1 {
+  font-size: 2.4em;
+  color: #1976d2;
+  border-left: none;
+  padding-left: 0;
+}
+.hero-section p {
+  font-size: 1.3em;
+  color: #388e3c;
+  margin-bottom: 18px;
+}
+
+/* Style for buttons */
+.button {
+  display: inline-block;
+  padding: 10px 22px;
+  background-color: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 22px;
+  text-decoration: none;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.2s;
+}
+.button:hover {
+  background-color: #1565c0;
+}
+
+/* Skills and portfolio lists: no box, just clean spacing */
+.skills-section ul,
+.portfolio-section ul {
+  list-style: disc inside;
+  background: none;
+  padding: 0 0 0 18px;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+}
+
+/* Portfolio project items: use different blue shades */
+.portfolio-item.blue1 {
+  background: #e3f2fd; /* light blue */
+  border-left: 6px solid #64b5f6;
+}
+.portfolio-item.blue2 {
+  background: #bbdefb; /* slightly deeper blue */
+  border-left: 6px solid #1976d2;
+}
+.portfolio-item {
+  margin-bottom: 18px;
+  padding: 16px 0 16px 18px;
+  border-radius: 10px;
+  transition: background 0.2s, border 0.2s;
+  /* Remove list style for cleaner look */
+  list-style: none;
+}
+.portfolio-item:hover {
+  background: #90caf9;
+}
+
+/* Footer styles */
+.footer {
+  text-align: center;
+  padding: 24px 0 16px 0;
+  color: #1976d2;
+  font-size: 1em;
+  background: none;
+}
+.footer a {
+  color: #1976d2;
+  text-decoration: underline;
+}
+.footer a.linkedin-link {
+  display: inline-block;
+  vertical-align: middle;
+}
+.linkedin-icon {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  margin-left: 6px;
+  transition: transform 0.2s;
+}
+.linkedin-icon:hover {
+  transform: scale(1.15);
+}
+
+/* Skills section at the bottom with rectangles and icons */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px; /* space between skill rectangles */
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  background: #e3f2fd; /* light blue rectangle */
+  border: 2px solid #64b5f6; /* blue border */
+  border-radius: 12px;
+  padding: 12px 22px;
+  font-size: 1.1em;
+  min-width: 140px;
+  box-shadow: 0 2px 8px rgba(100,181,246,0.07);
+  transition: background 0.2s, border 0.2s;
+}
+
+.skill-item:hover {
+  background: #bbdefb; /* slightly darker blue on hover */
+  border-color: #1976d2;
+}
+
+.skill-icon {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+.skill-name {
+  font-weight: 500;
+}
+
+/* Responsive: make sure it looks good on phones */
+@media (max-width: 600px) {
+  .section {
+    padding: 24px 0 12px 0;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+}
