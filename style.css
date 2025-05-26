@@ -1,3 +1,129 @@
+/* Contact footer styles */
+.contact-footer {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  align-items: center;
+  background: #eafff2;
+  border-top: 1px solid #b2e2c4;
+  padding: 16px 0 12px 0;
+  margin-top: 32px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #1abc9c;
+  font-size: 1.1em;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.contact-link:hover {
+  color: #159c85;
+}
+
+.contact-icon {
+  width: 28px;
+  height: 28px;
+  margin-right: 8px;
+  vertical-align: middle;
+  border-radius: 6px;
+  background: #fff;
+  border: 1px solid #b2e2c4;
+  box-shadow: 0 1px 4px rgba(26, 188, 156, 0.07);
+}
+/* Favorite Videos Section Styles */
+.favorite-videos-section {
+  background-color: #eafff2;
+  border: 2px solid #b2e2c4;
+  border-radius: 16px;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(26, 188, 156, 0.07);
+}
+
+.videos-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 18px;
+}
+
+.video-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #222;
+  width: 160px;
+}
+
+.video-thumb {
+  width: 150px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #b2e2c4;
+  box-shadow: 0 1px 6px rgba(26, 188, 156, 0.10);
+  margin-bottom: 8px;
+  background: #fff;
+}
+
+.video-title {
+  font-size: 1em;
+  margin-top: 2px;
+  color: #1abc9c;
+  text-align: center;
+}
+/* Container to place About Me and My Goal boxes side by side */
+.about-goal-container {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin: 32px auto;
+  flex-wrap: wrap;
+  max-width: 900px;
+}
+
+/* About Me box styling */
+.aboutme-section {
+  background-color: #eafff2; /* Soft light green to blend with site */
+  border: 2px solid #b2e2c4; /* Lighter green border */
+  border-radius: 14px;
+  padding: 18px 28px;
+  max-width: 350px;
+  min-width: 220px;
+  color: #333;
+  font-size: 1.1em;
+  box-shadow: 0 2px 8px rgba(26, 188, 156, 0.06);
+  text-align: center;
+}
+/* Style for the photo at the top of the page */
+.my-photo {
+  display: block;
+  margin: 0 auto 18px auto; /* Center the image and add space below */
+  width: 100px;
+  height: 100px;
+  object-fit: fill; /* Stretch the image to fill the box, removing whitespace */
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* Makes the image a circle */
+  border: 3px solid #1abc9c; /* Teal border to match the theme */
+  background-color: #eafff2; /* Matches the header box */
+  box-shadow: 0 2px 8px rgba(26, 188, 156, 0.10);
+  /* Make the photo fit nicely inside the header box */
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
 /* Style the projects section with a big, centered box */
 .projects-section {
   display: flex;
@@ -76,9 +202,13 @@ section.skills-section li {
 /* Placeholder for images under each skill */
 section.skills-section img {
   margin-top: 8px;
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
+  background-color: #eafff2; /* Matches the skills box background */
+  border-radius: 12px; /* Soft rounded corners for blending */
+  padding: 6px; /* Adds space around the image for blending */
+  box-shadow: 0 1px 4px rgba(26, 188, 156, 0.07); /* Soft shadow for a gentle look */
 }
 /* Make the goal section stand out with a box and clear font color */
 section.goal-section {
