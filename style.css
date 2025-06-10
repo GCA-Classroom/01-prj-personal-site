@@ -17,7 +17,7 @@ section, ul, li, p {
 
 /* Style the header */
 header {
-  background-color: #e5a5f9; /* blue header */
+  background-color: #e5a5f9; /* purple header */
   color: rgb(92, 24, 153);
   padding: 20px;
   text-align: center;
@@ -117,7 +117,7 @@ nav {
   text-decoration: underline;
 }
 
-/* Style for the hero image in the hero section */
+/* Style for the hero image in the lifeline section */
 .hero-img {
   display: block; /* puts the image on its own line */
   margin: 0 auto 15px auto; /* center the image and add space below */
