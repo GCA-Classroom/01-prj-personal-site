@@ -127,3 +127,11 @@ nav {
   border-radius: 12px; /* slightly rounded corners */
   border: 3px solid #8cf390; /* light green border to match section heading */
 }
+
+/* Style for the footer at the bottom of the page */
+footer {
+  margin-top: 30px;
+  padding: 20px 0;
+  background-color: #fff0fa; /* light pink background */
+  color: #5c1899; /* matches your header text */
+}
