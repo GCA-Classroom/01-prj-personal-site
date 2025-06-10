@@ -1,1 +1,80 @@
 /* Add you CSS here */
+
+/* Set a more readable cursive font for the whole page and make text italic */
+body {
+  background-color: #e181d4; /* light background */
+  font-family: "Segoe Script", "Comic Sans MS", "Comic Sans", cursive, sans-serif; /* more readable cursive font */
+  font-style: italic; /* make all text italic */
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the header */
+header {
+  background-color: #e5a5f9; /* blue header */
+  color: rgb(92, 24, 153);
+  padding: 20px;
+  text-align: center;
+}
+
+/* Add some space around each section */
+section {
+  background-color: rgb(255, 255, 255);
+  margin: 20px auto;
+  padding: 15px;
+  max-width: 600px; /* keeps content easy to read */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Style section headings */
+section h2 {
+  color: #8cf390;
+}
+
+/* Style lists */
+ul {
+  padding-left: 20px;
+}
+
+/* Remove bullet points from the social links list */
+#social ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Style links */
+a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Style the donate button */
+.donate-button {
+  display: inline-block;
+  background-color: #f5a623; /* orange button */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.donate-button:hover {
+  background-color: #d48806;
+}
+
+/* Style for the profile image above the heading */
+.profile-img {
+  display: block; /* puts the image on its own line */
+  margin: 0 auto 15px auto; /* center the image and add space below */
+  width: 180px; /* increased image size */
+  height: 180px;
+  object-fit: cover; /* crop the image to fit the circle */
+  border-radius: 50%; /* makes the image a circle */
+  border: 4px solid #ff69b4; /* hot pink border */
+}
