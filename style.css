@@ -7,6 +7,12 @@ body {
   font-style: italic; /* make all text italic */
   margin: 0;
   padding: 0;
+  text-align: center; /* center all text */
+}
+
+/* Center text in sections and lists */
+section, ul, li, p {
+  text-align: center;
 }
 
 /* Style the header */
@@ -34,12 +40,12 @@ section h2 {
 
 /* Style lists */
 ul {
-  padding-left: 20px;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 /* Remove bullet points from the social links list */
 #social ul {
-  list-style-type: none;
   padding-left: 0;
 }
 
@@ -77,4 +83,47 @@ a:hover {
   object-fit: cover; /* crop the image to fit the circle */
   border-radius: 50%; /* makes the image a circle */
   border: 4px solid #ff69b4; /* hot pink border */
+}
+
+/* Style for the navigation bar */
+nav {
+  background-color: #fff0fa; /* light pink background */
+  padding: 10px 0;
+}
+
+/* Style the navigation list */
+.navbar {
+  list-style-type: none; /* remove bullets */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Style each navigation item */
+.navbar li {
+  display: inline; /* show links in a row */
+  margin: 0 15px;
+}
+
+/* Style navigation links */
+.navbar a {
+  color: #e181d4; /* matches your color theme */
+  font-weight: bold;
+  text-decoration: none;
+  font-style: normal; /* keep nav links upright for readability */
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Style for the hero image in the hero section */
+.hero-img {
+  display: block; /* puts the image on its own line */
+  margin: 0 auto 15px auto; /* center the image and add space below */
+  width: 220px; /* make the image larger */
+  height: 220px;
+  object-fit: cover; /* crop the image to a square */
+  border-radius: 12px; /* slightly rounded corners */
+  border: 3px solid #8cf390; /* light green border to match section heading */
 }
