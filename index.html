@@ -1,11 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Personal Site</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sophia Diaz Portfolio</title>
+<!-- ...existing code... -->
+  
+</header>
+<!-- ...existing code... -->
+  <!-- Google Font: Poppins -->
+  <link hre="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons (your kit) -->
+  <script src="https://kit.fontawesome.com/ee4f0990df.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f8f6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      padding: 1rem 0;
+    }
+
+    nav a {
+      color: #444;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #0077b6;
+    }
+
+    header {
+      background-color: #e6e1dc;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-weight: 600;
+      font-size: 2.8rem;
+      color: #2c2a28;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-weight: 300;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    ul.skills-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    ul.skills-list li {
+      background-color: #d7ccc8;
+      color: #3e2723;
+      padding: 0.6rem 1rem;
+      border-radius: 20px;
+      font-weight: 500;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .project {
+      margin-bottom: 1.5rem;
+    }
+
+    .project-title {
+      font-weight: 600;
+      font-size: 1.3rem;
+      color: #2e2b28;
+    }
+
+    .project-description {
+      font-weight: 300;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    footer {
+      background-color: #e6e1dc;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .contact-link {
+      color: #2a5d84;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .contact-link:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <!-- Add your HTML content here -->
-</body>
-</html>
+
+<!-- Navigation Bar -->
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- Hero Section -->
+<header id="home">
+  <h1>Sophia Diaz</h1>
+  <p>Studying global health and international issues — building digital tools that make a difference.</p>
+  
+  <!-- Hero photo at the top of the header -->
+  <img src="img/IMG_6454.png" alt="Hero photo" style="width: 100%; max-width: 400px; border-radius: 10px; margin-bottom: 1rem;">
+</header>
+
+<!-- Main Content -->
+<main>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a sophomore at American University, double majoring in International Studies and Global Health. I am learning web development because knowledge is powerful and I am interested in crossing my studies with technology to further global change. In the future, I hope to pursue law school, focusing on kids, education, global health, and use photography — my passion — as a way to connect with others on these global issues. I am also a fluent Spanish speaker.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li><i class="fas fa-language"></i> Fluent Spanish</li>
+      <li><i class="fas fa-camera-retro"></i> Photography</li>
+      <li><i class="fas fa-users"></i> Team Collaboration</li>
+      <li><i class="fas fa-lightbulb"></i> Creativity</li>
+      <li><i class="fab fa-js-square"></i> JavaScript (Basic)</li>
+    </ul>
+  </section>
+  <section class="photo-scroll-gallery">
+  <h2>Shots</h2>
+  <div class="scroll-container">
+    <div class="scroll-track">
+      <!-- Flashcard 1 -->
+      <div class="flashcard">
+        <img src="img/IMG_9231 (1).png" alt="Solar panels">
+      </div>
+
+      <!-- Flashcard 2 -->
+      <div class="flashcard">
+        <img src="img/IMG_7097 (1).png" alt="Green building">
+      </div>
+
+      <!-- Flashcard 3 -->
+      <div class="flashcard">
+        <img src="img/DSC01616.png" alt="Tree planting">
+      </div>
+      <!-- Flashcard 4 -->
+      <div class="flashcard">
+        <img src="img/IMG_6502.png" alt="Wind energy">
+      </div>
+      <!-- Flashcard 5 -->
+      <div class="flashcard">
+        <img src="img/IMG_6589.png" alt="Wind energy">
+      </div>
+      <!-- Flashcard 6 -->
+      <div class="flashcard">
+        <img src="img/IMG_0768 (1).png" alt="Wind energy">
+      </div>
+      
+
+      <!-- Add more flashcards below as needed -->
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="Zoomed Image">
+</div>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <div class="project-title">Photography Portfolio</div>
+      <div class="project-description">
+        My goal is to capturing meaningful moments through my camera lens — with a focus on human connection, global stories, and everyday beauty.<br/>
+        <em><a href="https://photos.google.com/album/AF1QipMQv2KsJUWj025EFJ_Mg28aEgKzjfrDDd6MZ8uw/photo/AF1QipOhXpYs71ZU0MTFoz1bfGNIGJcUrYm9CBtYqq1P" target="_blank">View my photography portfolio</a></em>
+      </div>
+    </div>
+    <div class="project">
+      
+<!-- Volunteer Experience -->
+    <div class="project">
+      <div class="project-title">Volunteer Experience — buildOn</div>
+      <div class="project-description">
+        As a dedicated member of <em>buildOn</em>, I participated in a two-year service-learning program focused on global education equity.
+        In both my junior and senior years of high school, I fundraised over $4,000 annually to support the construction of schools in underserved communities abroad.<br /><br />
+        In Summer 2023, I traveled to rural Nicaragua, where I lived with a host family and helped lay the foundation for a new school.
+        A year later, I joined a similar trek to Babel2, Senegal, continuing hands-on work while deeply engaging with local communities.
+        Despite language barriers, I built meaningful relationships rooted in shared purpose and human connection.<br /><br />
+        These experiences taught me resilience, cultural humility, and the power of education as a catalyst for change—fueling my long-term passion for service, youth empowerment, and global health equity.
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer / Contact -->
+<footer id="contact">
+  <a href="https://www.linkedin.com/in/sophia-diaz-939ab1279" target="_blank" rel="noopener" class="contact-link">
+    <i class="fab fa-linkedin"></i> LinkedIn
+  </a>
+</footer>
