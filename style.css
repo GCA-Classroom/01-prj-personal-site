@@ -1,1 +1,63 @@
-/* Add you CSS here */
+/* Center all main titles and paragraphs */
+h1, h2, p {
+  text-align: center; /* This centers the text inside these elements */
+}
+/* Section Styling */
+.photo-scroll-gallery {
+  background-color: #ffffff;
+  padding: 20px 10px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.photo-scroll-gallery h2 {
+  font-size: 1.5rem;
+  color: #003399;
+  margin-bottom: 15px;
+}
+
+/* Scroll Container */
+.scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Scroll Track */
+.scroll-track {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+}
+
+/* Flashcard Container */
+.flashcard {
+  flex: 0 0 auto;
+  width: 180px;
+  height: 160px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 10px;
+  scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Flashcard Image */
+.flashcard img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+}
