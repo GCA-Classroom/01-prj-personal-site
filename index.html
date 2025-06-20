@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <head>
+  <!-- ...existing code... -->
+  <style>
+    /* ...existing CSS code... */
+
+    /* This makes all images the same width and keeps their shape */
+    img {
+      width: 100%;         /* Image fills its container */
+      max-width: 200px;    /* You can change 200px to any size you want */
+      height: auto;        /* Keeps the image from stretching */
+      display: block;      /* Removes small gaps below images */
+      border-radius: 10px; /* Rounded corners for all images */
+      margin: 0 auto;      /* Centers the image in its container */
+    }
+
+    /* ...existing CSS code... */
+  </style>
+  <!-- ...existing code... -->
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sophia Diaz Portfolio</title>
@@ -185,53 +204,46 @@
   </section>
   <section class="photo-scroll-gallery">
   <h2>Shots</h2>
+  
   <div class="scroll-container">
-    <div class="scroll-track">
-      <!-- Flashcard 1 -->
       <div class="flashcard">
         <img src="img/IMG_9231 (1).png" alt="Solar panels">
       </div>
-
-      <!-- Flashcard 2 -->
       <div class="flashcard">
-        <img src="img/IMG_7097 (1).png" alt="Green building">
+        <img src="img/IMG_7097 (1).png" alt="Intel building">
       </div>
-
-      <!-- Flashcard 3 -->
       <div class="flashcard">
         <img src="img/DSC01616.png" alt="Tree planting">
       </div>
-      <!-- Flashcard 4 -->
       <div class="flashcard">
-        <img src="img/IMG_6502.png" alt="Wind energy">
+        <img src="img/IMG_0768 (1).png" alt="Solar panels">
       </div>
-      <!-- Flashcard 5 -->
       <div class="flashcard">
-        <img src="img/IMG_6589.png" alt="Wind energy">
+        <img src="img/IMG_6589.png
+        " alt="Intel building">
       </div>
-      <!-- Flashcard 6 -->
       <div class="flashcard">
-        <img src="img/IMG_0768 (1).png" alt="Wind energy">
-      </div>
-      
-
-      <!-- Add more flashcards below as needed -->
+        <img src="img/IMG_6502.png" (1).png alt="Tree planting">
+      <!-- Add more flashcards as needed -->
     </div>
   </div>
 </section>
 
+
 <!-- Lightbox Modal -->
-<div id="lightbox" class="lightbox">
+<div class="lightbox-modal" id="lightboxModal">
   <span class="close">&times;</span>
-  <img class="lightbox-img" id="lightbox-img" src="" alt="Zoomed Image">
-</div>
+  <img class="lightbox-content" id="lightboxImage">
+  <div class="caption" id="lightboxCaption"></div>
+</div>    
+
   <section id="projects">
     <h2>Projects</h2>
     <div class="project">
       <div class="project-title">Photography Portfolio</div>
       <div class="project-description">
-        My goal is to capturing meaningful moments through my camera lens — with a focus on human connection, global stories, and everyday beauty.<br/>
-        <em><a href="https://photos.google.com/album/AF1QipMQv2KsJUWj025EFJ_Mg28aEgKzjfrDDd6MZ8uw/photo/AF1QipOhXpYs71ZU0MTFoz1bfGNIGJcUrYm9CBtYqq1P" target="_blank">View my photography portfolio</a></em>
+        Capturing meaningful moments through my camera lens is what I am most passionate about. I look forward to using my hobby to share true human connections, global stories, and everyday beauty.<br/>
+        <em><a href="https://photos.google.com/album/AF1QipMQv2KsJUWj025EFJ_Mg28aEgKzjfrDDd6MZ8uw/photo/AF1QipOhXpYs71ZU0MTFoz1bfGNIGJcUrYm9CBtYqq1P" target="_blank">google photos gallery </a></em>
       </div>
     </div>
     <div class="project">

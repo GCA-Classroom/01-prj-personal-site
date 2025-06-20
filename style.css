@@ -2,22 +2,24 @@
 h1, h2, p {
   text-align: center; /* This centers the text inside these elements */
 }
-/* Section Styling */
+/* Section Container */
 .photo-scroll-gallery {
-  background-color: #ffffff;
-  padding: 20px 10px;
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #022d54; /* Deep blue like your timeline */
+  overflow-x: hidden;
+  color: white;
 }
 
 .photo-scroll-gallery h2 {
-  font-size: 1.5rem;
-  color: #003399;
-  margin-bottom: 15px;
+  font-size: 1.6rem;
+  margin: 0;
+  color: #ffffff;
 }
 
-/* Scroll Container */
+/* Scrollable Row */
 .scroll-container {
   overflow-x: auto;
   overflow-y: hidden;
@@ -30,11 +32,11 @@ h1, h2, p {
   display: none;
 }
 
-/* Scroll Track */
+/* Horizontal Track */
 .scroll-track {
   display: flex;
-  gap: 12px;
-  padding: 10px;
+  gap: 16px;
+  padding: 10px 0;
 }
 
 /* Flashcard Container */
@@ -42,19 +44,17 @@ h1, h2, p {
   flex: 0 0 auto;
   width: 180px;
   height: 160px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
+  background-color: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  padding: 10px;
   scroll-snap-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  padding: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Flashcard Image */
+/* Image Styling */
 .flashcard img {
   max-width: 100%;
   max-height: 100%;
