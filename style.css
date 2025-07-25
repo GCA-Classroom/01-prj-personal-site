@@ -1,1 +1,137 @@
 /* Add you CSS here */
+
+/* Set a more readable cursive font for the whole page and make text italic */
+body {
+  background-color: #e181d4; /* light background */
+  font-family: "Segoe Script", "Comic Sans MS", "Comic Sans", cursive, sans-serif; /* more readable cursive font */
+  font-style: italic; /* make all text italic */
+  margin: 0;
+  padding: 0;
+  text-align: center; /* center all text */
+}
+
+/* Center text in sections and lists */
+section, ul, li, p {
+  text-align: center;
+}
+
+/* Style the header */
+header {
+  background-color: #e5a5f9; /* purple header */
+  color: rgb(92, 24, 153);
+  padding: 20px;
+  text-align: center;
+}
+
+/* Add some space around each section */
+section {
+  background-color: rgb(255, 255, 255);
+  margin: 20px auto;
+  padding: 15px;
+  max-width: 600px; /* keeps content easy to read */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Style section headings */
+section h2 {
+  color: #28be2d;
+}
+
+/* Style lists */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Remove bullet points from the social links list */
+#social ul {
+  padding-left: 0;
+}
+
+/* Style links */
+a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Style the donate button */
+.donate-button {
+  display: inline-block;
+  background-color: #f5a623; /* orange button */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.donate-button:hover {
+  background-color: #d48806;
+}
+
+/* Style for the profile image above the heading */
+.profile-img {
+  display: block; /* puts the image on its own line */
+  margin: 0 auto 15px auto; /* center the image and add space below */
+  width: 180px; /* increased image size */
+  height: 180px;
+  object-fit: cover; /* crop the image to fit the circle */
+  border-radius: 50%; /* makes the image a circle */
+  border: 4px solid #ff69b4; /* hot pink border */
+}
+
+/* Style for the navigation bar */
+nav {
+  background-color: #fff0fa; /* light pink background */
+  padding: 10px 0;
+}
+
+/* Style the navigation list */
+.navbar {
+  list-style-type: none; /* remove bullets */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Style each navigation item */
+.navbar li {
+  display: inline; /* show links in a row */
+  margin: 0 15px;
+}
+
+/* Style navigation links */
+.navbar a {
+  color: #e181d4; /* matches your color theme */
+  font-weight: bold;
+  text-decoration: none;
+  font-style: normal; /* keep nav links upright for readability */
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Style for the hero image in the lifeline section */
+.hero-img {
+  display: block; /* puts the image on its own line */
+  margin: 0 auto 15px auto; /* center the image and add space below */
+  width: 220px; /* make the image larger */
+  height: 220px;
+  object-fit: cover; /* crop the image to a square */
+  border-radius: 12px; /* slightly rounded corners */
+  border: 3px solid #8cf390; /* light green border to match section heading */
+}
+
+/* Style for the footer at the bottom of the page */
+footer {
+  margin-top: 30px;
+  padding: 20px 0;
+  background-color: #fff0fa; /* light pink background */
+  color: #5c1899; /* matches your header text */
+}
