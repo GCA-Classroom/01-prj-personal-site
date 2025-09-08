@@ -26,11 +26,26 @@ width: 100%;              /* full width */
   height: 30px;             
   top: 0;                   /* stick to top */
   left: 0;
+  position: fixed;
 }
 
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav li {
+  display: inline-block;
+  /* margin-right: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 5px; */
+}
 
 .me{
-background-color: rgb(174, 189, 223);
+background-color: rgba(174, 189, 223, 0.575);
 padding: 2%;
 box-shadow: 0 4px 8px rgb(0, 38, 255);
 /* border: 2px solid rgba(84, 120, 196, 0.151); */
@@ -94,7 +109,7 @@ border: 2px solid rgba(84, 120, 196, 0.151);
 }
 
 .skills {
-background-color: rgb(174, 189, 223);
+background-color: rgba(174, 189, 223, 0.575);
   padding: 2%;
   margin-top: 2em;
   box-shadow: 0 4px 8px rgb(0, 0, 0);
