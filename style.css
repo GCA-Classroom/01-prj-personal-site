@@ -1,1 +1,160 @@
-/* Add you CSS here */
+/* Decorative side images */
+.side-img {
+	position: fixed;
+	z-index: 0;
+	opacity: 0.18;
+	width: 80px;
+	height: 80px;
+	pointer-events: none;
+}
+.left-img {
+	left: 12px;
+}
+.right-img {
+	right: 12px;
+}
+.bottom-img {
+	bottom: 24px;
+	top: auto;
+}
+.side-img:not(.bottom-img) {
+	top: 24px;
+}
+.skill-icon {
+	width: 28px;
+	height: 28px;
+	vertical-align: middle;
+	margin-right: 8px;
+	margin-left: 2px;
+}
+
+.skills ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.skills li {
+	display: flex;
+	align-items: center;
+	background: #6c2eb7;
+	color: #fff;
+	padding: 10px 16px;
+	margin: 12px 0;
+	border-radius: 20px;
+	font-size: 16px;
+	justify-content: flex-start;
+	gap: 8px;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+/* Mission Section */
+.mission {
+	background: #2d0a4b;
+	max-width: 400px;
+	margin: 24px 0;
+	padding: 20px 16px;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+	text-align: center;
+	color: #f7f7f7;
+}
+
+.mission h2 {
+	font-weight: bold;
+	color: #e0aaff;
+	margin-bottom: 10px;
+}
+/* Reset some default styles */
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background: linear-gradient(to bottom, #1a0826 0%, #6c2eb7 100%);
+	color: #f7f7f7;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+	background: #2d0a4b; /* Deeper purple */
+	color: #fff;
+	text-align: center;
+	padding: 40px 20px 24px 20px;
+	border-radius: 0 0 24px 24px;
+	margin-bottom: 32px;
+	width: 100vw;
+	max-width: 100vw;
+	box-sizing: border-box;
+}
+
+.hero-img {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%; /* Makes the image round */
+	border: 3px solid #fff;
+	margin-bottom: 12px;
+	margin-top: 8px;
+}
+
+.hero h1 {
+	margin: 0 0 8px 0;
+	font-size: 2rem;
+	color: #e0aaff;
+}
+
+.hero p {
+	margin: 0;
+	color: #d1c4e9;
+	font-size: 1.1rem;
+}
+
+/* Bio/About Section */
+.bio {
+	background: #2d0a4b;
+	max-width: 400px;
+	margin: 24px 0;
+	padding: 20px 16px;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+	text-align: center;
+	color: #f7f7f7;
+}
+
+/* Skills Section */
+.skills {
+	background: #2d0a4b;
+	max-width: 400px;
+	margin: 24px 0 32px 0;
+	padding: 20px 16px;
+	border-radius: 12px;
+	text-align: center;
+	color: #f7f7f7;
+}
+
+.skills ul {
+	list-style: none;
+	padding: 0;
+}
+
+.skills li {
+	display: inline-block;
+	background: #6c2eb7;
+	color: #fff;
+	padding: 8px 16px;
+	margin: 6px 4px;
+	border-radius: 20px;
+	font-size: 16px;
+}
+
+@media (max-width: 600px) {
+	.bio, .skills {
+		margin: 12px 4px;
+		padding: 12px 4px;
+		max-width: 95vw;
+	}
+	.hero {
+		padding: 32px 4px 16px 4px;
+	}
+}
