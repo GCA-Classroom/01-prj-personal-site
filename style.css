@@ -1,1 +1,156 @@
-/* Add you CSS here */
+/* Style for the top section */
+.top-section {
+  background-color: #fafdffd3;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 40px auto 40px auto;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-size: 1.2em; /* Increase font size for all text in the top section */
+}
+
+/* Container for the cards */
+/* This centers the cards and keeps them in a row */
+.card-container {
+  width: 100%;
+  max-width: 1000px;      /* Limit the container width */
+  margin: 40px auto 100px auto; /* Center the container and add space below */
+  text-align: center;      /* Center the cards inside the container */
+}
+
+/* Style for each card */
+/* Use inline-block to keep cards in a row of 3 */
+.card {
+  background-color: #dae5f1;
+  padding: 30px;
+  width: 28%;              /* About 3 cards per row */
+  display: inline-block;   /* Show cards next to each other */
+  margin: 1%;              /* Space between cards */
+  vertical-align: top;     /* Align cards to the top */
+  text-align: center;
+  box-sizing: border-box;  /* Include padding in width */
+  border-radius: 10px;      /* Rounded corners */
+}
+
+/* Make all text in the About Me card bigger */
+.card:nth-child(1) {
+  font-size: 1.2em; /* Increase font size for all text in the About Me card */
+}
+
+/* Make all text in the Languages card bigger */
+/* This uses a class selector for beginner simplicity */
+.card:nth-child(2) {
+  font-size: 1.2em; /* Increase font size for all text in the Languages card */
+}
+
+/* Make all text in the Languages card bigger */
+/* This uses a class selector for beginner simplicity */
+.card:nth-child(3) {
+  font-size: 1.2em; /* Increase font size for all text in the Languages card */
+}
+
+/* Style for each language line */
+/* This centers the text and icon, and keeps them on the same line */
+.language {
+  text-align: center;      /* Center the whole line */
+  margin-bottom: 10px;     /* Space below each language */
+}
+
+/* Style for the language name and icon */
+.language p {
+  display: inline-block;   /* Keep text and icon together */
+  font-size: 1em;          /* Normal font size */
+  vertical-align: middle;  /* Align text and icon vertically */
+  margin: 0;               /* Remove default margin */
+}
+
+/* Style for the language icon after the text */
+.language i {
+  font-size: 1.2em;        /* Make the icon a bit bigger */
+  vertical-align: middle;  /* Align icon with text */
+  margin-left: 8px;        /* Space between text and icon */
+}
+
+/* Style for the circle-user icon */
+.user-icon {
+  font-size: 4em;
+  margin-bottom: 10px;
+}
+
+/* Style for the social media icons */
+.social-media a {
+  margin: 0 10px;
+  font-size: 2em;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Enlarge the paragraph in the About Me card */
+.about-me-text {
+  font-size: 1.3em;        /* Make the text bigger */
+  line-height: 1.5;        /* Add space between lines for readability */
+}
+
+/* Beginner-friendly background card under all cards */
+.bottom-card-background {
+  background-color: #d6e9f6;
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 900px;
+  margin: 35px auto 0 auto;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  text-align: center;
+  font-size: 25px; /* Height of the background card */
+}
+
+/* Beginner-friendly three-color split background */
+
+/* Remove default margin and padding from body and html */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Make the background divs fill the whole page height */
+.left-bg, .middle-bg, .right-bg {
+  height: 100vh;      /* Full viewport height */
+  position: fixed;    /* Fix to the viewport */
+  top: 0;
+}
+
+/* Left side background */
+.left-bg {
+  background-color: #a8d0f3; /* Light blue */
+  width: 20%;                /* 20% of the screen */
+  left: 0;                   /* Start at the left edge */
+}
+
+/* Middle side background */
+.middle-bg {
+  background-color: #6abaff; /* Light purple */
+  width: 60%;                /* 60% of the screen */
+  left: 20%;                 /* Start after the left side */
+}
+
+/* Right side background */
+.right-bg {
+  background-color: #a8d0f3; /* Light blue */
+  width: 20%;                /* 20% of the screen */
+  left: 80%;                 /* Start after the middle section */
+}
+
+/* Make the content overlap the backgrounds */
+.content {
+  position: absolute;        /* Place content above backgrounds */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;                /* Make sure it's above the backgrounds */
+}
+
+/*
+  Beginner tip:
+  The left side is 20%, the middle is 60%, and the right side is 20%.
+  This fills the whole page and touches the

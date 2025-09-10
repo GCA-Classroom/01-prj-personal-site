@@ -1,11 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/4c0200abaa.js" crossorigin="anonymous"></script>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
+  <title>Simple Card Example</title>
+  <!-- Link to the CSS file for styling -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <!-- Three divs for left, middle, and right background colors -->
+  <div class="left-bg"></div>
+  <div class="middle-bg"></div>
+  <div class="right-bg"></div>
+
+  <!-- All your page content goes here and will overlap the backgrounds -->
+  <div class="content">
+    <!-- Top section with user icon and info -->
+    <div class="top-section">
+      <!-- Enlarged circle-user icon -->
+      <i class="fa-solid fa-circle-user user-icon"></i>
+      <h1>Logan Hunter</h1>
+      <h2>Web Developer</h2>
+    </div>
+
+    <!-- Card container for all cards -->
+    <div class="card-container">
+      <!-- About Me Card -->
+      <div class="card">
+        <h2>About Me</h2>
+        <p>Hello! I'm Logan, a beginner web developer hoping to gain as much experience as possible. I'm always eager to learn new concepts and improve my skills.</p>
+      </div>
+      <!-- Languages Card -->
+      <div class="card">
+        <h2>Languages</h2>
+        <!-- Each language name is followed by its matching icon -->
+        <div class="language">
+          <p>Python <i class="fa-brands fa-python"></i></p>
+        </div>
+        <div class="language">
+          <p>HTML <i class="fa-brands fa-html5"></i></p>
+        </div>
+        <div class="language">
+          <p>CSS <i class="fa-brands fa-css3-alt"></i></p>
+        </div>
+        
+        <div class="language">
+          <p>Java <i class="fa-brands fa-java"></i></p>
+        </div>
+      </div>
+      <!-- Where to Find Me Card -->
+      <div class="card">
+        <h2>My Goals</h2>
+        <p>My goals are to become a proficient web developer. By summer I hope to have secured an internship. Please feel free to reach out if you have any opportunities!</p>
+      </div>
+    </div>
+
+    <!-- Bottom card background section -->
+    <div class="bottom-card-background">
+      <h2>Connect With Me</h2>
+        <div class="social-media">
+          <a href="https://www.linkedin.com/in/logan-hunter-7647b9382/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/NotMehFault" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      <!-- This is just a background, not a content card -->
+      <!-- You can add more info here if you want -->
+    </div>
+  </div>
+
+  <!-- Link to the JavaScript module -->
+  <script type="module" src="main.js"></script>
 </body>
 </html>
+
