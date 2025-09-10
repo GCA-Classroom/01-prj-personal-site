@@ -1,1 +1,63 @@
-/* Add you CSS here */
+/* 
+  This CSS file styles the sections and paragraphs.
+  It uses simple properties for beginners.
+*/
+
+/* Set the overall background color to light gray */
+body {
+  background-color: #eeeeee; /* Light gray background for the whole page */
+}
+
+/* Style for all sections */
+.section {
+  /* Add space inside each section */
+  padding: 20px;
+  /* Add space below each section */
+  margin-bottom: 10px;
+  /* Center all content in the section */
+  text-align: center;
+}
+
+/* First section: light blue background */
+.section-one {
+  background-color: #cceeff;
+  font-size: 2em;        /* Keep the text size the same */
+  padding: 120px;         /* Give section one more space inside */
+  margin-bottom: 40px;   /* Add more space below the first section */
+}
+
+/* Second section: light green background */
+.section-two {
+  background-color: #ccffcc;
+}
+
+/* Third section: light yellow background */
+.section-three {
+  background-color: #ffffcc;
+}
+
+/* Style for headings */
+h2, .separator-heading {
+  /* Make headings bigger and center them */
+  font-size: 2em;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Style for all paragraphs */
+p, .separator {
+  /* Make all words bigger and center them */
+  font-size: 1.5em;
+  text-align: center;
+  margin: 15px 0;
+  font-weight: normal;
+}
+
+/* Style for the placeholder image in section one */
+.placeholder-img {
+  display: block;           /* Make the image a block element */
+  margin: 0 auto 20px auto; /* Center the image and add space below */
+  width: 300px;             /* Set a simple width for beginners */
+  height: 100px;            /* Set a simple height for beginners */
+}
