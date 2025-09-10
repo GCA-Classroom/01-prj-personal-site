@@ -1,1 +1,127 @@
-/* Add you CSS here */
+/*
+  style.css - Simple styles for your personal website
+  This file uses beginner-friendly CSS and includes comments to help you learn.
+*/
+
+/* Set up color variables for easy changes */
+:root {
+  --light-purple: #e6d6f3; /* light/lilac purple */
+  --deep-purple: #6c3483;  /* deep purple */
+  --magenta: #d72660;      /* magenta */
+  --white: #fff;
+}
+
+/* Set the background color and font for the whole page */
+body {
+  background-color: var(--light-purple);
+  font-family: Arial, sans-serif;
+  color: var(--deep-purple);
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the navigation bar */
+nav {
+  background-color: var(--deep-purple);
+  padding: 10px 0;
+  margin-bottom: 0;
+}
+nav ul {
+  list-style: none; /* Remove bullets */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+nav ul li {
+  display: inline; /* Show links in a row */
+  margin: 0 15px;
+}
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+}
+nav ul li a:hover {
+  color: var(--magenta); /* Change color on hover */
+}
+
+/* Style each section to look neat and small */
+section {
+  background-color: var(--white);
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(108, 52, 131, 0.08);
+}
+
+/* Style the hero section to span the full width and be flush with the nav bar */
+#hero {
+  text-align: center;
+  background-color: var(--magenta);
+  color: var(--white);
+  margin-top: 0; /* Remove top margin */
+  border-radius: 0 0 10px 10px; /* Only round the bottom corners */
+  max-width: none; /* Remove max-width so it fills the page */
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 10px; /* Decreased from 30px to 10px */
+}
+
+/* Remove margin from the first section to make it flush with nav */
+#hero {
+  margin-top: 0;
+}
+
+/* Use Pacifico font for section headers */
+h2 {
+  font-family: 'Pacifico', cursive;
+  color: var(--deep-purple);
+  margin-bottom: 10px;
+}
+
+/* Make sure the hero section title uses the Pacifico font */
+#hero h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+/* Highlight the skills section */
+#skills {
+  border: 2px solid var(--magenta);
+  background-color: #fbeafc; /* very light magenta */
+}
+#skills h2 {
+  color: var(--magenta);
+}
+#skills ul {
+  padding-left: 20px;
+}
+#skills li {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Style the footer */
+footer {
+  text-align: center;
+  background-color: var(--deep-purple);
+  color: var(--white);
+  padding: 10px 0; /* Reduced from 15px */
+  margin-top: 40px;
+  font-size: 0.7em; /* Smaller font */
+  border-radius: 0 0 10px 10px;
+}
+
+/* Style for the profile picture in the hero section */
+.profile-pic {
+  display: block;
+  margin: 20px auto 0 auto; /* Center the image and add space above */
+  width: 120px; /* You can adjust the size */
+  height: 120px;
+  object-fit: cover; /* Make sure the image covers the area */
+  border-radius: 50%; /* Makes the image circular */
+  border: 4px solid var(--white); /* White border around the image */
+  box-shadow: 0 2px 8px rgba(108, 52, 131, 0.15); /* Optional: soft shadow */
+}
