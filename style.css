@@ -1,63 +1,156 @@
-/* 
-  This CSS file styles the sections and paragraphs.
-  It uses simple properties for beginners.
-*/
-
-/* Set the overall background color to light gray */
-body {
-  background-color: #eeeeee; /* Light gray background for the whole page */
-}
-
-/* Style for all sections */
-.section {
-  /* Add space inside each section */
-  padding: 20px;
-  /* Add space below each section */
-  margin-bottom: 10px;
-  /* Center all content in the section */
+/* Style for the top section */
+.top-section {
+  background-color: #fafdffd3;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 40px auto 40px auto;
   text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-size: 1.2em; /* Increase font size for all text in the top section */
 }
 
-/* First section: light blue background */
-.section-one {
-  background-color: #cceeff;
-  font-size: 2em;        /* Keep the text size the same */
-  padding: 120px;         /* Give section one more space inside */
-  margin-bottom: 40px;   /* Add more space below the first section */
+/* Container for the cards */
+/* This centers the cards and keeps them in a row */
+.card-container {
+  width: 100%;
+  max-width: 1000px;      /* Limit the container width */
+  margin: 40px auto 100px auto; /* Center the container and add space below */
+  text-align: center;      /* Center the cards inside the container */
 }
 
-/* Second section: light green background */
-.section-two {
-  background-color: #ccffcc;
+/* Style for each card */
+/* Use inline-block to keep cards in a row of 3 */
+.card {
+  background-color: #dae5f1;
+  padding: 30px;
+  width: 28%;              /* About 3 cards per row */
+  display: inline-block;   /* Show cards next to each other */
+  margin: 1%;              /* Space between cards */
+  vertical-align: top;     /* Align cards to the top */
+  text-align: center;
+  box-sizing: border-box;  /* Include padding in width */
+  border-radius: 10px;      /* Rounded corners */
 }
 
-/* Third section: light yellow background */
-.section-three {
-  background-color: #ffffcc;
+/* Make all text in the About Me card bigger */
+.card:nth-child(1) {
+  font-size: 1.2em; /* Increase font size for all text in the About Me card */
 }
 
-/* Style for headings */
-h2, .separator-heading {
-  /* Make headings bigger and center them */
+/* Make all text in the Languages card bigger */
+/* This uses a class selector for beginner simplicity */
+.card:nth-child(2) {
+  font-size: 1.2em; /* Increase font size for all text in the Languages card */
+}
+
+/* Make all text in the Languages card bigger */
+/* This uses a class selector for beginner simplicity */
+.card:nth-child(3) {
+  font-size: 1.2em; /* Increase font size for all text in the Languages card */
+}
+
+/* Style for each language line */
+/* This centers the text and icon, and keeps them on the same line */
+.language {
+  text-align: center;      /* Center the whole line */
+  margin-bottom: 10px;     /* Space below each language */
+}
+
+/* Style for the language name and icon */
+.language p {
+  display: inline-block;   /* Keep text and icon together */
+  font-size: 1em;          /* Normal font size */
+  vertical-align: middle;  /* Align text and icon vertically */
+  margin: 0;               /* Remove default margin */
+}
+
+/* Style for the language icon after the text */
+.language i {
+  font-size: 1.2em;        /* Make the icon a bit bigger */
+  vertical-align: middle;  /* Align icon with text */
+  margin-left: 8px;        /* Space between text and icon */
+}
+
+/* Style for the circle-user icon */
+.user-icon {
+  font-size: 4em;
+  margin-bottom: 10px;
+}
+
+/* Style for the social media icons */
+.social-media a {
+  margin: 0 10px;
   font-size: 2em;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  color: #333;
+  text-decoration: none;
 }
 
-/* Style for all paragraphs */
-p, .separator {
-  /* Make all words bigger and center them */
-  font-size: 1.5em;
-  text-align: center;
-  margin: 15px 0;
-  font-weight: normal;
+/* Enlarge the paragraph in the About Me card */
+.about-me-text {
+  font-size: 1.3em;        /* Make the text bigger */
+  line-height: 1.5;        /* Add space between lines for readability */
 }
 
-/* Style for the placeholder image in section one */
-.placeholder-img {
-  display: block;           /* Make the image a block element */
-  margin: 0 auto 20px auto; /* Center the image and add space below */
-  width: 300px;             /* Set a simple width for beginners */
-  height: 100px;            /* Set a simple height for beginners */
+/* Beginner-friendly background card under all cards */
+.bottom-card-background {
+  background-color: #d6e9f6;
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 900px;
+  margin: 35px auto 0 auto;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  text-align: center;
+  font-size: 25px; /* Height of the background card */
 }
+
+/* Beginner-friendly three-color split background */
+
+/* Remove default margin and padding from body and html */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Make the background divs fill the whole page height */
+.left-bg, .middle-bg, .right-bg {
+  height: 100vh;      /* Full viewport height */
+  position: fixed;    /* Fix to the viewport */
+  top: 0;
+}
+
+/* Left side background */
+.left-bg {
+  background-color: #a8d0f3; /* Light blue */
+  width: 20%;                /* 20% of the screen */
+  left: 0;                   /* Start at the left edge */
+}
+
+/* Middle side background */
+.middle-bg {
+  background-color: #6abaff; /* Light purple */
+  width: 60%;                /* 60% of the screen */
+  left: 20%;                 /* Start after the left side */
+}
+
+/* Right side background */
+.right-bg {
+  background-color: #a8d0f3; /* Light blue */
+  width: 20%;                /* 20% of the screen */
+  left: 80%;                 /* Start after the middle section */
+}
+
+/* Make the content overlap the backgrounds */
+.content {
+  position: absolute;        /* Place content above backgrounds */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;                /* Make sure it's above the backgrounds */
+}
+
+/*
+  Beginner tip:
+  The left side is 20%, the middle is 60%, and the right side is 20%.
+  This fills the whole page and touches the
