@@ -2,10 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>erinclee portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <!-- nav bar -->
+  <nav>
+    <div class="nav-container">
+      <a href="#" class="logo">erinclee</a>
+      <ul>
+        <li><a href="#bio">about</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- header with photo + bio-->
+  <header id="bio">
+    <div class="bio-content">
+      <div class="bio-photo">
+        <img src="erinpic.png" alt="Photo of Erin Lee">
+      </div>
+      <div class="bio-text">
+        <h1>hi, i'm erin!</h1>
+        <p><b>aspiring product designer with illustration chops creating user first experiences.</b></p>
+        <p>currently an undergraduate student at the University of Michigan (go blue!) majoring in UX Design and double minoring in art and entrepreneurship. My background in traditional and fine art, specifically illustration, has led me to explore different forms of art. As I explored the various types of art, I started to discover a passion for design. </p>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/erinc-lee" aria-label="LinkedIn" target="_blank">
+            <span class="material-icons">work</span>
+          </a>
+
+          <!-- Email icon -->
+          <a href="mailto:erinclee@umich.edu" aria-label="Email">
+            <span class="material-icons">alternate_email</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="section-content">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>UI/UX Design</li>
+        <li>Illustration</li>
+        <li>HTML &amp; CSS</li>
+        <li>Figma</li>
+        <li>Prototyping</li>
+        <li>User Research</li>
+        <li>Wireframing</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="section-content">
+      <h2>Projects</h2>
+      <div class="project-list">
+        <!-- Project card 1 -->
+        <div class="project-card">
+          <h3>NomNow – Meal Sharing App</h3>
+          <p>
+            A mobile app that reduces food waste and builds community by connecting users through meal sharing with convenient scheduling and pickup options. Features include real-time availability tracking, user ratings, and integrated payment systems.
+          </p>
+        </div>
+        <!-- Project card 2 -->
+        <div class="project-card">
+          <h3>LabLink – Centralized Research Hub</h3>
+          <p>
+            A research platform that connects students with labs through tailored workflows, live application tracking, and smart matching to improve how opportunities are found and filled. Includes personalized recommendations and progress analytics.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer / Contact Section -->
+  <footer id="contact">
+    <p>Contact: <a href="mailto:erinclee@umich.edu">erinclee@umich.edu</a></p>
+  </footer>
 </body>
 </html>
