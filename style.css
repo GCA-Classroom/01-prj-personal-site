@@ -5,6 +5,18 @@
 
 /* Tokyo, Japan inspired dark theme for beginners */
 
+/* Visually hidden class for accessibility (screen readers only) */
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
 /* Main body styles: font, background, and text color */
 body {
 	font-family: 'Montserrat', Arial, sans-serif;
@@ -12,6 +24,7 @@ body {
 	padding: 0;
 	/* Tokyo night gradient with subtle pattern and Tokyo Tower background image */
 	background:
+		linear-gradient(rgba(24, 28, 47, 0.85), rgba(24, 28, 47, 0.85)), /* overlay */
 		linear-gradient(135deg, #181c2f 0%, #2a2740 100%),
 		repeating-linear-gradient(135deg, #23234d 0 18px, #1a1833 18px 36px),
 		url('img/Screenshot 2025-09-12 001602.png'); /* Embedded PNG */
@@ -273,6 +286,10 @@ a:focus, button:focus, .icon-link:focus {
 /* --- Responsive design for mobile devices --- */
 /* Students: This makes the site look better on small screens */
 @media (max-width: 600px) {
+	body {
+		background-size: cover, cover, 200px auto;
+		padding-bottom: 80px;
+	}
 	section {
 		padding: 24px 8px;
 		max-width: 98vw;
