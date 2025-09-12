@@ -1,3 +1,8 @@
+/* 
+  Beginner-friendly CSS for a Tokyo, Japan inspired personal website.
+  This file uses simple CSS and comments to help students learn.
+*/
+
 /* Tokyo, Japan inspired dark theme for beginners */
 
 /* Main body styles: font, background, and text color */
@@ -117,6 +122,12 @@ section {
 
 /* Project card hover effect for interactivity */
 .project:hover {
+	box-shadow: 0 4px 24px #40cfff88;
+	border-color: #40cfff;
+}
+
+/* Project card focus-within for keyboard users */
+.project:focus-within {
 	box-shadow: 0 4px 24px #40cfff88;
 	border-color: #40cfff;
 }
@@ -254,12 +265,19 @@ footer {
 	outline: 2px solid #40cfff;
 }
 
+/* Focus style for all interactive elements for keyboard accessibility */
+a:focus, button:focus, .icon-link:focus {
+	outline: 2px solid #40cfff;
+	outline-offset: 2px;
+}
+
 /* --- Responsive design for mobile devices --- */
 /* Students: This makes the site look better on small screens */
 @media (max-width: 600px) {
 	section {
 		padding: 24px 8px;
 		max-width: 98vw;
+		margin-bottom: 32px; /* More spacing between sections on mobile */
 	}
 	.hero-img {
 		width: 90px;
