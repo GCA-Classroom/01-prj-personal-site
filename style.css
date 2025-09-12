@@ -1,1 +1,323 @@
-/* Add you CSS here */
+/* 
+  Beginner-friendly CSS for a Tokyo, Japan inspired personal website.
+  This file uses simple CSS and comments to help students learn.
+*/
+
+/* This class hides content visually but keeps it accessible for screen readers.
+   Useful for decorative image descriptions or skip links. */
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+/* Tokyo, Japan inspired dark theme for beginners */
+
+/* Main body styles: font, background, and text color */
+body {
+	font-family: 'Montserrat', Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	/* Tokyo night gradient with subtle pattern and Tokyo Tower background image */
+	background:
+		linear-gradient(rgba(24, 28, 47, 0.92), rgba(24, 28, 47, 0.92)), /* darker overlay */
+		linear-gradient(135deg, #181c2f 0%, #2a2740 100%),
+		repeating-linear-gradient(135deg, #23234d 0 18px, #1a1833 18px 36px),
+		url('img/Screenshot 2025-09-12 001602.png'); /* Embedded PNG */
+	background-size: cover, cover, 350px auto; /* PNG will be max 350px wide */
+	background-repeat: no-repeat, repeat, no-repeat;
+	background-position: center bottom, left top, center bottom;
+	padding-bottom: 120px; /* Add padding so content doesn't overlap the image */
+	opacity: 0.98;
+	color: #fff6fa; /* Brighter sakura pinkish-white text for better contrast */
+	min-height: 100vh;
+	font-size: 1.15em;
+	line-height: 1.8;
+}
+
+/* Section styling: indigo background, neon pink border, and shadow */
+section {
+	max-width: 650px;
+	margin: 56px auto;
+	background: #23234d;
+	padding: 48px 40px;
+	border-radius: 18px;
+	box-shadow: 0 6px 24px rgba(255, 64, 129, 0.12);
+	border: 2.5px solid #ff4081;
+}
+
+/* Hero section styles */
+.hero {
+	position: relative;
+	text-align: center;
+	padding-top: 48px;
+	overflow: hidden;
+}
+
+/* Hero image: neon pink border, subtle shadow */
+.hero-img {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-bottom: 16px;
+	border: 4px solid #ff4081;
+	background: #23234d;
+	box-shadow: 0 2px 12px #ff408155;
+}
+
+/* Tagline: neon blue, bold */
+.tagline {
+	font-size: 1.1em;
+	color: #40cfff;
+	margin: 8px 0 0 0;
+	font-weight: bold;
+}
+
+/* Motto/quote: sakura pink italic */
+.motto {
+	font-style: italic;
+	color: #ffb7e5;
+	margin: 16px 0 0 0;
+	font-size: 1em;
+	letter-spacing: 0.5px;
+}
+
+/* About section: extra spacing between sentences */
+.bio p {
+	line-height: 2.1;
+	margin-bottom: 18px;
+	letter-spacing: 0.2px;
+}
+
+/* Learning journey highlight: neon blue background, pink text */
+.learning {
+	background: #40cfff22;
+	color: #ff4081;
+	padding: 10px 18px;
+	border-radius: 8px;
+	display: inline-block;
+	margin-top: 18px;
+	border: 1px solid #40cfff;
+	font-weight: bold;
+}
+
+/* Projects section */
+.projects {
+	margin-top: 36px;
+}
+
+/* Project list: vertical layout using flex */
+.project-list {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+/* Each project box styling */
+.project {
+	display: flex;
+	align-items: center;
+	gap: 18px;
+	background: #1a1833;
+	border-radius: 10px;
+	padding: 24px;
+	border: 1.5px solid #ff4081;
+	box-shadow: 0 2px 8px #ff408122;
+	transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+/* Project card hover effect for interactivity */
+.project:hover {
+	box-shadow: 0 4px 24px #40cfff88;
+	border-color: #40cfff;
+}
+
+/* Project card focus style for keyboard users */
+.project:focus {
+	box-shadow: 0 4px 24px #40cfff88;
+	border-color: #40cfff;
+	outline: 2px solid #40cfff;
+}
+
+/* Project image styling */
+.project-img {
+	width: 80px;
+	height: 60px;
+	object-fit: cover;
+	border-radius: 8px;
+	border: 2px solid #40cfff;
+	background: #23234d;
+}
+
+/* Headings: use Noto Sans JP for Asian-inspired look, neon pink color */
+h2, h3 {
+	font-family: 'Noto Sans JP', 'Montserrat', Arial, sans-serif;
+	color: #ff4081;
+	margin-top: 0;
+	text-shadow: 1px 1px 0 #40cfff55;
+	letter-spacing: 1px;
+}
+
+/* Skills list styling */
+.skills ul {
+	list-style-type: disc;
+	padding-left: 20px;
+	margin-top: 18px;
+}
+
+.skills li {
+	margin-bottom: 6px;
+}
+
+/* Contact & social links: neon blue, pink hover, improved contrast */
+.contact a {
+	color: #00e0ff; /* Brighter neon blue for better contrast */
+	text-decoration: none;
+	margin: 0 4px;
+	padding: 2px 4px;
+	transition: color 0.2s;
+}
+
+.contact a:hover,
+.contact a:focus {
+	color: #ff4081;
+	text-decoration: underline;
+	outline: none;
+}
+
+/* Contact section spacing */
+.contact {
+	margin-top: 36px;
+}
+
+/* Social icons: neon pink hover, indigo background */
+.social-icons {
+	margin-top: 18px;
+	display: flex;
+	justify-content: center;
+	gap: 16px;
+}
+
+/* Social icon link wrapper for better hover effect */
+.icon-link {
+	display: inline-block;
+	border-radius: 50%;
+	transition: box-shadow 0.2s, background 0.2s;
+}
+
+.icon-link:hover,
+.icon-link:focus {
+	background: #ff408122;
+	box-shadow: 0 0 12px #40cfff88;
+	outline: 2px solid #40cfff;
+}
+
+/* SVG icon style for consistent sizing and color */
+.icon {
+	width: 36px;
+	height: 36px;
+	display: block;
+}
+
+/* Back to top: neon pink link with more pronounced hover and focus */
+.back-to-top a {
+	color: #ff4081;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 10px 20px;
+	border-radius: 10px;
+	transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+	background: #1a1833;
+	border: 2px solid #ff4081;
+	display: inline-block;
+	margin-top: 32px;
+	box-shadow: 0 2px 8px #ff408122;
+}
+
+.back-to-top a:hover,
+.back-to-top a:focus {
+	background: #ff4081;
+	color: #23234d;
+	box-shadow: 0 4px 24px #40cfff88;
+	outline: 2px solid #40cfff;
+}
+
+/* Footer: neon pink text, border top, indigo background */
+footer {
+	text-align: center;
+	padding: 28px 0 16px 0;
+	color: #ff4081;
+	border-top: 2px solid #ff4081;
+	background: #23234d;
+	margin-top: 40px;
+	font-size: 1em;
+	letter-spacing: 1px;
+}
+
+/* Skip link for accessibility - hidden until focused */
+.skip-link {
+	position: absolute;
+	left: -999px;
+	top: 10px;
+	background: #ff4081;
+	color: #23234d;
+	padding: 8px 16px;
+	border-radius: 8px;
+	font-weight: bold;
+	z-index: 1000;
+	transition: left 0.2s;
+}
+.skip-link:focus {
+	left: 10px;
+	outline: 2px solid #40cfff;
+}
+
+/* Focus style for all interactive elements for keyboard accessibility */
+a:focus, button:focus, .icon-link:focus {
+	outline: 2px solid #40cfff;
+	outline-offset: 2px;
+}
+
+/* --- Responsive design for mobile devices --- */
+/* Students: This makes the site look better on small screens */
+@media (max-width: 600px) {
+	body {
+		background-size: cover, cover, 160px auto; /* Reduce image size further */
+		padding-bottom: 60px;
+	}
+	section {
+		padding: 24px 8px;
+		max-width: 98vw;
+		margin-bottom: 32px; /* More spacing between sections on mobile */
+	}
+	.hero-img {
+		width: 90px;
+		height: 90px;
+	}
+	.project {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 16px;
+	}
+	.project-img {
+		width: 100%;
+		height: auto;
+		margin-bottom: 12px;
+	}
+	.back-to-top a {
+		padding: 8px 10px;
+		font-size: 1em;
+	}
+	footer {
+		margin-top: 64px; /* More vertical space above the footer on mobile */
+	}
+/* --- End of beginner-friendly CSS --- */
+}
+
+/* --- End of beginner-friendly CSS --- */
