@@ -1,3 +1,8 @@
+<!--
+  Alissa's Personal Website
+  Beginner-friendly HTML and CSS, Tokyo-inspired theme.
+  Learn and experiment with structure, links, and accessibility!
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,8 +18,11 @@
 </head>
 
 <body id="top">
+  <!-- Skip link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- Hero Section -->
-  <section class="hero" tabindex="0">
+  <section class="hero" id="main-content" tabindex="0">
     <img src="img/me.png" alt="Portrait of Alissa smiling" class="hero-img">
     <h1>Hello, I'm Alissa</h1>
     <h2 lang="ja" style="font-family: 'Noto Sans JP', 'Montserrat', Arial, sans-serif;">はじめまして、アリッサと申します</h2>
@@ -62,13 +70,13 @@
     <h2>Let’s Connect!</h2>
     <p>Email: <a href="mailto:alissamarie411@aol.com">alissamarie411@aol.com</a></p>
     <div class="social-icons">
-      <a href="https://linkedin.com/in/alissa-rowell-423b8716a" target="_blank" aria-label="LinkedIn" class="icon-link">
+      <a href="https://linkedin.com/in/alissa-rowell-423b8716a" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="icon-link">
         <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <rect width="24" height="24" rx="4" fill="#23234d" />
           <path d="M6.94 8.5C7.8 8.5 8.5 7.8 8.5 6.94C8.5 6.08 7.8 5.38 6.94 5.38C6.08 5.38 5.38 6.08 5.38 6.94C5.38 7.8 6.08 8.5 6.94 8.5ZM8.25 9.75H5.62V18.25H8.25V9.75ZM12.25 13.25C12.25 12.25 13 11.5 14 11.5C14.83 11.5 15.5 12.17 15.5 13V18.25H18.12V13C18.12 10.83 16.17 9.75 14.5 9.75C13.33 9.75 12.25 10.67 12.25 12V18.25H14.88V13.25H12.25Z" fill="#40cfff" />
         </svg>
       </a>
-      <a href="https://github.com/UchihaSayuri87" target="_blank" aria-label="GitHub" class="icon-link">
+      <a href="https://github.com/UchihaSayuri87" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="icon-link">
         <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <rect width="24" height="24" rx="4" fill="#23234d" />
           <path d="M12 2C6.48 2 2 6.58 2 12.26C2 16.62 4.87 20.26 8.84 21.5C9.34 21.59 9.5 21.29 9.5 21.04C9.5 20.82 9.49 20.18 9.49 19.39C7 19.91 6.48 18.36 6.48 18.36C6.04 17.23 5.42 16.94 5.42 16.94C4.5 16.31 5.5 16.33 5.5 16.33C6.52 16.41 7.04 17.47 7.04 17.47C7.96 19.09 9.5 18.63 10.09 18.38C10.18 17.67 10.47 17.19 10.8 16.94C8.63 16.68 6.36 15.86 6.36 12.68C6.36 11.74 6.7 10.97 7.27 10.36C7.18 10.11 6.88 9.18 7.36 7.93C7.36 7.93 8.09 7.67 9.5 8.62C10.18 8.43 10.92 8.34 11.66 8.34C12.4 8.34 13.14 8.43 13.82 8.62C15.23 7.67 15.96 7.93 15.96 7.93C16.44 9.18 16.14 10.11 16.05 10.36C16.62 10.97 16.96 11.74 16.96 12.68C16.96 15.87 14.68 16.67 12.5 16.93C12.92 17.26 13.29 17.93 13.29 18.93C13.29 20.29 13.28 21.18 13.28 21.04C13.28 21.29 13.44 21.6 13.94 21.5C17.91 20.26 20.78 16.62 20.78 12.26C20.78 6.58 16.3 2 12 2Z" fill="#ff4081" />
