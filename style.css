@@ -151,18 +151,20 @@ h2, h3 {
 	margin-bottom: 6px;
 }
 
-/* Contact & social links: neon blue, pink hover */
+/* Contact & social links: neon blue, pink hover, improved contrast */
 .contact a {
-	color: #40cfff;
+	color: #00e0ff; /* Brighter neon blue for better contrast */
 	text-decoration: none;
 	margin: 0 4px;
 	padding: 2px 4px;
 	transition: color 0.2s;
 }
 
-.contact a:hover {
+.contact a:hover,
+.contact a:focus {
 	color: #ff4081;
 	text-decoration: underline;
+	outline: none;
 }
 
 /* Contact section spacing */
@@ -185,9 +187,11 @@ h2, h3 {
 	transition: box-shadow 0.2s, background 0.2s;
 }
 
-.icon-link:hover {
+.icon-link:hover,
+.icon-link:focus {
 	background: #ff408122;
 	box-shadow: 0 0 12px #40cfff88;
+	outline: 2px solid #40cfff;
 }
 
 /* SVG icon style for consistent sizing and color */
@@ -197,7 +201,7 @@ h2, h3 {
 	display: block;
 }
 
-/* Back to top: neon pink link with more pronounced hover */
+/* Back to top: neon pink link with more pronounced hover and focus */
 .back-to-top a {
 	color: #ff4081;
 	font-weight: bold;
@@ -212,10 +216,12 @@ h2, h3 {
 	box-shadow: 0 2px 8px #ff408122;
 }
 
-.back-to-top a:hover {
+.back-to-top a:hover,
+.back-to-top a:focus {
 	background: #ff4081;
 	color: #23234d;
 	box-shadow: 0 4px 24px #40cfff88;
+	outline: 2px solid #40cfff;
 }
 
 /* Footer: neon pink text, border top, indigo background */
@@ -246,6 +252,33 @@ footer {
 .skip-link:focus {
 	left: 10px;
 	outline: 2px solid #40cfff;
+}
+
+/* --- Responsive design for mobile devices --- */
+/* Students: This makes the site look better on small screens */
+@media (max-width: 600px) {
+	section {
+		padding: 24px 8px;
+		max-width: 98vw;
+	}
+	.hero-img {
+		width: 90px;
+		height: 90px;
+	}
+	.project {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 16px;
+	}
+	.project-img {
+		width: 100%;
+		height: auto;
+		margin-bottom: 12px;
+	}
+	.back-to-top a {
+		padding: 8px 10px;
+		font-size: 1em;
+	}
 }
 
 /* --- End of beginner-friendly CSS --- */
