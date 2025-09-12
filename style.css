@@ -10,18 +10,16 @@ body {
 	font-family: 'Montserrat', Arial, sans-serif;
 	margin: 0;
 	padding: 0;
+	/* Tokyo night gradient with subtle pattern and Tokyo Tower background image */
 	background:
 		linear-gradient(135deg, #181c2f 0%, #2a2740 100%),
-		repeating-linear-gradient(135deg, #23234d 0 18px, #1a1833 18px 36px);
-	/* Optional: Tokyo skyline background image (uncomment and add your own image) */
-	/* background-image:
-		linear-gradient(135deg, #181c2f 0%, #2a2740 100%),
 		repeating-linear-gradient(135deg, #23234d 0 18px, #1a1833 18px 36px),
-		url('img/skyline.png');
-	background-size: cover, cover, contain;
+		url('img/Screenshot 2025-09-12 001602.png'); /* Embedded PNG */
+	background-size: cover, cover, 350px auto; /* PNG will be max 350px wide */
 	background-repeat: no-repeat, repeat, no-repeat;
 	background-position: center bottom, left top, center bottom;
-	opacity: 0.98; */
+	padding-bottom: 120px; /* Add padding so content doesn't overlap the image */
+	opacity: 0.98;
 	color: #fff6fa; /* Brighter sakura pinkish-white text for better contrast */
 	min-height: 100vh;
 	font-size: 1.15em;
@@ -126,10 +124,11 @@ section {
 	border-color: #40cfff;
 }
 
-/* Project card focus-within for keyboard users */
-.project:focus-within {
+/* Project card focus style for keyboard users */
+.project:focus {
 	box-shadow: 0 4px 24px #40cfff88;
 	border-color: #40cfff;
+	outline: 2px solid #40cfff;
 }
 
 /* Project image styling */
@@ -297,6 +296,10 @@ a:focus, button:focus, .icon-link:focus {
 		padding: 8px 10px;
 		font-size: 1em;
 	}
+	footer {
+		margin-top: 64px; /* More vertical space above the footer on mobile */
+	}
+/* --- End of beginner-friendly CSS --- */
 }
 
 /* --- End of beginner-friendly CSS --- */
