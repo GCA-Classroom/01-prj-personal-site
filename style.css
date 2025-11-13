@@ -1,1 +1,149 @@
-/* Add you CSS here */
+.project-box h3, .project-box p {
+	font-size: 1.22em; /* Unified font size for headings */
+	font-family: 'Optima', 'Book Antiqua', Optima, serif;
+	color: #4b2e13;
+}
+/* Style for project buttons */
+
+/* Style for project buttons - tan background and brown text */
+
+.project-box {
+	display: block;
+	width: 100%;
+	background-color: #c28f66; /* Tan color similar to section background */
+	color: #4b2e13; /* Brown text */
+	border: none;
+	border-radius: 8px;
+	padding: 12px;
+	margin: 8px 16px 8px 0; /* More space on right side */
+	text-align: left;
+	cursor: pointer;
+	transition: background-color 0.2s;
+	text-decoration: none; /* Remove underline for <a> buttons */
+	font-family: 'Optima', 'Book Antiqua', Optima, serif; /* Match all project boxes font */
+}
+
+/* Make the button color lighter tan when hovered */
+.project-box:hover {
+	background-color: #eeb17e; /* Lighter tan on hover */
+	text-decoration: none; /* No underline on hover */
+}
+
+/* Make sure headings and paragraphs inside buttons look normal */
+
+/* Make sure headings and paragraphs inside buttons look normal and brown */
+.project-box h3 {
+	margin: 0 0 8px 0;
+	font-size: 1.22em; /* Unified font size for all project headings */
+	font-family: 'Optima', 'Book Antiqua', Optima, serif;
+	color: #4b2e13; /* Brown heading */
+}
+.project-box p {
+	margin: 0;
+	font-size: 1.08em; /* Unified font size for all project paragraphs */
+	font-family: 'Optima', 'Book Antiqua', Optima, serif;
+	color: #4b2e13; /* Brown paragraph */
+}
+/* Simple navigation bar styles */
+.navbar {
+	background: #333;
+	padding: 10px 0;
+	text-align: center;
+}
+.navbar ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.navbar li {
+	display: inline;
+	margin: 0 15px;
+}
+.navbar a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.1em;
+}
+.navbar a:hover {
+	text-decoration: underline;
+}
+/* Style and center the laptop image in About Me section */
+.about-photo {
+	display: block;
+	margin: 0 auto 16px auto; /* Center and add space below */
+	width: 180px; /* Adjust size as needed */
+	height: auto;
+	border-radius: 12px; /* Slightly rounded corners */
+	box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+/* Simple CSS for Portfolio Website */
+
+body {
+	font-family: 'Optima', 'Book Antiqua', Optima, serif; /* Book Antiqua font for a classic look */
+	/* Set a wallpaper image as the background */
+	background-image: url('img/hero-bg.jpg');
+	background-size: cover; /* Make the image cover the whole page */
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Don't repeat the image */
+	background-attachment: fixed; /* Keep the wallpaper fixed when scrolling */
+	margin: 0;
+	padding: 0;
+}
+
+section {
+	background: #c28f66; /* Section background */
+	margin: 20px auto;
+	padding: 20px 40px; /* More left and right padding for roomy boxes */
+	max-width: 600px;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Center content in the welcome section */
+#welcome {
+	text-align: center;
+}
+
+/* Style and resize the profile photo */
+.profile-photo {
+	width: 150px; /* Adjust size as needed */
+	height: 150px;
+	object-fit: cover;
+	border-radius: 50%; /* Makes the photo round */
+	display: block;
+	margin: 0 auto 16px auto; /* Center and add space below */
+	box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+	border: 3px solid #e6ecec;
+}
+
+
+/* Headings in dark brown */
+h1, h2, h3 {
+	color: #333; /* Darker text for headings */
+}
+
+ul {
+	padding-left: 20px; /* Indent list items */
+}
+
+.project-list {
+	margin-top: 10px;
+}
+
+.project {
+	border: 0px solid #e0e0e0;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	background: #eeb17ef1;
+}
+
+a {
+	color: #007acc; /* Blue links */
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none; /* Remove underline on hover for all links */
+}
+
+/* You can add more styles as you learn! */
