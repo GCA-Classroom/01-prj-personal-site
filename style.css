@@ -1,1 +1,285 @@
-/* Add you CSS here */
+/* Simple, modern styles for your personal site */
+
+/* Use the Roboto font for the whole page */
+body {
+  font-family: 'Noto Sans', Arial, sans-serif; /* Use Roboto, then Arial as fallback */
+  background-color: #edfdfd;      /* background */
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for each section */
+section {
+  margin: 25px auto;              /* Space around each section */
+  padding: 24px;                  /* Space inside each section */
+  max-width: 500px;          /* Limit the width for easy reading */
+  border-radius: 16px;            /* Rounded corners */
+}
+
+/* Hero section styles */
+.hero {
+  max-width: 900px;              /* Wider hero section */
+  margin-left: 40px;             /* Add space on the left */
+  margin-right: auto;            /* Keep the right side tight */
+  width: 100%;                   /* Full width of the container */
+  box-sizing: border-box;        /* Include padding in width calculation */
+  display: flex;              /* Place items in a row */
+  align-items: center;        /* Vertically center items */
+  justify-content: space-between; /* Space between text and image */
+  color: #04061f;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  padding: 150px;      /* Reduce padding for a less centered look */
+  position: relative;
+  min-height: 260px;       /* Enough height for the bigger image */
+}
+
+.hero h1 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 100px;
+  letter-spacing: 0px;
+
+}
+
+.hero p {
+  font-size: 1.1em;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+/* Hero text stays on the left */
+.hero-text {
+  flex: 1;                    /* Take up available space */
+}
+
+/* Profile picture stays on the right */
+.profile-pic {
+  width: 200px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.10);
+  margin-left: 120px;        /* Space between text and image */
+  position: static;           /* Remove absolute positioning */
+}
+
+/* Section headings */
+h2 {
+  color: #04061f;                 /* Purple color for headings */
+  margin-top: 0;
+  font-size: 1.4em;
+  letter-spacing: 0.5px;
+}
+
+/* Skills list styles */
+.skills ul {
+  list-style-type: square;        /* Square bullets */
+  padding-left: 60px;
+  margin: 0;
+  max-width:900px ;
+
+}
+.skills {
+  align-content: center;
+  text-align: center;
+  padding: 50px;                  /* Match bio section padding */
+  margin: 25px auto;              /* Space around each section */
+  background-color: #407a7a;
+  color: #ffffff;            /* White text for contrast */
+  max-width: 900px; /* Match bio section width */
+  border-radius: 0; /* Match bio section corners */
+}
+.skills h2 {
+  color: #ffffff; /* Make the My Skills title dark */
+}
+.skills li {
+  margin-bottom: 6px;
+  display: inline-block;         /* Show bubbles in a row */
+  color: #ffffff;                   /* Text color */
+  background-color: #36b8b8;
+  padding: 10px 28px;             /* Space inside bubble */
+  margin: 8px 10px 8px 0;         /* Space between bubbles */
+  border-radius: 200px;           /* Rounded corners */
+  font-size: 1em;                /* Normal text size */
+  box-shadow: 0 1px 4px #86396f0f; /* Soft shadow */
+  list-style: none;              /* Remove bullet for inline-block */
+}
+
+/* Projects list styles */
+.projects ul {
+  list-style-type: none; /* No bullets */
+  padding-left: 0;       /* Remove left padding */
+  margin: 0;
+}
+
+.projects li {
+  margin-bottom: 8px;
+  padding: 40px;           /* Space around the image */
+}
+
+/* Style for project images */
+.project-image {
+  display: block;        /* Block element */
+  margin: 30px 0;
+  width: 100%;           /* Fill the container width */
+  max-width: 100%;       /* Allow image to be as wide as the container */
+  height: auto;          /* Keep aspect ratio */
+  object-fit: cover;     /* Crop if needed */
+  border-radius: 8px;    /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.10); /* Soft shadow */
+  transition: transform 0.3s; /* Smoothly animate the size change */
+}
+
+.project-image:hover {
+  transform: scale(1.08);     /* Grows the image by 8% on hover */
+  z-index: 1;                 /* Makes sure the image appears above other elements */
+}
+
+/* Resume link style */
+.resume a {
+  color: #6c3183;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px dotted #6c3183;
+  transition: border-bottom 0.2s;
+}
+
+.resume a:hover {
+  border-bottom: 2px solid #6c3183;
+}
+
+/* Simple, centered navigation bar styles */
+.navbar {
+  padding: 16px 0;           /* Space above and below the links */
+  text-align: center;        /* Center the nav bar */
+  margin-bottom: 24px;       /* Space below navbar */
+  border-radius: 0 0 16px 16px; /* Rounded bottom corners */
+
+}
+
+.navbar ul {
+  list-style-type: none;     /* Remove bullets */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline-block;     /* Display links in a row */
+  margin: 0 18px;            /* Space between links */
+}
+
+.navbar a {
+  text-decoration: none;     /* Remove underline */
+  color: #333;               /* Dark text */
+  font-weight: lighter;      /* Lighter text */
+  font-size: 1.1em;
+  transition: 
+    color 0.2s,
+    background-color 0.2s,
+    border-radius 0.2s;      /* Smooth transition for hover effect */
+  padding: 8px 16px;         /* Add space around the text */
+  border-radius: 20px;       /* Rounded corners */
+  display: inline-block;     /* Needed for padding and background */
+}
+
+.navbar a:hover {
+  color: #ffffff;            /* Darker text on hover */
+  background-color: #04061f; /* Dark background on hover */
+  font-weight: bold;          
+}
+
+/* Make the About Me section content align to the left */
+.bio {
+  text-align: left;          /* Align text to the left */
+  max-width: 900px;          /* Optional: make About Me a bit wider */
+  background-color: #ffffff; /* Bright yellow background */
+  border-radius: 0; /* No rounded corners */
+}
+.projects {
+  text-align: left;          /* Align project list to the left */
+  max-width: 900px;          /* Optional: make projects section a bit wider */
+}
+
+/* Skills container holds all skill groups */
+.skills-container {
+  display: flex;                /* Place skill groups in a row */
+  justify-content: center;      /* Center the groups horizontally */
+  gap: 24px;                    /* Space between groups */
+  flex-wrap: wrap;              /* Allow wrapping on small screens */
+  margin-top: 10px;
+  padding: 30px;
+}
+
+/* Each skill group is a simple box */
+.skill-group {
+  padding: 10px;                /* Space inside each group */
+  border-radius: 12px;          /* Rounded corners for group boxes */
+  min-width: 160px;             /* Minimum width for each group */
+  flex: 1 1 160px;              /* Grow and shrink as needed */
+}
+
+/* Each project is in a simple box */
+.project-container {
+  background: #fff;              /* White background for each project */
+  border-radius: 12px;           /* Rounded corners for project boxes */
+  box-shadow: 0 2px 8px rgba(44,62,80,0.08); /* Soft shadow */
+  padding: 24px;                 /* Space inside each project box */
+  margin-bottom: 10px;           /* Space between project boxes */
+}
+
+/* About section container: image on left, text on right */
+.about-container {
+  display: flex;              /* Place image and text in a row */
+  align-items: center;        /* Vertically center items */
+  gap: 20px;                  /* Space between image and text */
+  padding: 50px;
+}
+
+/* About section image styles */
+.about-pic {
+  width: 250px;               /* Set image width */
+  height: 250px;              /* Set image height */
+  object-fit: cover;          /* Crop image to fit box */
+}
+
+/* Align the about section text to the right, keeping the image on the left */
+.about-text {
+  text-align: center; /* Align text to the right of the image */
+  flex: 1;           /* Allow text to take up remaining space */
+}
+
+/* Make about section stack on small screens */
+@media (max-width: 700px) {
+  .about-container {
+    flex-direction: column;   /* Stack image and text vertically */
+    align-items: flex-start;  /* Align items to the left */
+    gap: 12px;
+  }
+  .about-pic {
+    width: 100%;              /* Make image full width on small screens */
+    height: auto;
+    max-width: 300px;
+  }
+}
+
+/* Responsive: Make sure it looks good on small screens */
+@media (max-width: 600px) {
+  section {
+    padding: 14px;
+    max-width: 95%;
+  }
+  .hero h1 {
+    font-size: 1.4em;
+  }
+}
+
+/* Simple footer styles */
+.site-footer {
+  background-color: #04061f; /* Dark blue background */
+  color: #ffffff;            /* White text */
+  text-align: center;        /* Center the text */
+  padding: 20px 0;           /* Space above and below the text */
+  margin-top: 40px;          /* Space above the footer */
+}
+
