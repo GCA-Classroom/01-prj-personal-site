@@ -1,1 +1,254 @@
 /* Add you CSS here */
+
+/* IMPORTANT: 
+   When adding diamond images in your HTML, 
+   use this new diamond image URL:
+   https://sdmntpreastus.oaiusercontent.com/files/00000000-af50-61f9-8b02-1389373c23fb/raw?se=2025-05-30T23%3A38%3A33Z&sp=r&sv=2024-08-04&sr=b&scid=cd378129-42c6-5b8a-9d00-94339c8b303c&skoid=5cab1ff4-c20d-41dc-babb-df0c2cc21dd4&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-30T23%3A21%3A52Z&ske=2025-05-31T23%3A21%3A52Z&sks=b&skv=2024-08-04&sig=MkA9A%2B7APmDAwEPFRV9wuPEd4uVTfAOHyq8SGFzzYDQ%3D
+*/
+
+/* Style for the whole page */
+body {
+  /* Set a light background color */
+  background-color: #f0f4f8;
+  /* Use a simple font */
+  font-family: Arial, sans-serif;
+  /* Add some space around the content */
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero section styles */
+.hero {
+  /* Center the content */
+  text-align: center;
+  /* Add space around the hero section */
+  padding: 60px 20px 40px 20px;
+  /* Use a light background for the hero card */
+  background: #fff;
+  /* Add a card-like shadow */
+  box-shadow: 0 4px 24px rgba(79, 140, 255, 0.10);
+  /* Make the hero section stand out with rounded corners */
+  border-radius: 18px;
+  /* Limit the width and center the hero card */
+  max-width: 400px;
+  margin: 40px auto 30px auto;
+  /* Add a border for a modern look */
+  border: 1px solid #e0eaff;
+}
+
+/* Profile image style */
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 5px solid #e0eaff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 18px;
+  object-fit: cover;
+}
+
+/* Name style */
+.hero h1 {
+  font-size: 2.3em;
+  margin: 12px 0 6px 0;
+  color: #4f8cff;
+  font-weight: bold;
+}
+
+/* Subtitle style */
+.subtitle {
+  color: #7a8ca3;
+  font-size: 1.1em;
+  margin-bottom: 22px;
+}
+
+/* Hero buttons container */
+.hero-buttons {
+  margin-top: 18px;
+}
+
+/* Style for hero buttons */
+.hero-buttons button {
+  background-color: #4f8cff;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1em;
+  border-radius: 6px;
+  margin: 0 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 6px rgba(79, 140, 255, 0.08);
+}
+
+.hero-buttons button:hover {
+  background-color: #2563eb;
+}
+
+/* Bio section styles */
+.bio {
+  padding: 30px 20px;
+  text-align: center;
+  background: #f0f4f8;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 0 auto 24px auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+/* Skills section styles */
+.skills {
+  padding: 30px 20px;
+  text-align: center;
+  background: #f0f4f8;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 0 auto 24px auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+/* Style the skills list */
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  margin: 8px 0;
+  background-color: #e0eaff;
+  border-radius: 4px;
+  padding: 8px 0;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+/* Diamonds background container */
+#diamonds-background {
+  /* Cover the whole page */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* So it doesn't block clicks */
+  z-index: 0; /* Behind all content */
+  overflow: hidden;
+}
+
+/* Style for each falling diamond image */
+.falling-diamond {
+  position: absolute;
+  top: -50px; /* Start above the screen */
+  opacity: 0.8;
+  /* Use the diamond PNG image, so remove any background color */
+  background: none; /* Remove blue background */
+  border: none;      /* Remove any border */
+  /* Smooth animation */
+  animation-name: fall-diamond;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  pointer-events: none;
+  /* Make sure the image keeps its aspect ratio and fits the box */
+  object-fit: contain;
+  /* Optional: add a little drop shadow to make the diamond pop */
+  filter: drop-shadow(0 2px 8px rgba(79,140,255,0.15));
+}
+
+/* Animation for falling diamonds */
+@keyframes fall-diamond {
+  0% {
+    top: -40px;
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    top: 100vh;
+    opacity: 0;
+  }
+}
+
+/* Spinning diamond animation for SVG diamond */
+.spin-diamond {
+  animation: spinDiamond 5s linear infinite;
+  /* Start at 45deg for diamond orientation */
+  transform: rotate(45deg);
+}
+
+/* Keyframes for spinning the diamond */
+@keyframes spinDiamond {
+  0% { transform: rotate(45deg);}
+  100% { transform: rotate(405deg);}
+}
+
+/* Cursive font for the catch button overlay */
+.catch-cursive {
+  font-family: 'Pacifico', cursive, 'Comic Sans MS', 'Brush Script MT', sans-serif;
+  /* Fallbacks included for browser compatibility */
+  letter-spacing: 1px;
+}
+
+/* Big shimmering and blinking name for the catch overlay */
+.catch-name-glitter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8vw;
+  font-family: 'Pacifico', cursive, 'Comic Sans MS', 'Brush Script MT', sans-serif;
+  text-transform: uppercase;
+  /* Make the name brighter */
+  color: #fff;
+  opacity: 0.95; /* Much brighter */
+  text-shadow:
+    0 0 24px #fff,
+    0 0 48px #4f8cff,
+    0 0 64px #a6c8ff,
+    0 0 80px #fff;
+  /* Shimmer animation */
+  background: linear-gradient(
+    120deg,
+    #fff 20%,
+    #e0eaff 30%,
+    #b5cfff 40%,
+    #fff 60%,
+    #e0eaff 70%,
+    #fff 80%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer-glitter 2.5s linear infinite, blink 1.2s steps(2, start) infinite;
+}
+
+/* Blinking animation for the name */
+.blink-name {
+  animation: shimmer-glitter 2.5s linear infinite, blink 1.2s steps(2, start) infinite;
+}
+
+/* Blinking keyframes */
+@keyframes blink {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+
+/* Shimmer keyframes for glitter effect */
+@keyframes shimmer-glitter {
+  0% {
+    background-position: 200% center;
+    opacity: 0.18;
+    filter: blur(0.5px) drop-shadow(0 0 6px #fff8);
+  }
+  50% {
+    background-position: 0% center;
+    opacity: 0.25;
+    filter: blur(1.5px) drop-shadow(0 0 12px #fff);
+  }
+  100% {
+    background-position: 200% center;
+    opacity: 0.18;
+    filter: blur(0.5px) drop-shadow(0 0 6px #fff8);
+  }
+}

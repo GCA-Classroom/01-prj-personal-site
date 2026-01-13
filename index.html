@@ -1,11 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>My Personal Site</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Add your HTML content here -->
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TheRealAmayaFletcher| Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add meta for color scheme for accessibility -->
+    <meta name="color-scheme" content="light dark">
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Falling diamonds animation */
+      @keyframes fall {
+        0% {
+          transform: translateY(0) rotate(0);
+        }
+        100% {
+          transform: translateY(100vh) rotate(360deg);
+        }
+      }
+      #diamonds-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 0;
+      }
+      .falling-diamond {
+        position: absolute;
+        top: -50px;
+        width: 20px;
+        height: 20px;
+        background: #4f8cff;
+        opacity: 0.7;
+        animation: fall linear infinite;
+      }
+      /* Spinning diamond animation */
+      @keyframes spinDiamond {
+        0% { transform: rotate(45deg); }
+        100% { transform: rotate(405deg); }
+      }
+      .spin-diamond {
+        animation: spinDiamond 5s linear infinite;
+      }
+      /* Catch Name Glitter Animation */
+      @keyframes glitter {
+        0%, 100% { text-shadow: 0 0 5px #fff, 0 0 10px #2563eb, 0 0 15px #2563eb, 0 0 20px #4f8cff, 0 0 30px #4f8cff; }
+        50% { text-shadow: 0 0 10px #fff, 0 0 20px #2563eb, 0 0 30px #2563eb, 0 0 40px #4f8cff, 0 0 50px #4f8cff; }
+      }
+      .catch-name-glitter {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 10vw;
+        white-space: nowrap;
+        color: rgba(255, 255, 255, 0.1);
+        pointer-events: none;
+        animation: glitter 3s infinite;
+      }
+      /* Blinking effect for the name */
+      @keyframes blink {
+        0%, 100% { opacity: 0.8; }
+        50% { opacity: 1; }
+      }
+      .blink-name {
+        animation: blink 1.5s infinite;
+      }
+      /* Add a simple style to center the image */
+      .profile-image {
+        display: block; /* Makes the image a block element */
+        margin-left: auto; /* Centers the image horizontally */
+        margin-right: auto;
+        width: 150px; /* Sets a nice width for the image */
+        border-radius: 50%; /* Makes the image round */
+      }
+    </style>
+    <!-- Add Google Fonts Pacifico for pretty cursive -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- In the <head> section, add the Google Material Symbols font link if not already present -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  </head>
+  <body class="bg-black text-gray-900 font-sans">
+    <!-- Skip to main content link for screen readers -->
+    <a href="#hero" class="sr-only focus:not-sr-only absolute top-2 left-2 bg-white text-black px-3 py-2 rounded z-50">Skip to main content</a>
+    <!-- Catch Button Overlay -->
+    <div id="catch-overlay" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#000;z-index:9999;display:flex;align-items:center;justify-content:center;overflow:hidden;" aria-modal="true" role="dialog" aria-labelledby="catch-title">
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;z-index:2;">
+        <span id="catch-title" class="catch-name-glitter blink-name" style="margin-bottom:40px;" aria-live="polite">AMAYA FLETCHER</span>
+        <button id="catch-btn"
+          style="margin-top:-40px;position:relative;padding:18px 36px;font-size:1.2em;
+          background:#fff;
+          color:#000;
+          border:none;
+          border-radius:8px;
+          cursor:pointer;
+          transition:background 0.2s;"
+          aria-label="Click to enter the site">
+          Click Me!
+        </button>
+      </div>
+    </div>
+
+    <!-- Falling Diamonds Background -->
+    <div id="diamonds-background" aria-hidden="true"></div>
+
+    <!-- Navbar -->
+    <header class="fixed top-0 w-full bg-white shadow z-50" role="banner">
+      <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+        <!-- Removed the site title from the left corner for a cleaner look -->
+        <!-- <h1 class="text-2xl font-bold" id="site-title">Amaya Fletcher</h1> -->
+        <!-- Mobile menu button (shows on small screens) -->
+        <button id="menu-btn" class="md:hidden block text-gray-700 focus:outline focus:ring-2 focus:ring-blue-400" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <!-- Hamburger icon for menu -->
+          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+        <!-- Desktop navigation bar -->
+        <nav class="space-x-6 hidden md:block" aria-label="Main navigation">
+          <!-- Navigation links for desktop -->
+          <!-- Removed the home icon for simplicity -->
+          <a href="#hero" class="hover:text-blue-500" tabindex="0">
+            Home
+          </a>
+          <a href="#about" class="hover:text-blue-500" tabindex="0">About</a>
+          <a href="#skills" class="hover:text-blue-500" tabindex="0">Skills</a>
+          <a href="#projects" class="hover:text-blue-500" tabindex="0">Projects</a>
+          <a href="#contact" class="hover:text-blue-500" tabindex="0">Contact</a>
+        </nav>
+      </div>
+      <!-- Mobile navigation menu (hidden by default) -->
+      <nav id="mobile-menu" class="md:hidden hidden bg-white px-4 pb-4" aria-label="Mobile navigation">
+        <!-- Navigation links for mobile -->
+        <!-- Removed the home icon for simplicity -->
+        <a href="#hero" class="block py-2 hover:text-blue-500 border-b" tabindex="0">
+          Home
+        </a>
+        <a href="#about" class="block py-2 hover:text-blue-500 border-b" tabindex="0">About</a>
+        <a href="#skills" class="block py-2 hover:text-blue-500 border-b" tabindex="0">Skills</a>
+        <a href="#projects" class="block py-2 hover:text-blue-500 border-b" tabindex="0">Projects</a>
+        <a href="#contact" class="block py-2 hover:text-blue-500" tabindex="0">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main id="main-content">
+      <section class="h-screen flex items-center justify-center text-center bg-gray-100 px-4" id="hero" tabindex="-1" aria-labelledby="hero-title">
+        <div>
+          <!-- Removed the profile image for a simpler look -->
+          <!-- <img src="me.png" alt="My photo" class="profile-image"> -->
+          <h2 id="hero-title" class="text-5xl md:text-6xl font-extrabold mb-4">Hi, I'm Amaya Fletcher</h2>
+          <p class="text-lg md:text-xl text-gray-600 mb-6">I design and build beautiful web experiences.</p>
+          <a href="#projects" class="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 focus:outline focus:ring-2 focus:ring-blue-400" role="button">View My Work</a>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="max-w-5xl mx-auto px-4 py-20 text-center" id="about" aria-labelledby="about-title">
+        <!-- Added text-center to align content in the middle -->
+        <h3 id="about-title" class="text-3xl font-semibold mb-4" style="color: white;">About Me</h3>
+        <p class="text-lg leading-relaxed" style="color: white;">
+          I’m a web developer and designer with a passion for creating elegant designs. I love solving problems and turning ideas into reality. I am a dedicated and ambitious college student pursuing a career in healthcare, driven by a strong desire to make a meaningful impact in people's lives. I am passionate about both healthcare and technology, and I look forward to making an impact blending these two passions. 
+        </p>
+      </section>
+
+      <!-- Skills -->
+      <section class="max-w-5xl mx-auto px-4 py-20 text-center" id="skills" aria-labelledby="skills-title">
+        <!-- Added text-center to align content in the middle -->
+        <h3 id="skills-title" class="text-3xl font-semibold mb-4" style="color: white;">Skills</h3>
+        <ul class="list-disc list-inside text-lg" style="color: white; display: inline-block; text-align: left;">
+          <li>HTML &amp; CSS</li>
+          <li>JavaScript</li>
+          <li>Web Design</li>
+          <li>Teamwork</li>
+          <li>Problem Solving</li>
+        </ul>
+      </section>
+
+      <!-- Projects -->
+      <section class="bg-gray-50 py-20 px-4" id="projects" aria-labelledby="projects-title">
+        <div class="max-w-5xl mx-auto">
+          <h3 id="projects-title" class="text-3xl font-semibold mb-10 text-center">My Projects</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Project Card -->
+            <div class="bg-white shadow rounded-lg p-6 hover:shadow-lg transition" role="region" aria-labelledby="project1-title">
+              <h4 id="project1-title" class="text-xl font-bold mb-2">Project Title</h4>
+              <!-- Removed the placeholder project description for simplicity -->
+              <a href="#" class="text-blue-600 hover:underline focus:outline focus:ring-2 focus:ring-blue-400">View Project →</a>
+            </div>
+            <!-- Duplicate the above card as needed -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="max-w-4xl mx-auto py-20 px-4" id="contact" aria-labelledby="contact-title">
+        <!-- 
+          Changed the font color to white and made it bold for better readability.
+        -->
+        <h3 id="contact-title" class="text-3xl font-semibold mb-6 text-center" style="color: white; font-weight: bold;">
+          Contact Me
+        </h3>
+        <!-- 
+          Changed the "Email me at" text to white for better readability.
+        -->
+        <p class="text-center mb-4" style="color: white;">
+          Email me at
+          <a href="mailto:amayamfletcher@gmail.com" class="text-blue-600 hover:underline focus:outline focus:ring-2 focus:ring-blue-400">
+            amayamfletcher@gmail.com
+          </a>
+        </p>
+        <form class="space-y-4" aria-label="Contact form" action="https://formspree.io/f/mnqewqzv" method="POST">
+          <!-- 
+            The form now sends submissions to your email using Formspree.
+            Replace the action URL with your own Formspree endpoint if needed.
+          -->
+          <label>
+            <span class="sr-only">Name</span>
+            <input type="text" name="name" placeholder="Name" class="w-full p-3 border rounded" required aria-required="true" autocomplete="name"/>
+          </label>
+          <label>
+            <span class="sr-only">Email</span>
+            <input type="email" name="email" placeholder="Email" class="w-full p-3 border rounded" required aria-required="true" autocomplete="email"/>
+          </label>
+          <label>
+            <span class="sr-only">Message</span>
+            <textarea name="message" placeholder="Message" class="w-full p-3 border rounded h-32" required aria-required="true"></textarea>
+          </label>
+          <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 focus:outline focus:ring-2 focus:ring-blue-400">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="text-center py-6 text-gray-500 text-sm" role="contentinfo">
+      © 2025 Amaya Fletcher. All rights reserved.
+    </footer>
+    <!-- Falling Diamonds Animation Script -->
+    <script>
+      // No more falling diamond images are created.
+      // The background container is left empty.
+    </script>
+    <!-- Catch Button Script -->
+    <script>
+      const overlay = document.getElementById('catch-overlay');
+      const btn = document.getElementById('catch-btn');
+      let tries = 0;
+      let canMove = true;
+
+      // Move the button in a circular path around the name, but not too fast
+      function moveButton() {
+        if (!canMove) return;
+        const container = btn.parentElement;
+        const containerRect = container.getBoundingClientRect();
+        const btnRect = btn.getBoundingClientRect();
+
+        // Set the center point (center of the container)
+        const centerX = containerRect.width / 2 - btn.offsetWidth / 2;
+        const centerY = containerRect.height / 2 - btn.offsetHeight / 2;
+
+        // Set the radius for the circular movement
+        const radius = 120;
+
+        // Pick a random angle in radians
+        const angle = Math.random() * 2 * Math.PI;
+
+        // Calculate new x and y using the circle formula
+        const x = centerX + radius * Math.cos(angle);
+        const y = centerY + radius * Math.sin(angle);
+
+        btn.style.position = "absolute";
+        // Add a smooth transition so the button moves slowly
+        btn.style.transition = "left 0.7s, top 0.7s";
+        btn.style.left = x + 'px';
+        btn.style.top = y + 'px';
+      }
+
+      // Move button when hovered, up to 2 times
+      btn.addEventListener('mouseenter', function() {
+        if (canMove) {
+          tries++;
+          if (tries > 2) {
+            canMove = false; // After 2 tries, stop moving
+            btn.style.position = "relative";
+            btn.style.left = "auto";
+            btn.style.top = "auto";
+          } else {
+            moveButton();
+          }
+        }
+      });
+
+      // Move button initially
+      moveButton();
+
+      // When button is clicked, hide overlay and show site
+      btn.addEventListener('click', function() {
+        overlay.style.display = 'none';
+      });
+
+      // Optional: reposition button on window resize, only if still moving
+      window.addEventListener('resize', function() {
+        if (canMove) moveButton();
+      });
+
+      // Simple mobile menu toggle for accessibility and responsiveness
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function () {
+          const isOpen = mobileMenu.classList.contains('block');
+          if (isOpen) {
+            mobileMenu.classList.remove('block');
+            mobileMenu.classList.add('hidden');
+            menuBtn.setAttribute('aria-expanded', 'false');
+          } else {
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.classList.add('block');
+            menuBtn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      }
+    </script>
+  </body>
 </html>
