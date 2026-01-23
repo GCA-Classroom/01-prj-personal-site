@@ -1,1 +1,127 @@
-/* Add you CSS here */
+/* This is a simple CSS file for your personal website */
+
+/* Set a background color and font for the whole page */
+body {
+    background-color: #3b2f2f; /* charcoal brown background */
+    font-family: Arial, sans-serif; /* easy-to-read font */
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for each section */
+section {
+    background-color: #fff; /* white background for sections */
+    margin: 20px auto; /* space above and below each section */
+    padding: 20px; /* space inside each section */
+    max-width: 600px; /* limit the width for better readability */
+    border-radius: 8px; /* rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* subtle shadow */
+}
+
+/* Style for section headings */
+section h2, #hero h1 {
+    color: #333; /* dark gray text */
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif; /* fun and easy-to-read font for titles */
+    letter-spacing: 1px; /* add space between letters for readability */
+    font-size: 2em; /* make titles larger */
+}
+
+/* Make section information match the titles */
+.fancy-text {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif; /* match the title font */
+    color: #333; /* keep text readable */
+    font-size: 20px; /* larger for easier reading */
+    line-height: 1.7; /* more space between lines */
+    letter-spacing: 0.5px; /* slight spacing for clarity */
+}
+
+/* Style for paragraphs */
+p {
+    font-family: 'Arial', sans-serif; /* basic, easy-to-read font for paragraphs */
+    color: #333; /* dark gray text for good contrast */
+    font-size: 16px; /* basic readable size */
+    line-height: 1.5; /* more space between lines */
+}
+
+/* Style for lists */
+ul {
+    padding-left: 20px; /* indent list items */
+}
+
+/* Style for links */
+a {
+    color: #007acc; /* blue color for links */
+    text-decoration: none; /* remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* underline on hover */
+}
+
+/* Special style for the hero section */
+#hero {
+    text-align: center; /* center the text */
+    background-color: #fffdd0; /* creme background */
+}
+
+/* Add some space between sections */
+section + section {
+    margin-top: 10px;
+}
+
+/* Simple navigation bar styles */
+nav {
+    background-color: #fffdd0; /* creme background for navbar */
+    padding: 10px 0; /* space above and below navbar */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* subtle shadow */
+}
+
+ul.navbar {
+    list-style-type: none; /* remove bullets */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* center the links */
+}
+
+ul.navbar li {
+    display: inline; /* display links in a row */
+    margin: 0 10px; /* space between links */
+}
+
+ul.navbar a {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif; /* match the site font */
+    color: #333; /* dark text */
+    font-size: 18px;
+    text-decoration: none; /* remove underline */
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+ul.navbar a:hover {
+    background-color: #ffe4a1; /* light gold on hover */
+}
+
+/* Striped background for the About Me section */
+.striped-background {
+    /* Creates diagonal gold and brown stripes */
+    background: repeating-linear-gradient(
+        45deg,
+        #ffd700,      /* gold */
+        #ffd700 20px, /* gold for 20px */
+        #8b5c2a 20px, /* brown starts at 20px */
+        #8b5c2a 40px  /* brown for next 20px */
+    );
+    padding: 20px 0; /* Adds space above and below the section */
+}
+
+/* Style for the educational quote */
+.educational-quote {
+    font-style: italic;
+    color: #1976d2;
+    background-color: #f1f8e9;
+    border-left: 4px solid #1976d2;
+    margin: 10px 0 20px 0;
+    padding: 10px;
+    /* Makes the quote stand out for beginners */
+}

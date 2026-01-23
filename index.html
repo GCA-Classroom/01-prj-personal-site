@@ -1,11 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Personal Site</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>My Personal Portfolio</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+    <!-- Navigation Bar: Links to each section -->
+    <nav>
+        <!-- Each link goes to a section on the page -->
+        <ul class="navbar">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#bio">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section: Your name and a short welcome message -->
+    <section id="hero">
+        <h1>Welcome to My Portfolio!</h1>
+        <p class="fancy-text">Hello, I'm Ibrahim!</p>
+    </section>
+
+    <!-- Bio Section: A short introduction about yourself -->
+    <!-- We wrap the About Me section in a div for the striped background -->
+    <div class="striped-background">
+        <section id="bio">
+            <h2>About Me</h2>
+            <!-- LeBron James quote for inspiration -->
+            <blockquote class="educational-quote">
+                "You have to be able to accept failure to get better." – LeBron James
+            </blockquote>
+            <p class="fancy-text">
+                I am a web development student learning to build websites.<br>
+                I enjoy creating simple and useful web pages. Currently, I am pursuing a bachelor's degree in Business Computer Information Systems at the University of North Texas. I am passionate about expressing my creativity and eager to learn more about web development.
+            </p>
+        </section>
+    </div>
+
+    <!-- Skills Section: List your skills -->
+    <section id="skills">
+        <h2>My Skills</h2>
+        <ul class="fancy-text">
+            <li>🌐 HTML</li>
+            <li>🎨 CSS</li>
+            <li>💻 JavaScript (beginner)</li>
+        </ul>
+    </section>
+
+    <!-- Portfolio Projects Section: Placeholder for your projects -->
+    <section id="projects">
+        <h2>Portfolio Projects</h2>
+        <ul class="fancy-text">
+            <li>Biography Card</li>
+        </ul>
+    </section>
+
+    <!-- Hobbies Section: List your hobbies -->
+    <section id="hobbies">
+        <h2>My Hobbies</h2>
+        <ul class="fancy-text">
+            <li>🏀 Basketball</li>
+            <li>🏋️‍♂️ Weightlifting</li>
+            <li>🛹 Skating</li>
+            <li>✈️ Traveling</li>
+        </ul>
+    </section>
+
+    <!-- Contact Information Section: How people can reach you -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <!-- Added icons for email and phone using emoji -->
+        <p class="fancy-text">📧 Email: <a href="mailto:Ibrahimhsesay6@gmail.com">Ibrahimhsesay6@gmail.com</a></p>
+        <p class="fancy-text">📱 Phone: <a href="tel:+12144302167">214-430-2167</a></p>
+    </section>
 </body>
 </html>
