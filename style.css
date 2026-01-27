@@ -266,7 +266,7 @@ section {
   /* transform: scale slightly larger on hover */
   transform: translateY(-10px);
   box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
-  border-color: #667eea;
+  border-color: #aeb7de;
 }
 
 .project-title {
