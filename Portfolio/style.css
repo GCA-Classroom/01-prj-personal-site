@@ -245,13 +245,6 @@ footer {
   gap: 20px;
 }
 
-@media (min-width: 600px) {
-  footer {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-  }
-}
 
 /* Footer image */
 .footer-image {

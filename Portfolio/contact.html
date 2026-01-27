@@ -21,8 +21,8 @@
   </div>
 
   <div class="page-content">
-    <p><strong>Email (School):</strong> <a href="mailto:jmota11@asu.edu">jmota11@asu.edu</a></p>
-    <p><strong>Email (Personal):</strong> <a href="mailto:motajacklyn00@gmail.com">motajacklyn00@gmail.com</a></p>
+    <p><strong>Email (School):</strong> <a href="#" class="copy-email" data-email="jmota11@asu.edu">jmota11@asu.edu</a> <span class="copied-message" style="display:none; color:var(--accent); font-size:12px;">Copied!</span></p>
+    <p><strong>Email (Personal):</strong> <a href="#" class="copy-email" data-email="motajacklyn00@gmail.com">motajacklyn00@gmail.com</a> <span class="copied-message" style="display:none; color:var(--accent); font-size:12px;">Copied!</span></p>
     <p><strong>GitHub:</strong> <a href="https://github.com/jacklyn-mota" target="_blank" rel="noopener noreferrer">jacklyn-mota</a></p>
     <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jacklyn-mota-28569b3a8/" target="_blank" rel="noopener noreferrer">View my profile</a></p>
   </div>
@@ -33,4 +33,20 @@
 </footer>
 
 </body>
+<script>
+// Copy email to clipboard and show message
+document.querySelectorAll('.copy-email').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const email = link.getAttribute('data-email');
+    navigator.clipboard.writeText(email);
+    // Show copied message
+    const msg = link.nextElementSibling;
+    msg.style.display = 'inline';
+    setTimeout(function() {
+      msg.style.display = 'none';
+    }, 1200);
+  });
+});
+</script>
 </html>
