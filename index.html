@@ -4,8 +4,98 @@
   <meta charset="UTF-8">
   <title>My Personal Site</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Load a simple, readable font for learners -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Load Font Awesome for simple icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <!-- Simple personal website layout for beginners -->
+  <!-- Sections: Hero, Bio, Skills, Cats, Hobbies -->
+
+  <header class="site-header">
+    <div class="container">
+      <div class="title-box">
+        <h1 class="site-title">Vrushab Shreenidhi</h1>
+      </div>
+      <p class="site-tag">Web developer student — building projects and learning every day</p>
+      <nav class="main-nav">
+        <a href="#bio">Bio</a>
+        <a href="#skills">Skills</a>
+        <a href="#cats">Cats</a>
+        <a href="#hobbies">Hobbies</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero / Introduction -->
+    <section class="hero container">
+      <!-- Replace the text below with your own introduction -->
+      <h2>Hello — </h2>
+      <p>I'm Vrushab Shreenidhi, building small web projects while learning HTML, CSS, and JavaScript is my passion. This site will show my portfolio as I complete class assignments.</p>
+    </section>
+
+    <!-- Bio section -->
+    <section id="bio" class="container section">
+      <h3>Bio</h3>
+      <div class="bio-row">
+        <!-- Profile photo removed per request. Add back an <img> here if desired. -->
+        <div>
+          <p>Hi — I'm a web development student. I enjoy learning by building projects and experimenting with new ideas. I'm focused on writing clear, accessible code and improving my design skills.</p>
+          <p><strong>Location:</strong> Annandale, Virginia — <strong>Education:</strong> Web Dev Course</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills section -->
+    <section id="skills" class="container section">
+      <h3>Skills</h3>
+      <p>Basic skills I'm working with:</p>
+      <ul class="skills-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript (basics)</li>
+        <li>Git</li>
+      </ul>
+    </section>
+
+    <!-- Cats section: a fun personal touch -->
+    <section id="cats" class="container section">
+      <h3>Cats <i class="fa-solid fa-cat"></i></h3>
+      <p>Here are my cats (or cats I like). Replace these images in the <code>img/</code> folder.</p>
+      <div class="cards">
+        <figure class="card">
+          <img src="img/Two Cats Sleeping.jpg" alt="Cat 1">
+          <figcaption>Two Cats Sleeping</figcaption>
+        </figure>
+        <figure class="card">
+          <img src="img/Cat Playing.jpg" alt="Cat 2">
+          <figcaption>Cat Playing</figcaption>
+        </figure>
+        <figure class="card">
+          <img src="img/Cat Curious.jpg" alt="Cat 3">
+          <figcaption>Cat Curious</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Hobbies section -->
+    <section id="hobbies" class="container section">
+      <h3>Hobbies</h3>
+      <p>When I'm not coding, I enjoy:</p>
+      <ul>
+        <li>Photography</li>
+        <li>Reading tech blogs</li>
+        <li>Walking with my cats</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Vrushab Shreenidhi — <a href="#">Contact: vshreeni@gmu.edu</a></p>
+    </div>
+  </footer>
 </body>
 </html>
