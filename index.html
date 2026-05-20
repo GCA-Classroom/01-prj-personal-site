@@ -2,10 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adrian Bautista</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-pVnJ+Gx8HjE3o7H/UVMYxg5n8LkqLQbG/TqHgeBZY8ZkVQ9LVxC6J+Vpon0Z7Es5V/TpJZBz5WuU6X3Z6YjQFg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/e897990c41.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <header class="page-header">
+    <div class="container top-nav">
+      <a class="brand" href="#home">Adrian Bautista</a>
+      <nav class="top-nav-menu">
+        <ul>
+          <li><a href="#mission">About Me</a></li>
+          <li><a href="#skills">Tools & Skills</a></li>
+          <li><a href="#links">Links</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="hero-avatar">
+          <img src="img/me.jpg" alt="Profile photo">
+        </div>
+        <h1>Adrian Bautista</h1>
+        <p class="hero-subtitle">Aspired Web Developer & UI/UX Designer</p>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="mission" class="section section-white">
+      <div class="container mission">
+        <div class="mission-card">
+          <div class="mission-image">
+            <img src="img/largeScreen.png" alt="Large screen preview">
+          </div>
+          <div class="mission-copy">
+            <h2>About Me</h2>
+            <p>Hi! I’m Adrian Bautista, a Computer Science student at the University of Illinois Chicago (UIC).</p>
+            <p>I am currently expanding my skills in web development and UI/UX design because I love applying my creativity to technical problem-solving, and I want to build interfaces and user experiences that are visually appealing, accessible, and easy to use.</p>
+            <p>When I’m not coding or designing, I usually play video games, read books, watch anime, crafting cosplays, and attending conventions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section section-dark">
+      <div class="container skills-section">
+        <h2>Tools & Skills</h2>
+        <p class="muted">Here are a few of the tools and skills I use:</p>
+        <div class="skill-list">
+          <span class="skill">HTML</span>
+          <span class="skill">CSS</span>
+          <span class="skill">Java</span>
+          <span class="skill">FXML</span>
+          <span class="skill">C</span>
+          <span class="skill">C++</span>
+          <span class="skill">GitHub</span>
+          <span class="skill">Git</span>
+          <span class="skill">Visual Studio</span>
+          <span class="skill">VSCode</span>
+          <span class="skill">IntelliJ</span>
+          <span class="skill">Figma</span>
+          <span class="skill">Canva</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="links" class="section section-white">
+      <div class="container links-section">
+        <h2>Links</h2>
+        <p class="muted">Connect with me on the platforms I use most:</p>
+        <div class="link-cards">
+          <a class="link-card" href="https://github.com" target="_blank" rel="noreferrer noopener">
+            <i class="fa-brands fa-github"></i>
+            <div>
+              <div class="link-label">GitHub</div>
+              <div class="link-subtext">See my code and projects</div>
+            </div>
+            <span class="material-icons google-icon">open_in_new</span>
+          </a>
+          <a class="link-card" href="https://www.linkedin.com" target="_blank" rel="noreferrer noopener">
+            <i class="fa-brands fa-linkedin"></i>
+            <div>
+              <div class="link-label">LinkedIn</div>
+              <div class="link-subtext">Connect with me professionally</div>
+            </div>
+            <span class="material-icons google-icon">open_in_new</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2026 Adrian Bautista ™</p>
+    </div>
+  </footer>
 </body>
 </html>
