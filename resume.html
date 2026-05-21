@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume — Evelin Tolentino</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav nav--light" id="nav">
+    <a href="index.html" class="nav-monogram">ET</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="work.html" class="nav-link">Work</a></li>
+      <li><a href="resume.html" class="nav-link active">Resume</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="resume.html">Resume</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <div class="resume-page">
+    <p class="resume-page__eyebrow">Let's work together</p>
+    <h1 class="resume-page__title">Let's Connect.</h1>
+
+    <div class="resume-links">
+
+      <a href="https://www.dropbox.com/scl/fi/lsr9jspr19jkixa2x7t8u/Resume.pdf?rlkey=cqb5bzmthjcw466zzg0jpez8i&st=nuub32o0&dl=0" target="_blank" rel="noopener" class="resume-link-item">
+        <div>
+          <p class="resume-link-item__label">Resume</p>
+          <p class="resume-link-item__value">Download PDF ↗</p>
+        </div>
+        <span class="resume-link-item__arrow">→</span>
+      </a>
+
+      <a href="mailto:etolentino@berkeley.edu" class="resume-link-item">
+        <div>
+          <p class="resume-link-item__label">Email</p>
+          <p class="resume-link-item__value">etolentino@berkeley.edu</p>
+        </div>
+        <span class="resume-link-item__arrow">→</span>
+      </a>
+
+      <a href="https://linkedin.com/in/evelin-tolentino-3aa1a51a6" target="_blank" rel="noopener" class="resume-link-item">
+        <div>
+          <p class="resume-link-item__label">LinkedIn</p>
+          <p class="resume-link-item__value">linkedin.com/in/evelin-tolentino-3aa1a51a6</p>
+        </div>
+        <span class="resume-link-item__arrow">→</span>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-tagline">Thanks for stopping by, let's chat. 👋</p>
+      </div>
+      <div>
+        <p class="footer-col-label">Contact</p>
+        <a href="mailto:etolentino@berkeley.edu" class="footer-link">etolentino@berkeley.edu</a>
+      </div>
+      <div>
+        <p class="footer-col-label">Let's Connect</p>
+        <a href="https://linkedin.com/in/evelin-tolentino-3aa1a51a6" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
+        <a href="resume.html" class="footer-link">Resume</a>
+        <a href="work.html" class="footer-link">Work</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Evelin Tolentino</span>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
+  </script>
+
+</body>
+</html>

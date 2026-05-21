@@ -1,11 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Personal Site</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evelin Tolentino — UX Researcher & Product Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Add your HTML content here -->
+
+  <nav class="nav nav--dark" id="nav">
+    <a href="index.html" class="nav-monogram">ET</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="work.html" class="nav-link">Work</a></li>
+      <li><a href="resume.html" class="nav-link">Resume</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="resume.html">Resume</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <section class="hero">
+    <p class="hero-eyebrow">UX Researcher &amp; Product Designer</p>
+    <h1 class="hero-title">Hi, I'm Evelin.</h1>
+    <p class="hero-sub">Incoming UC Berkeley MIMS · First-Gen · Bilingual Researcher</p>
+    <a href="work.html" class="btn-hero">See My Work ↓</a>
+  </section>
+
+  <section class="projects-home">
+
+    <!-- 1: Listo — color block left, text right -->
+    <div class="project-row">
+      <div class="project-row__image">
+        <div class="project-color-block listo-bg">
+          <span class="project-color-label">Listo</span>
+        </div>
+      </div>
+      <div class="project-row__text">
+        <span class="project-tag">UX Research · Civic Tech · AI · Solo</span>
+        <h2 class="project-title">Listo — Ya Estás Listo</h2>
+        <p class="project-desc">AI-assisted legal readiness tool for undocumented immigrants, grounded in a three-instrument mixed-methods study conducted entirely in Spanish. Designed to reduce cognitive load at the highest-stakes moments.</p>
+        <p class="project-impact">↳ 3 core features built around survival-mode cognition research; bilingual primary data collection ongoing Spring 2026.</p>
+        <a href="listo.html" class="btn-project">View Project →</a>
+      </div>
+    </div>
+
+    <!-- 2: SHEIN — text left, black/white graphic right -->
+    <div class="project-row flip">
+      <div class="project-row__image">
+        <div class="project-color-block shein-bg">
+          <div class="shein-graphic">
+            <span class="shein-graphic__word">CIRCULAR.</span>
+            <div class="shein-graphic__bar"></div>
+            <span class="shein-graphic__sub">Fast Fashion Redesigned</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-row__text">
+        <span class="project-tag">Behavioral Design · Quantitative Research · Systems</span>
+        <h2 class="project-title">SHEIN Circular Ecosystem Redesign</h2>
+        <p class="project-desc">Research-backed redesign applying behavioral economics to fast fashion. Built on a primary correlational study (N=95, r=−0.230, p=.025) proving compulsive buying decreases wellbeing.</p>
+        <p class="project-impact">↳ Full ecosystem redesign: Digital Product Passports, gamified sustainability milestones, ReCommerce hub.</p>
+        <a href="shein.html" class="btn-project">View Project →</a>
+      </div>
+    </div>
+
+    <!-- 3: Morehouse — real photo left, text right -->
+    <div class="project-row">
+      <div class="project-row__image">
+        <img src="img/morehouse-cover.jpg" alt="Morehouse Crafted Interiors — luxury kitchen interior" />
+      </div>
+      <div class="project-row__text">
+        <span class="project-tag">UX Audit · Real Client · UX Writing</span>
+        <h2 class="project-title">Morehouse Crafted Interiors</h2>
+        <p class="project-desc">Full heuristic evaluation and redesign for a real interior design client using Nielsen's 10 principles. Identified critical usability failures and rebuilt the client onboarding and booking flow.</p>
+        <p class="project-impact">↳ Rewrote 6 key interface touchpoints; high-fidelity Figma prototype with restructured consultation flow.</p>
+        <a href="morehouse.html" class="btn-project">View Project →</a>
+      </div>
+    </div>
+
+    <!-- 4: L'Oréal — text left, real photo right -->
+    <div class="project-row flip">
+      <div class="project-row__image">
+        <img src="img/loreal-cover.jpg" alt="L'Oréal AI Routine Builder — beauty tech" />
+      </div>
+      <div class="project-row__text">
+        <span class="project-tag">AI Integration · Frontend Dev · Shipped Product</span>
+        <h2 class="project-title">L'Oréal AI Routine Builder</h2>
+        <p class="project-desc">Designed and developed a product-aware AI chatbot using real L'Oréal brand data and the OpenAI API. Users browse products and receive personalized skincare routines through multi-turn conversation.</p>
+        <p class="project-impact">↳ Live deployed product — API integration, multi-turn memory, product search, localStorage persistence.</p>
+        <a href="loreal.html" class="btn-project">View Project →</a>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-tagline">Thanks for stopping by, let's chat. 👋</p>
+      </div>
+      <div>
+        <p class="footer-col-label">Contact</p>
+        <a href="mailto:etolentino@berkeley.edu" class="footer-link">etolentino@berkeley.edu</a>
+      </div>
+      <div>
+        <p class="footer-col-label">Let's Connect</p>
+        <a href="https://linkedin.com/in/evelin-tolentino-3aa1a51a6" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
+        <a href="resume.html" class="footer-link">Resume</a>
+        <a href="work.html" class="footer-link">Work</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Evelin Tolentino</span>
+    </div>
+  </footer>
+
+  <script>
+    // Nav dark/light on scroll
+    const nav = document.getElementById('nav');
+    const hero = document.querySelector('.hero');
+    const observer = new IntersectionObserver(([e]) => {
+      nav.classList.toggle('nav--dark', e.isIntersecting);
+      nav.classList.toggle('nav--light', !e.isIntersecting);
+    }, { threshold: 0.1 });
+    observer.observe(hero);
+
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
+  </script>
+
 </body>
 </html>

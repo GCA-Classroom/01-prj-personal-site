@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Listo — Evelin Tolentino</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav nav--dark" id="nav">
+    <a href="index.html" class="nav-monogram">ET</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="work.html" class="nav-link active">Work</a></li>
+      <li><a href="resume.html" class="nav-link">Resume</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="resume.html">Resume</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <!-- HERO -->
+  <div class="case-hero listo-hero">
+    <a href="work.html" class="case-hero__back">← Back to Work</a>
+    <div class="case-hero__content">
+      <h1 class="case-hero__title">Listo — Ya Estás Listo</h1>
+      <p class="case-hero__subtitle">AI-Assisted Legal Readiness for Undocumented Immigrants</p>
+    </div>
+  </div>
+
+  <!-- SPECS -->
+  <div class="specs-strip">
+    <div>
+      <p class="spec__label">Role</p>
+      <p class="spec__value">Lead UX Researcher &amp; Designer<br>Solo Project</p>
+    </div>
+    <div>
+      <p class="spec__label">Duration</p>
+      <p class="spec__value">Spring 2026<br>Ongoing into Berkeley MIMS</p>
+    </div>
+    <div>
+      <p class="spec__label">Tools</p>
+      <p class="spec__value">Figma, Qualtrics,<br>Mixed-Methods Instruments</p>
+    </div>
+    <div>
+      <p class="spec__label">Type</p>
+      <p class="spec__value">HSE 477 Capstone<br>Arizona State University</p>
+    </div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <div class="case-overview">
+    <p>When I began this project I thought the core challenge was a content problem — that undocumented immigrants lacked access to the right information. The more I researched, the more I understood I was wrong. The barrier was never a lack of information. It was a neurological one. Chronic stress from the migration experience physically reconfigures how the brain processes information. Every existing legal resource was designed as if users had full cognitive bandwidth. They do not. This is not a policy problem. It is a design problem. And design problems have design solutions.</p>
+  </div>
+
+  <!-- PROBLEM -->
+  <div class="case-section">
+    <p class="case-section__label">Problem</p>
+    <h2 class="case-section__title">Survival-Mode Cognition</h2>
+    <p>A user navigating an ICE encounter or trying to understand their legal rights is not operating with full cognitive bandwidth — they are in threat-response mode. Research across migration psychology and information science confirmed this: even among highly educated, highly motivated undocumented college students, fear of deportation significantly hindered help-seeking behavior. Education is not a shield.</p>
+    <p>The result is a compounding cycle. Fear prevents help-seeking. Distrust of institutions — earned through real experiences of exploitation including notario fraud — keeps people away from the very resources designed to protect them. And the vacuum left by that distrust gets filled by misinformation.</p>
+    <p>I came to understand this not just through research but through lived experience. I am a first-generation undocumented woman who navigated these systems from childhood, from an ICE facility at age seven to earning my place in architecture, in design, and now in a Berkeley graduate program. I know what it means to need information and have no safe way to access it.</p>
+  </div>
+
+  <!-- PROCESS -->
+  <div class="case-section">
+    <p class="case-section__label">Process &amp; Research</p>
+    <h2 class="case-section__title">Three Instruments, One Framework</h2>
+    <p>To ground design decisions in real user needs, I developed a three-instrument mixed-methods research study: a seven-section quantitative survey, a semi-structured interview guide conducted in Spanish, and a think-aloud prototype walkthrough. Participants were recruited through trusted immigration attorneys and legal aid clinics. Primary data collection is ongoing as of Spring 2026.</p>
+    <p>The literature review synthesized 10 peer-reviewed sources across PsycINFO, ACM Digital Library, and Web of Science, covering migration psychology, information poverty, and AI-assisted plain-language tools. The hardest decision in designing Listo was not which features to build — it was deciding what kind of tool to build at all. My first instinct was expansive. What kept pulling me back to earth was a more urgent question: what does someone need in the worst moment, not the best one?</p>
+  </div>
+
+  <!-- EVIDENCE -->
+  <div class="case-section">
+    <p class="case-section__label">Evidence</p>
+    <h2 class="case-section__title">Three Features, Three User States</h2>
+    <p>Each feature was designed to meet a user at a different point in their experience — from crisis to curiosity to discovery.</p>
+    <p><strong>Protocol</strong> — Emergency preparedness system that lets users pre-configure critical documents, legal contacts, and family communication plans into a single interface that can be activated during a high-stakes enforcement encounter. Zero-logging protocols and local device storage are being explored to protect user privacy.</p>
+    <p><strong>Community-Vetted Resource Hub</strong> — A trust architecture, not a simple directory. Organizations are surfaced based on community credibility rather than institutional authority, built specifically to counteract the information vacuum that notario fraud exploits.</p>
+    <p><strong>Listo AI</strong> — A bilingual conversational agent in Spanish that answers rights-based legal questions in plain language, helps users interpret documents through photo upload, and surfaces potential case pathways including VAWA, TPS, and other protections through natural conversation.</p>
+
+    <!-- Image placeholders — replace with actual screenshots -->
+    <div class="evidence-grid">
+      <div class="evidence-placeholder"><span>Protocol Screen</span></div>
+      <div class="evidence-placeholder"><span>Resource Hub</span></div>
+      <div class="evidence-placeholder"><span>Listo AI Chat</span></div>
+    </div>
+
+    <!-- Figma embed — replace iframe src with your embed link -->
+    <div class="figma-placeholder">
+      <span>Figma Prototype</span>
+      <a href="https://www.figma.com/proto/4ruVyMsIaysLgCB8qEz4rm/HSE-FINAL?node-id=8203-105&t=GOJq0pIKkNAvE30g-0&scaling=scale-down&content-scaling=fixed&page-id=5999%3A10563&starting-point-node-id=8203%3A105&device-frame=0" target="_blank" rel="noopener">Open in Figma ↗</a>
+    </div>
+  </div>
+
+  <!-- OUTCOME -->
+  <div class="case-section">
+    <p class="case-section__label">Outcome</p>
+    <h2 class="case-section__title">Ya Estás Listo.</h2>
+    <p>Six months after first using Listo, success would not look like a user who knew more. It would look like a user who felt less alone. Someone who opened the app during an emergency and knew exactly what to do — not because they memorized a pamphlet, but because they had a plan they built themselves.</p>
+    <p>Listo is not designed to solve the immigration system. It is designed to give one person, in one moment, the information clarity and practical preparation to make their own decision. The difference between a savior model and an empowerment model is that one drives you to the destination. The other teaches you to drive.</p>
+  </div>
+
+  <!-- REFLECTION -->
+  <div class="case-section">
+    <p class="case-section__label">Honest Reflection</p>
+    <h2 class="case-section__title">What's Still Unresolved</h2>
+    <p>The Protocol feature's privacy architecture is still in development. Any system that stores sensitive data creates privacy risk, and for this population that risk is not theoretical — it is existential. I am actively exploring zero-logging protocols, local device storage without server contact, and encryption approaches that prevent data from ever being accessible to third parties including government agencies.</p>
+    <p>I chose not to remove this feature from the prototype because removing it would mean designing for the easy version of this problem rather than the real one. The users who need Listo most are the ones who need an emergency button. Designing around that need would be a failure of the design. I am still building this. And I am building it right.</p>
+  </div>
+
+  <!-- PREV / NEXT -->
+  <div class="case-nav">
+    <div class="case-nav__item" style="visibility: hidden;">
+      <!-- No previous project -->
+    </div>
+    <a href="shein.html" class="case-nav__item next">
+      <span class="case-nav__dir">Next Project →</span>
+      <span class="case-nav__name">SHEIN Circular Ecosystem</span>
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-tagline">Thanks for stopping by, let's chat. 👋</p>
+      </div>
+      <div>
+        <p class="footer-col-label">Contact</p>
+        <a href="mailto:etolentino@berkeley.edu" class="footer-link">etolentino@berkeley.edu</a>
+      </div>
+      <div>
+        <p class="footer-col-label">Let's Connect</p>
+        <a href="https://linkedin.com/in/evelin-tolentino-3aa1a51a6" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
+        <a href="resume.html" class="footer-link">Resume</a>
+        <a href="work.html" class="footer-link">Work</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Evelin Tolentino</span>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
+  </script>
+
+</body>
+</html>

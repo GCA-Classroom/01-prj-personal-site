@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L'Oréal AI Routine Builder — Evelin Tolentino</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav nav--dark" id="nav">
+    <a href="index.html" class="nav-monogram">ET</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="work.html" class="nav-link active">Work</a></li>
+      <li><a href="resume.html" class="nav-link">Resume</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="resume.html">Resume</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <div class="case-hero loreal-hero">
+    <a href="work.html" class="case-hero__back">← Back to Work</a>
+    <div class="case-hero__content">
+      <h1 class="case-hero__title">L'Oréal AI Routine Builder</h1>
+      <p class="case-hero__subtitle">AI-Integrated Live Product — Designed &amp; Developed</p>
+    </div>
+  </div>
+
+  <div class="specs-strip">
+    <div>
+      <p class="spec__label">Role</p>
+      <p class="spec__value">Designer &amp; Developer</p>
+    </div>
+    <div>
+      <p class="spec__label">Duration</p>
+      <p class="spec__value">2025<br>ASU Global Tech Experience</p>
+    </div>
+    <div>
+      <p class="spec__label">Tools</p>
+      <p class="spec__value">HTML, CSS, JavaScript,<br>OpenAI API, Cloudflare Workers</p>
+    </div>
+    <div>
+      <p class="spec__label">Live Project</p>
+      <p class="spec__value"><a href="https://eve708.github.io/FINAL09-prj-loreal-routine-builder/" target="_blank" rel="noopener" style="color:#C1603A;">View Live Site ↗</a></p>
+    </div>
+  </div>
+
+  <div class="case-overview">
+    <p>This project proves I can build — not just design. A fully functional, deployed AI chatbot using real L'Oréal brand data from CeraVe, Garnier, and Lancôme. Users browse and select products, then receive personalized skincare and beauty routines generated through multi-turn conversation with the OpenAI API. End-to-end: concept, design, development, API integration, and deployment.</p>
+  </div>
+
+  <div class="case-section">
+    <p class="case-section__label">Problem</p>
+    <h2 class="case-section__title">Personalization at Scale</h2>
+    <p>Skincare routines are deeply personal, but most product recommendation systems are static — they surface options based on filters but cannot have a conversation, cannot adapt to follow-up information, and cannot help users understand why specific products work together. The challenge was building something that felt like talking to a knowledgeable friend rather than querying a database.</p>
+    <p>The technical constraint was equally important: real brand data, not invented products. Every recommendation the chatbot makes is grounded in actual L'Oréal product lines, creating a product experience that could realistically exist within the brand's ecosystem.</p>
+  </div>
+
+  <div class="case-section">
+    <p class="case-section__label">Process</p>
+    <h2 class="case-section__title">Design, Then Build, Then Solve the Hard Problems</h2>
+    <p>The design process started with the conversation flow — mapping out how a user moves from browsing products to receiving a routine recommendation to asking follow-up questions. The UX challenge was making the chatbot feel responsive and helpful without making users feel like they were filling out a form.</p>
+    <p>On the technical side: product search filtering required building a client-side search system against a structured product database. Multi-turn conversation memory required passing conversation history to the API on each request. Secure API key management required implementing a Cloudflare Worker as a proxy to keep credentials off the client. localStorage persistence ensures users don't lose their selections between sessions.</p>
+  </div>
+
+  <div class="case-section">
+    <p class="case-section__label">Evidence</p>
+    <h2 class="case-section__title">Shipped and Live</h2>
+    <p>The product is live and accessible. Features include: product browsing with search and filter, multi-turn AI conversation using OpenAI API, personalized routine generation based on selected products, follow-up conversation memory, localStorage persistence across sessions, and secure API key management via Cloudflare Worker.</p>
+
+    <div class="evidence-grid">
+      <div class="evidence-placeholder"><span>Product Browse</span></div>
+      <div class="evidence-placeholder"><span>Chat Interface</span></div>
+      <div class="evidence-placeholder"><span>Routine Output</span></div>
+    </div>
+  </div>
+
+  <div class="case-section">
+    <p class="case-section__label">Outcome</p>
+    <h2 class="case-section__title">What It Proves</h2>
+    <p>This project demonstrates something the other three case studies cannot: I can take a product from concept through deployment on my own. Every engineer I will ever work with needs to know that their designer understands what it takes to actually build something — the constraints, the tradeoffs, the debugging, the deployment.</p>
+    <p>That is what this project is. It is not a portfolio piece. It is a working product. Visit the live site and talk to it.</p>
+  </div>
+
+  <div class="case-section">
+    <p class="case-section__label">Honest Reflection</p>
+    <h2 class="case-section__title">Where I'd Take It Next</h2>
+    <p>The current version is a strong proof of concept but has real limitations. The product database is static — a production version would need a live inventory connection. The AI responses are good but not grounded in dermatological expertise, which matters for a skincare application. A next version would introduce more rigorous prompt engineering, skin type intake, and potentially an ingredient compatibility check layer before making recommendations.</p>
+    <p>I know exactly what it would take to build that version. That's the point.</p>
+  </div>
+
+  <div class="case-nav">
+    <a href="morehouse.html" class="case-nav__item">
+      <span class="case-nav__dir">← Previous Project</span>
+      <span class="case-nav__name">Morehouse Crafted Interiors</span>
+    </a>
+    <a href="listo.html" class="case-nav__item next">
+      <span class="case-nav__dir">Back to First →</span>
+      <span class="case-nav__name">Listo — Ya Estás Listo</span>
+    </a>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-tagline">Thanks for stopping by, let's chat. 👋</p>
+      </div>
+      <div>
+        <p class="footer-col-label">Contact</p>
+        <a href="mailto:etolentino@berkeley.edu" class="footer-link">etolentino@berkeley.edu</a>
+      </div>
+      <div>
+        <p class="footer-col-label">Let's Connect</p>
+        <a href="https://linkedin.com/in/evelin-tolentino-3aa1a51a6" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
+        <a href="resume.html" class="footer-link">Resume</a>
+        <a href="work.html" class="footer-link">Work</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Evelin Tolentino</span>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
+  </script>
+
+</body>
+</html>
