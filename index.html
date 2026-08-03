@@ -2,10 +2,217 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nathaniel Akintola Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">Nathaniel</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" style="background-image: linear-gradient(rgba(10,15,30,0.75), rgba(10,15,30,0.85)), url('img/hero-bg.jpg');">
+    <div class="hero-content">
+      <p class="eyebrow">Information Science @ UMD</p>
+      <h1>Hi, I'm Nathaniel Akintola</h1>
+      <p class="hero-subtitle">
+        Rising senior at the University of Maryland passionate about
+        data, web development, and building digital solutions that
+        create real-world impact — especially in civic and public interest spaces.
+      </p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">View My Projects</a>
+        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container about-grid">
+      <div class="about-image">
+        <img src="img/me.png" alt="Photo of Nathaniel Akintola">
+      </div>
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          Hello! I'm Nathaniel — an Information Science student at the University of Maryland,
+          College Park (GPA: 3.6, expected May 2027) with a minor in Technology Innovation Leadership.
+          I'm passionate about the intersection of data, technology, and public service.
+        </p>
+        <p>
+          My goal is to leverage data and technology to solve problems that matter.
+          I'm currently building my web development skills through hands-on projects and
+          coursework, while also exploring opportunities in data analysis, civic tech, and
+          philanthropic organizations in the DMV area.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <span class="skill-pill">HTML</span>
+        <span class="skill-pill">CSS</span>
+        <span class="skill-pill">JavaScript</span>
+        <span class="skill-pill">Python</span>
+        <span class="skill-pill">SQL / MySQL</span>
+        <span class="skill-pill">R</span>
+        <span class="skill-pill">Java</span>
+        <span class="skill-pill">Git</span>
+        <span class="skill-pill">GitHub</span>
+        <span class="skill-pill">Responsive Design</span>
+        <span class="skill-pill">VS Code</span>
+        <span class="skill-pill">Linux / WSL</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <h3>Transit-Oriented Development Database</h3>
+          <p>
+            A relational database built in MySQL using real Maryland MTA data to
+            analyze transit-oriented development patterns and support urban planning insights.
+          </p>
+          <p class="tech"><strong>Technologies:</strong> MySQL, SQL, Data Modeling</p>
+          <div class="project-links">
+            <a href="#">GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Python Adventure Game</h3>
+          <p>
+            A text-based adventure game built in Python featuring branching story paths,
+            inventory management, and object-oriented design principles.
+          </p>
+          <p class="tech"><strong>Technologies:</strong> Python, OOP</p>
+          <div class="project-links">
+            <a href="#">GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="img/laptop.jpg" alt="Laptop showing code" class="project-image">
+          <h3>Personal Portfolio Website</h3>
+          <p>
+            A responsive single-page portfolio website built from scratch using
+            HTML and CSS to showcase my skills, projects, and experience.
+          </p>
+          <p class="tech"><strong>Technologies:</strong> HTML, CSS, GitHub Pages</p>
+          <div class="project-links">
+            <a href="#">Live Demo</a>
+            <a href="#">GitHub</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="section section-alt">
+    <div class="container">
+      <h2>Education</h2>
+      <div class="edu-card">
+        <h3>University of Maryland, College Park</h3>
+        <p class="edu-degree">Bachelor of Science in Information Science</p>
+        <p><strong>Minor:</strong> Technology Innovation Leadership</p>
+        <p><strong>GPA:</strong> 3.6 | <strong>Expected Graduation:</strong> May 2027</p>
+        <p>
+          <strong>Relevant Coursework:</strong> Programming for Information Science (INST126),
+          Human-Computer Interaction (INST327), Web Development (INST377),
+          Database Design, Data Visualization
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <div class="container">
+      <h2>Experience</h2>
+      <div class="experience-list">
+
+        <div class="experience-item">
+          <h3>Research Data Annotator</h3>
+          <p class="exp-meta">Amazon Mechanical Turk | Remote</p>
+          <ul>
+            <li>Completed structured data annotation tasks to support machine learning and NLP research projects.</li>
+            <li>Maintained high accuracy and consistency across large batches of categorization and labeling work.</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <h3>Program Coordinator</h3>
+          <p class="exp-meta">Luv Michael | Volunteer</p>
+          <ul>
+            <li>Coordinated program activities and volunteer logistics for a nonprofit supporting individuals with autism.</li>
+            <li>Assisted with outreach and community engagement efforts.</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <h3>Community Group Leader</h3>
+          <p class="exp-meta">Maryland CRU | University of Maryland</p>
+          <ul>
+            <li>Lead weekly small group meetings, facilitating discussion and community building for 10+ students.</li>
+            <li>Organize events and coordinate with campus leadership to plan activities.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt resume-section">
+    <div class="container">
+      <h2>Resume</h2>
+      <p>Download my resume to learn more about my experience and skills.</p>
+      <a href="resume.pdf" class="btn btn-primary">Download Resume</a>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container contact-container">
+      <h2>Contact Me</h2>
+      <p>I'd love to connect! Feel free to reach out via email or find me on LinkedIn and GitHub.</p>
+      <div class="contact-links">
+        <a href="mailto:youremail@umd.edu">youremail@umd.edu</a>
+        <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a>
+        <a href="https://github.com/yourusername">github.com/yourusername</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Nathaniel Akintola. All Rights Reserved.</p>
+      <div class="footer-links">
+        <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
+        <span>|</span>
+        <a href="https://github.com/yourusername">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
+
