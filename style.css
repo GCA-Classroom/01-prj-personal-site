@@ -200,6 +200,14 @@ main {
   border: 1px solid #efe7de;
 }
 
+.project-link-card {
+  background: linear-gradient(135deg, #fffdfa 0%, #f8ebf0 100%);
+}
+
+.project-button {
+  margin-top: 8px;
+}
+
 .footer {
   text-align: center;
   color: var(--muted);
