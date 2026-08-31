@@ -1,1 +1,397 @@
-/* Add you CSS here */
+/* ========================================
+   PERSONAL PORTFOLIO WEBSITE - CSS STYLES
+   Red & Black Color Scheme (Eye-Friendly)
+   ======================================== */
+
+/* COLOR PALETTE:
+   - Dark Black Background: #1a1a1a
+   - Crimson Red Accent: #DC143C (brighter, eye-friendly red)
+   - Dark Red: #8B0000 (darker alternative)
+   - Light Gray Text: #333
+   - White Backgrounds: #fff
+   - Light Red/Pink Background: #FFE4E1
+*/
+
+/* RESET AND BASIC STYLES */
+/* This removes default margins and padding from all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY - Sets up the basic page styling */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+/* ========================================
+   NAVIGATION BAR
+   ======================================== */
+/* CUSTOMIZE COLORS: Try these values for navbar background:
+   #1a1a1a (dark gray), #DC143C (crimson), #8B0000 (dark red), #000000 (black) */
+.navbar {
+  background-color: #8B0000;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Logo styling - CUSTOMIZE COLOR: Try #ffffff, #DC143C, #FFE4E1 */
+.logo {
+  color: #715def;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* Navigation tab styling - CUSTOMIZE THESE COLORS */
+/* Text color options: #ffffff (white), #DC143C (crimson), #FFE4E1 (light pink) */
+/* Background options: transparent, #DC143C, #8B0000, #1a1a1a */
+.nav-tab {
+  color: #FFE4E1;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect - what happens when you mouse over a tab */
+/* TRY THESE COMBINATIONS:
+   Dark theme: color: #FFE4E1, background: #DC143C
+   Light theme: color: #DC143C, background: #f5f5f5
+   Red theme: color: #000000, background: #FFE4E1 */
+.nav-tab:hover {
+  color: #FFE4E1;
+  background-color: #DC143C;
+  transform: scale(1.05);
+}
+
+/* CONTAINER - Centers content and sets max width */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================================
+   HEADER / NAME SECTION
+   ======================================== */
+.header {
+  text-align: center;
+  padding: 50px 0;
+  border-bottom: 4px solid #DC143C;
+  margin-bottom: 40px;
+  background: linear-gradient(135deg, #fff 0%, #FFE4E1 100%);
+  border-radius: 8px;
+}
+
+/* Main name - Large and prominent in red */
+.name {
+  font-size: 48px;
+  color: #DC143C;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Tagline - Smaller subtitle text */
+.tagline {
+  font-size: 18px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* ========================================
+   BIO SECTION
+   ======================================== */
+.bio-section {
+  padding: 30px 0;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #DC143C;
+}
+
+/* Section headings - Consistent red styling */
+.bio-section h2 {
+  font-size: 32px;
+  color: #DC143C;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Paragraph spacing */
+.bio-section p {
+  margin-bottom: 15px;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* ========================================
+   SKILLS SECTION
+   ======================================== */
+.skills-section {
+  padding: 30px 0;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #DC143C;
+}
+
+/* Section heading for skills */
+.skills-section h2 {
+  font-size: 32px;
+  color: #DC143C;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Container for skill items - Simple layout */
+.skills-container {
+  display: block;
+}
+
+/* Individual skill item styling - CUSTOMIZE YOUR COLORS HERE */
+/* BACKGROUND COLOR OPTIONS: #FFE4E1 (light red), #f0f8ff (light blue), #fffacd (light yellow), #f0fff0 (light green) */
+/* BORDER COLOR OPTIONS: #DC143C (crimson), #8B0000 (dark red), #007bff (blue), #28a745 (green) */
+.skill-item {
+  background-color: #FFE4E1;
+  border-left: 5px solid #DC143C;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add hover effect for interactivity */
+.skill-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(220, 20, 60, 0.2);
+}
+
+/* Skill titles - CUSTOMIZE TEXT COLOR */
+/* COLOR OPTIONS: #8B0000 (dark red), #DC143C (crimson), #003d7a (dark blue), #551a8b (purple) */
+.skill-item h3 {
+  color: #8B0000;
+  margin-bottom: 8px;
+  font-size: 22px;
+  display: inline;
+}
+
+/* Font Awesome skill icons */
+.skill-icon {
+  color: #DC143C;
+  font-size: 32px;
+  margin-right: 12px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Skill descriptions */
+.skill-item p {
+  color: #555;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* ========================================
+   PROJECTS SECTION
+   ======================================== */
+.projects-section {
+  padding: 30px 0;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #DC143C;
+}
+
+/* Section heading for projects */
+.projects-section h2 {
+  font-size: 32px;
+  color: #DC143C;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Intro text */
+.projects-intro {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+/* PROJECT CARD STYLING */
+.project-card {
+  background-color: #f9f9f9;
+  border: 2px solid #FFE4E1;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on project cards */
+.project-card:hover {
+  border-color: #DC143C;
+  box-shadow: 0 6px 16px rgba(220, 20, 60, 0.15);
+}
+
+/* Project image container */
+.project-image-container {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background-color: #e0e0e0;
+}
+
+/* Project image styling */
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Zoom effect on hover */
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+/* Project info section */
+.project-info {
+  padding: 25px;
+}
+
+/* Project title */
+.project-title {
+  font-size: 24px;
+  color: #DC143C;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+/* Project description */
+.project-description {
+  color: #555;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* Technologies used */
+.project-tech {
+  color: #8B0000;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Project link button */
+.project-link {
+  display: inline-block;
+  color: #DC143C;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: 2px solid #DC143C;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Link hover effect */
+.project-link:hover {
+  background-color: #DC143C;
+  color: white;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #666;
+  font-size: 14px;
+  margin-top: 40px;
+  border-top: 2px solid #DC143C;
+}
+
+.bio-section {
+        border: 2px solid #e31837;
+        border-radius: 12px;
+        padding: 30px;
+        margin: 30px 0;
+        background-color: #f9f9f9;
+      }
+.skills-section {
+    border: 2px solid #e31837;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 30px 0;
+    background-color: #ffffff;
+}
+
+.projects-section {
+    border: 2px solid #e31837;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 30px 0;
+    background-color: #f7f7f7;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN (Mobile-Friendly)
+   ======================================== */
+/* This makes the website look good on smaller screens like phones */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+
+  .name {
+    font-size: 36px;
+  }
+
+  .tagline {
+    font-size: 16px;
+  }
+
+  .bio-section h2,
+  .skills-section h2,
+  .projects-section h2,
+  .reflection-section h2 {
+    font-size: 24px;
+  }
+
+  .skill-icon {
+    font-size: 28px;
+  }
+
+  .skill-item h3 {
+    font-size: 18px;
+  }
+
+  .project-image-container {
+    height: 200px;
+  }
+
+  .project-title {
+    font-size: 20px;
+  }
+}
