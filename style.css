@@ -1,1 +1,886 @@
-/* Add you CSS here */
+/* --------------------------------------------------
+   Base styles and layout
+   - This section sets up the colors, page spacing,
+   - and general rules that make the whole site look consistent.
+   -------------------------------------------------- */
+/* CSS Variables: These store colors and values used throughout the site
+   - They start with -- and can be reused in many places
+   - This makes it easy to change colors globally
+   - Example: background-color: var(--primary) uses the primary color */
+:root {
+  /* Dark mode background colors */
+  --bg: #151515;           /* Very dark background */
+  --surface: #fff;      /* Dark surface color */
+  --surface-alt: #fff;  /* Alternative dark surface */
+  
+  /* Light accent colors for contrast */
+  --primary: #d6c1a8;      /* Main accent color (beige/tan) */
+  --primary-dark: #bda38d; /* Darker version of primary */
+  --secondary: #f1e6d8;    /* Secondary light color */
+  --accent: #e9dcc7;       /* Accent color for highlights */
+  --navy: #f7f2ea;         /* Very light color */
+  
+  /* Text and border colors */
+  --text: #2f2a28;         /* Main text color */
+  --muted: #4e4a45;        /* Muted/secondary text */
+  --border: rgba(24, 24, 24, 0.12); /* Border color with transparency */
+  --shadow: 0 0 22px rgba(214, 193, 168, 0.12); /* Soft shadow effect */
+}
+
+/* This universal selector (*) applies to ALL elements on the page
+   - box-sizing: border-box makes width calculations easier
+   - It includes padding and borders in the total width/height */
+* {
+  box-sizing: border-box;
+}
+
+/* HTML (root) element styles */
+html {
+  scroll-behavior: smooth; /* Smooth scrolling when clicking anchor links */
+  height: 100%;            /* Full height of viewport */
+}
+
+/* Body: Main container for all content */
+body {
+  margin: 0;             /* Remove default margins */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Readable sans-serif fonts */
+  /* Background: gradient layers for visual depth */
+  background:
+    radial-gradient(circle at top left, rgba(214, 193, 168, 0.12), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.08), transparent 30%),
+    linear-gradient(180deg, #111111 0%, #1d1a18 100%);
+  color: var(--text);    /* Use our primary text color variable */
+  line-height: 1.7;      /* Extra space between lines for readability */
+  /* Flexbox layout: makes footer stick to bottom */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  min-height: 100%;      /* At least full viewport height */
+}
+
+/* Link styles: remove underlines and use parent text color */
+a {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit;        /* Use the color of the parent element */
+}
+
+/* Image styles: make images responsive and block-level */
+img {
+  max-width: 100%;    /* Never wider than container */
+  display: block;     /* Removes inline spacing below images */
+  height: auto;       /* Keep aspect ratio */
+}
+
+/* Container: controls max width and centers content */
+.container {
+  width: min(1100px, 90%);  /* Max width of 1100px, but 90% on very small screens */
+  margin: 0 auto;           /* Center the container horizontally */
+}
+
+/* Main content area: takes up available space, pushes footer down */
+main {
+  flex: 1; /* Grows to fill available space */
+}
+
+/* --------------------------------------------------
+   Section styles
+   -------------------------------------------------- */
+/* Section: large content blocks with padding and white background */
+.section {
+  padding: 42px 0 56px;  /* Space above and below content */
+  background: #ffffff;   /* White background for contrast */
+}
+
+.alt-bg {
+  background: #ffffff;
+}
+
+/* Section heading: styles for eyebrow + title combinations */
+.section-heading {
+  max-width: 700px;    /* Limit width for readability */
+  margin-bottom: 30px; /* Space below the heading */
+}
+
+/* Eyebrow: small uppercase text above section titles */
+.eyebrow {
+  display: inline-block;     /* Only take up needed width */
+  margin: 0 0 12px;          /* Space below eyebrow */
+  color: #4f473f;            /* Muted brown color */
+  font-size: 0.8rem;         /* Small text size */
+  font-weight: 700;          /* Bold weight */
+  letter-spacing: 0.12em;    /* Spread letters apart */
+  text-transform: uppercase; /* All caps */
+}
+
+/* Heading and paragraph baseline styles */
+
+
+
+/* --------------------------------------------------
+   Header and navigation styles
+   - This section controls the dark header bar and the nav links.
+   - The header relativeto the top of the page as you scroll. edit
+   -------------------------------------------------- */
+
+/* Site header: sticky navigation bar */
+.site-header {
+  position: sticky;  /* relative to top while scrolling */
+  top: 0;            /* 0 pixels from top */
+  z-index: 20;       /* Stays above other content */
+  border-bottom: 1px solid rgba(241, 230, 216, 0.2); /* Subtle light border */
+  display: flex;     /* Flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  background:#282828
+}
+
+/* Navbar: container for logo and nav links */
+.navbar {
+  display: flex; /* Puts the logo and links side by side */
+  justify-content: space-between; /* Pushes logo and links to edges */
+  align-items: center; /* Aligns them vertically in the middle */
+  min-height: 72px; /* Minimum height of navbar */
+}
+
+/* Logo: site branding */
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;      /* Bold font */
+  color: #ffffff;        /* White text */
+  text-transform: uppercase; /* All caps */
+  letter-spacing: 0.08em; /* Spread letters */
+  text-shadow: 0 0 12px rgba(241, 230, 216, 0.12); /* Subtle glow */
+}
+
+.logo span {
+  color: #ffffff;        /* Keep span same color */
+}
+
+/* Navigation links list */
+.nav-links {
+  display: flex; /* Keeps links in a row */
+  gap: 24px; /* Adds space between links */
+  flex-wrap: wrap; /* Lets links wrap if the screen is narrow */
+}
+
+/* Navigation link styling */
+.nav-links a {
+  color: #ffffff;           /* White text */
+  font-weight: 700;         /* Bold */
+  text-transform: uppercase; /* All caps */
+  letter-spacing: 0.05em;   /* Spread letters */
+  /* Smooth animation when hovering */
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+/* Navigation link on hover or focus */
+.nav-links a:hover,
+.nav-links a:focus,
+.nav-links a.active {
+  color: #f5efe7;    /* Lighter color on hover */
+  text-shadow: none; /* Remove glow on hover */
+}
+
+.hero-header {
+  position: sticky;
+  top: auto;
+  z-index: 1;
+  background: #ffffff;
+  padding: 44px 0 30px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(24, 24, 24, 0.08);
+  width: 100%;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text,
+.hero-card {
+  flex: 1;
+}
+
+.lead {
+  max-width: 560px;
+  font-size: 1.08rem;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  border-radius: 0;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover,
+.button:focus {
+  transform: translateY(-1px);
+}
+
+.button.primary {
+  background: #f5efe7;
+  color: #121212;
+  border: 2px solid rgba(18, 18, 18, 0.12);
+  box-shadow: 0 0 18px rgba(214, 193, 168, 0.18);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.button.primary:hover,
+.button.primary:focus {
+  background: #efe4d7;
+}
+
+.button.secondary {
+  background: #f5efe7;
+  color: #121212;
+  border: 2px solid rgba(18, 18, 18, 0.12);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.mini-stats {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.mini-stats li {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 110px;
+}
+
+.mini-stats strong {
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.mini-stats span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.hero-card {
+  background: #ffffff;
+  border-radius: 0;
+  padding: 24px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+  transform: translateY(-4px);
+  border-top: 5px solid var(--primary);
+}
+
+.hero-photo-link {
+  display: block;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.hero-photo {
+  /* Image for the hero section */
+  width: 100%;
+  min-height: 420px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  /* this is where you edited */
+}
+
+.card-box {
+  background: linear-gradient(135deg, rgba(214, 193, 168, 0.12), rgba(255, 255, 255, 0.8));
+  border-radius: 0;
+  padding: 16px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(24, 24, 24, 0.08);
+}
+
+.card-label {
+  margin-bottom: 8px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.mini-list {
+  display: grid; /* Creates a simple 2-column layout */
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* Two equal columns */
+  gap: 16px; /* Space between the two boxes */
+}
+
+.mini-list div {
+  background: #f5efe7;
+  border: 1px solid rgba(24, 24, 24, 0.12);
+  border-radius: 0;
+  padding: 12px 14px;
+  color: #1d1b19;
+}
+
+.mini-list span {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #4a443f;
+  margin-bottom: 4px;
+}
+
+.about-grid,
+.contact-box {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-grid {
+  align-items: stretch;
+}
+
+.about-image-wrap,
+.about-copy,
+.contact-copy,
+.info-card,
+.contact-form {
+  flex: 1;
+}
+
+.about-image-wrap {
+  display: flex;
+}
+
+.about-image {
+  width: 100%;
+  min-height: 420px;
+  background: transparent;
+  display: grid;
+  place-items: center;
+  color: transparent;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: none;
+}
+
+.about-copy {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid rgba(24, 24, 24, 0.12);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
+  padding: 28px;
+}
+
+.about-copy p {
+  margin-bottom: 20px;
+}
+
+.info-card {
+  background: #ffffff;
+  border: 1px solid rgba(24, 24, 24, 0.1);
+  border-radius: 0;
+  padding: 22px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
+  margin-top: 10px;
+}
+
+.info-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-card li {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.info-card li:last-child {
+  border-bottom: none;
+}
+
+.info-card span {
+  color: var(--muted);
+}
+
+.vertical-indent {
+  margin-top: 30px;
+}
+
+.my-favorite-songs .section-heading {
+  text-align: left;
+}
+
+.my-favorite-songs h2 {
+  text-align: left;
+}
+
+.my-favorite-songs ul {
+  list-style: none;
+  padding: 0;
+  margin: 24px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 24px;
+  justify-items: center;
+  width: min(100%, 860px);
+}
+
+.my-favorite-songs li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.my-favorite-songs iframe {
+  width: 100%;
+  max-width: 320px;
+  display: block;
+  margin: 0 auto;
+}
+
+.my-favorite-songs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 24px;
+  justify-items: center;
+  width: min(100%, 760px);
+}
+
+.my-favorite-songs li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.my-favorite-songs iframe {
+  width: 100%;
+  max-width: 320px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 720px) {
+  .my-favorite-songs ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------
+   Skills and projects card styles
+   - These rules shape the cards and image boxes in the skills/projects sections.
+   -------------------------------------------------- */
+.skills-grid,
+.projects-grid {
+  display: flex; /* Keeps cards in a horizontal row */
+  gap: 24px; /* Space between cards */
+  padding-bottom: 10px;
+}
+
+.skill-card,
+.project-card {
+  background: #ffffff;
+  border: 1px solid rgba(24, 24, 24, 0.1);
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+  flex: 0 0 280px;
+}
+
+.skill-card {
+  padding: 24px;
+}
+
+.skill-image-link {
+  display: block;
+  margin-bottom: 18px;
+  background: #f5efe7;
+  border: 1px solid rgba(24, 24, 24, 0.12);
+  padding: 12px;
+  text-decoration: none;
+}
+
+.skill-icon {
+  width: 100%;
+  height: 90px;
+  display: block;
+  background: #f5efe7;
+  border: 1px solid rgba(24, 24, 24, 0.12);
+  position: relative;
+}
+
+.skill-card h3 {
+  margin-bottom: 12px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-image {
+  height: 150px;
+  display: flex;
+  align-items: end;
+  justify-content: start;
+  padding: 16px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.project-one {
+  background: linear-gradient(135deg, #ff8f3d 0%, #d63384 100%);
+}
+
+.project-two {
+  background: linear-gradient(135deg, #6f7cff 0%, #d883ff 100%);
+}
+
+.project-three {
+  background: linear-gradient(135deg, #2d6fe8 0%, #8db5ff 100%);
+}
+
+.project-body {
+  padding: 18px 18px 20px;
+}
+
+/* --------------------------------------------------
+   Inspiration and contact styles
+   - These rules style the website links and the contact form.
+   -------------------------------------------------- */
+.inspiration-links {
+  display: flex; /* Keeps the inspiration links side by side */
+  gap: 16px; /* Space between each link */
+  flex-wrap: wrap; /* Moves them to the next line on small screens */
+  margin-bottom: 18px;
+}
+
+.inspiration-links a {
+  background: linear-gradient(135deg, rgba(214, 193, 168, 0.1), rgba(255, 255, 255, 0.03));
+  border: 1px solid var(--border);
+  border-radius: 0;
+  padding: 0.7rem 1rem;
+  color: var(--text);
+  font-weight: 700;
+  box-shadow: 0 0 12px rgba(214, 193, 168, 0.06);
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.inspiration-links a:hover,
+.inspiration-links a:focus {
+  background: #f5efe7;
+  border-color: rgba(24, 24, 24, 0.18);
+  color: #1d1b19;
+}
+
+.inspiration-copy {
+  max-width: 760px;
+}
+
+.contact-section {
+  padding-bottom: 100px;
+}
+
+.contact-box {
+  background: #ffffff;
+  border: 1px solid rgba(24, 24, 24, 0.1);
+  border-radius: 0;
+  padding: 24px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
+}
+
+.contact-copy ul {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0 0;
+  color: var(--muted);
+}
+
+.contact-copy li + li {
+  margin-top: 10px;
+}
+
+.contact-form {
+  display: flex; /* Stacks the form fields vertically */
+  flex-direction: column;
+  gap: 18px; /* Space between each label and input */
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 700;
+  color: #1d1d1d;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid var(--border);
+  border-radius: 0;
+  padding: 0.8rem 0.9rem;
+  font: inherit;
+  background: #f8f5f1;
+  color: #1d1d1d;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid rgba(79, 110, 247, 0.2);
+  border-color: var(--primary);
+}
+
+/* --------------------------------------------------
+   Footer styles
+   - The footer stays pinned to the bottom of the page layout.
+   -------------------------------------------------- */
+.site-footer {
+  background: linear-gradient(180deg, rgba(17, 17, 17, 0.75), rgba(17, 17, 17, 1));
+  color: #f8f3ee;
+  padding: 25px 0;
+  margin-top: auto;
+  border-top: 1px solid rgba(241, 230, 216, 0.18);
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-content p {
+  margin: 0;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.social-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* --------------------------------------------------
+   Responsive styles for tablets and larger screens
+   - @media queries help the layout adapt on smaller screens.
+   - We keep the desktop layout for screens wider than 900px.
+   - For tablets and smaller screens, we stack elements vertically.
+   -------------------------------------------------- */
+
+/* Tablet breakpoint: screens smaller than 900px (iPads, small laptops) */
+@media (max-width: 900px) {
+  /* Stack these side-by-side layouts vertically on tablets */
+  .hero-content,
+  .about-grid,
+  .contact-box {
+    flex-direction: column; /* Changes from row to column layout */
+    align-items: flex-start; /* Aligns items to the left */
+  }
+
+  /* Skills and projects stay as flex containers */
+  .skills-grid,
+  .projects-grid {
+    display: flex;
+    /* On tablets, these will wrap thanks to flex-wrap */
+    flex-wrap: wrap;
+  }
+
+  /* Reduce padding on sections for tablets */
+  .section {
+    padding: 32px 0 40px; /* Less vertical padding on tablets */
+  }
+}
+
+/* Mobile breakpoint: screens smaller than 768px (phones and small tablets) */
+@media (max-width: 768px) {
+  /* Make navigation stack vertically on phones */
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px 0; /* Reduce padding on small screens */
+    gap: 12px; /* Add space between logo and nav links */
+  }
+
+  /* Center the navigation links */
+  .nav-links {
+    justify-content: center;
+    gap: 16px; /* Reduce gap between links on mobile */
+  }
+
+  /* Make nav links smaller on mobile */
+  .nav-links a {
+    font-size: 0.85rem; /* Slightly smaller text */
+  }
+
+  /* Hero section adjustments for mobile */
+  .hero-content {
+    gap: 24px; /* Reduce gap between elements */
+  }
+
+  .hero-photo,
+  .about-image {
+    min-height: 280px; /* Smaller image height on mobile */
+  }
+
+  /* Skills and projects: show one card per row on mobile */
+  .skills-grid,
+  .projects-grid {
+    flex-wrap: wrap; /* Allow cards to wrap */
+    gap: 16px; /* Reduce gap between cards */
+  }
+
+  /* Make cards flexible and full-width on mobile */
+  .skill-card,
+  .project-card {
+    flex: 1 1 100%; /* Take full width on mobile */
+    min-width: 0; /* Allow cards to shrink below 280px */
+  }
+
+  /* Stack form fields and contact info vertically */
+  .contact-box {
+    flex-direction: column; /* Stack vertically */
+    gap: 24px; /* Space between contact info and form */
+    padding: 20px; /* Reduce padding on mobile */
+  }
+
+  /* Full-width buttons on mobile */
+  .button {
+    width: 100%; /* Fill the width */
+    text-align: center;
+    padding: 0.9rem 1.2rem; /* Slightly larger touch target */
+  }
+
+  /* Stack button group vertically */
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px; /* Space between buttons */
+  }
+
+  /* Mini stats: show in single column on mobile */
+  .mini-stats {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* Reduce padding in sections on mobile */
+  .section {
+    padding: 28px 0 36px;
+  }
+
+  /* Make headings responsive on mobile */
+  h1 {
+    font-size: 1.8rem; /* Smaller on mobile */
+  }
+
+  h2 {
+    font-size: 1.4rem; /* Smaller on mobile */
+  }
+
+  /* Reduce padding in cards on mobile */
+  .skill-card {
+    padding: 16px; /* Less padding */
+  }
+
+  .about-copy,
+  .info-card,
+  .hero-card {
+    padding: 16px; /* Consistent padding on mobile */
+  }
+
+  /* Favorite songs: one column on mobile */
+  .my-favorite-songs ul {
+    grid-template-columns: 1fr; /* Single column */
+  }
+
+  /* Make Spotify iframes responsive */
+  .my-favorite-songs iframe {
+    max-width: 100%; /* Full width of container */
+  }
+}
+
+/* Extra small phones: screens smaller than 480px */
+@media (max-width: 480px) {
+  /* Reduce font sizes further for tiny screens */
+  h1 {
+    font-size: 1.4rem; /* Even smaller for small phones */
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 0.9rem; /* Slightly smaller text */
+  }
+
+  /* Reduce all padding for extra small screens */
+  .container {
+    width: 95%; /* Give more margin on tiny screens */
+  }
+
+  .section {
+    padding: 20px 0 28px; /* Minimal padding */
+  }
+
+  .navbar {
+    padding: 12px 0;
+  }
+
+  /* Stack navigation even more compactly */
+  .nav-links {
+    gap: 12px;
+  }
+
+  /* Smaller logo on tiny screens */
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  /* Reduce button size slightly */
+  .button {
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Reduce gap in mini-stats */
+  .mini-stats {
+    gap: 12px;
+  }
+}

@@ -1,11 +1,321 @@
 <!DOCTYPE html>
+<!-- This tells the browser this is an HTML5 document -->
 <html lang="en">
+<!-- lang="en" tells the browser this page is in English -->
+
 <head>
+  <!-- Head section: information ABOUT the page (not visible to users) -->
+  
+  <!-- Character encoding: tells browser to use UTF-8 (supports special characters) -->
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
+  
+  <!-- Viewport: makes site responsive on mobile devices -->
+  <!-- width=device-width: use device's actual width -->
+  <!-- initial-scale=1.0: don't zoom in by default -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Meta description: appears in search results and when sharing -->
+  <meta name="description" content="Personal portfolio website for a web development student.">
+  
+  <!-- Page title: appears in browser tab and search results -->
+  <title>Xi Isaiah Castro | Portfolio</title>
+  
+  <!-- Link to external CSS file: controls colors, spacing, and layout -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <!-- Add your HTML content here -->
+  <!-- Everything users see on the page goes in the body -->
+  
+  <!-- Site header and sticky navigation -->
+  <!-- "sticky" means this header stays at the top when scrolling -->
+  <header class="site-header">
+    <!-- Navigation bar with logo and menu links -->
+    <nav class="navbar container" aria-label="Main navigation">
+      <!-- aria-label helps screen readers understand this is navigation -->
+      
+      <!-- Logo/site title - links to top of page -->
+      <a href="#home" class="logo">Xi<span>Castro</span></a>
+
+      <!-- Navigation links - all connect to sections below -->
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#inspiration">Inspiration</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero section: the big eye-catching intro at the top -->
+  <!-- This section has two columns on desktop: text on left, card on right -->
+  <!-- On mobile, they stack vertically (one above the other) -->
+  <section class="hero-header">
+    <div class="container hero-content">
+      <!-- Left column: introduction text -->
+      <div class="hero-text">
+        <!-- Small label above the main heading -->
+        <p class="eyebrow">Web Development Student</p>
+        
+        <!-- Main headline -->
+        <h1>Building clean, modern websites using ideas to mold reality.</h1>
+        
+        <!-- Introductory paragraph (called "lead" in design) -->
+        <p class="lead">
+          I am a beginner web developer learning how to design and build digital
+          experiences that are simple, useful, and visually appealing.
+        </p>
+
+        <!-- Buttons for main calls-to-action -->
+        <!-- These buttons are full-width on mobile, side-by-side on desktop -->
+        <div class="hero-buttons">
+          <a href="#projects" class="button primary">Projects</a>
+          <a href="#contact" class="button secondary">Contact Me</a>
+        </div>
+
+        <!-- Quick facts list -->
+        <!-- On mobile: stacks vertically -->
+        <!-- On desktop: displays horizontally -->
+        <ul class="mini-stats" aria-label="Quick facts">
+          <li><strong>First</strong><span>Year Learning</span></li>
+          <li><strong>4+</strong><span>Projects Planned</span></li>
+        </ul>
+      </div>
+
+      <!-- Right column: profile card -->
+      <!-- On mobile, this appears below the text -->
+      <!-- On desktop, this appears next to the text -->
+      <div class="hero-card" aria-label="Profile summary">
+        <!-- Profile photo link -->
+        <a href="#about" class="hero-photo-link" aria-label="Profile photo link">
+          <img src="https://github.com/gicastr1-collab/01-prj-personal-site/blob/main/xispics/profile.jpeg?raw=true" alt="Profile photo" class="hero-photo">
+        </a>
+        <!-- Current focus box -->
+        <div class="card-box">
+          <p class="card-label">Current Focus</p>
+          <h3>HTML, CSS, and interpreting code to learn new skills.</h3>
+        </div>
+        <!-- Quick info boxes (grid layout) -->
+        <div class="mini-list">
+          <div>
+            <span>Learning</span>
+            <strong>Front-End</strong>
+          </div>
+          <div>
+            <span>Goal</span>
+            <strong>Portfolio</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main content area -->
+  <main>
+      <!-- About section -->
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">About</p>
+            <h2>This section tells a little about me.</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-image-wrap">
+              <div class="about-image" aria-label="Profile portrait placeholder">
+                <img src="https://github.com/gicastr1-collab/01-prj-personal-site/blob/main/xispics/FE83DA14-3C09-4331-A217-758D5DAC1B21.jpeg?raw=true" alt="Profile photo" class="hero-photo">
+              </div>
+            </div>
+
+            <div class="about-copy visible">
+              <p>
+                Hello everyone! I'm Xi, a student in a web development course learning how to create websites that are visually appealing, functional, and most of all beginner friendly so I can continue to learn and improve my skills! While I am still learning, I can't wait to continue to develop this page and add more projects to my portfolio to share with you!
+              </p>
+
+              <aside class="info-card">
+                <h3>Information About Me</h3>
+                <ul>
+                  <li><span>Located in</span><strong>Riverside, CA, United States of America</strong></li>
+                  <li><span>Course</span><strong>Web Development for <emphasis>EVERYONE</emphasis></strong></li>
+                  <li><span>Interests</span><strong>UI & UX Design</strong></li>
+                  <li><span>Focus</span><strong>Learning New Skills</strong></li>
+                </ul>
+              </aside>
+            </div>
+          </div>
+
+          <p class="vertical-indent"></p>
+
+          <div class="section-heading">
+            <h3>And some of my favorite music...</h3>
+          </div>
+          <div class="my-favorite-songs">  
+            <ul>
+              <li><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1KvHnVrCw0UxVrAoVC0AJk?utm_source=generator&si=86465cfb94304b7b" width="50%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></li>
+              <li><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0PnN08IKoqfSuGlwM6PAT5?utm_source=generator&si=f9cde7b01464438a" width="50%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></li>
+              <li><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2cxqeN9QqoeqVSQIlXnviB?utm_source=generator&si=87a5fe18778043be" width="50%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></li>
+              <li><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/38TpUKiHQZyBKiD9LMMy6X?utm_source=generator&si=aa2601745dbe49df" width="50%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></li>
+          </ul>
+        </div>
+      </section>
+
+      
+
+      <!-- Skills section -->
+      <section id="skills" class="section alt-bg">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Skills</p>
+            <h2>Tools and skills I am learning.</h2>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-card">
+              <a href="#" class="skill-image-link" aria-label="HTML skill image link">
+                <img src="https://github.com/gicastr1-collab/01-prj-personal-site/blob/main/xispics/HTML5_Logo_512.png?raw=true" alt="HTML logo" class="skill-photo">
+              </a>
+              <h3>HTML</h3>
+              <p>Creating a solid page structure with semantic elements and clean content.</p>
+            </article>
+
+            <article class="skill-card">
+              <a href="#" class="skill-image-link" aria-label="CSS skill image link">
+                <img src="https://github.com/gicastr1-collab/01-prj-personal-site/blob/main/xispics/css3-logo-png_seeklogo-186678.png?raw=true" alt="CSS logo" class="skill-photo">
+              </a>
+              <h3>CSS</h3>
+              <p>Styling pages with colors, spacing, layout, and responsive design principles.</p>
+            </article>
+
+            <article class="skill-card">
+              <a href="#" class="skill-image-link" aria-label="Responsive design skill image link">
+                <img src="https://github.com/gicastr1-collab/01-prj-personal-site/blob/main/xispics/Responsive_Design_Logo.png?raw=true" alt="Responsive design logo" class="skill-photo">
+              </a>
+              <h3>Responsive Design</h3>
+              <p>Making websites look great on all devices. I'm working on mastering it on mobile devices.</p>
+            </article>
+
+            <article class="skill-card">
+              <a href="#" class="skill-image-link" aria-label="Problem solving skill image link">
+                <img src="https://github.com/gicastr1-collab/01-prj-personal-site/blob/main/xispics/8148303.png?raw=true" alt="Problem solving logo" class="skill-photo">
+              </a>
+              <h3>Problem Solving</h3>
+              <p>Learning to troubleshoot errors, improve layouts, and build better code.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects section -->
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Projects</p>
+            <h2>Portfolio pieces I plan to build and showcase.</h2>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-image project-one">
+                <span>Landing Page</span>
+              </div>
+              <div class="project-body">
+                <h3>Business Landing Page</h3>
+                <p>A simple marketing page with a clear message, call-to-action, and modern layout.</p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-image project-two">
+                <span>Portfolio</span>
+              </div>
+              <div class="project-body">
+                <h3>Personal Portfolio</h3>
+                <p>A clean one-page portfolio to present my work, skills, and contact information.</p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-image project-three">
+                <span>Blog</span>
+              </div>
+              <div class="project-body">
+                <h3>Simple Blog Layout</h3>
+                <p>A content-focused page for posts, articles, and reading-friendly formatting.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Inspiration section -->
+      <section id="inspiration" class="section alt-bg inspiration">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Things that inspire me</p>
+            <h2>Websites I like for their clean, modern design. The first two are my friends who inspire me with their own skillset.</h2>
+          </div>
+
+          <div class="inspiration-links">
+            <a href="https://www.nicolesantamaria.design/" target="_blank" rel="noreferrer">Nicole Santamaria—Graphic Designer</a>
+            <a href="https://yaycub.bearblog.dev/v202607/" target="_blank" rel="noreferrer">yaycub's blog</a>
+            <a href="https://wutheringwaves.kurogames.com/en/" target="_blank" rel="noreferrer">Wuthering Waves Official Website</a>
+          </div>
+
+          <p class="inspiration-copy">
+            I like websites are visually pleasant and immersive I want my portfolio to feel like it represents me and my work, while remaining simple and accessible.
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact section -->
+      <section id="contact" class="section contact-section">
+        <div class="container contact-box">
+          <div class="contact-copy">
+            <p class="eyebrow">Contact</p>
+            <h2>Let’s connect.</h2>
+            <p>
+              If you want to collaborate, ask a question, or just say hello, I would love to hear from you. This form actually works, I set it up myself :)!
+            </p>
+            <ul>
+              <li>Email: hello@example.com</li>
+              <li>Location: Your City</li>
+              <li>Instagram: @yourusername</li>
+            </ul>
+          </div>
+
+          <form class="contact-form" method="POST" action="https://formspree.io/f/xoeqedjq">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="How should I address you?" required>
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" placeholder="How about your email address?" required>
+            </label>
+
+            <label>
+              Message
+              <textarea name="message" rows="5" placeholder="Write your message here" required></textarea>
+            </label>
+
+            <button type="submit" class="button primary">Off the message goes!</button>
+          </form>
+        </div>
+      </section>
+  </main>
+
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2026 Xi Isaiah Castro</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/gisaiahcastro/">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+
 </body>
 </html>
