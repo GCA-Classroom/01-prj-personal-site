@@ -1,1 +1,155 @@
-/* Add you CSS here */
+/* These variables make it easy to change the site's colors later. */
+:root {
+	--dark-color: #173042;
+	--light-color: #917db7;
+	--accent-color: #173042;
+	--link-color: #5d0e07;
+	--light-text-color: #b1e2ed;
+	--white-color: #ffffff;
+}
+
+/* This makes sizing easier to understand across the whole page. */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	color: var(--dark-color);
+	background-color: var(--light-color);
+	font-family: Georgia, "Times New Roman", serif;
+	line-height: 1.6;
+	text-align: center;
+}
+
+header {
+	padding: 60px 20px 40px;
+	color: var(--light-text-color);
+	background-color: var(--dark-color);
+	background-image: url("img/background.png");
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+}
+
+header img {
+	display: block;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto 20px;
+	object-fit: cover;
+	border-radius: 15px;
+}
+
+h1,
+h2,
+h3 {
+	margin-top: 0;
+	color: var(--dark-color);
+}
+
+h1 {
+	margin-bottom: 8px;
+	font-size: 42px;
+	color: var(--light-text-color);
+}
+
+header p {
+	margin-top: 0;
+	font-size: 18px;
+}
+
+nav {
+	margin-top: 28px;
+}
+
+nav a {
+	display: inline-block;
+	margin: 5px 10px;
+	padding: 6px 12px;
+	color: var(--link-color);
+	background-color: #b1e2ed;
+	border: 1px solid var(--dark-color);
+	border-radius: 15px;
+	text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus,
+a:hover,
+a:focus {
+	color: var(--link-color);
+}
+
+main {
+	width: 90%;
+	max-width: 850px;
+	margin: 0 auto;
+}
+
+section {
+	padding: 55px 0;
+	border-bottom: 1px solid #d8d0c2;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+ul {
+	padding-left: 0;
+}
+
+#skills ul {
+	list-style: none;
+}
+
+#skills li {
+	display: inline-block;
+	margin: 0 20px 8px;
+	vertical-align: top;
+}
+
+li img {
+	display: block;
+	width: 70px;
+	height: 70px;
+	margin: 0 auto 8px;
+}
+
+article {
+	display: inline-block;
+	width: 46%;
+	min-height: 170px;
+	margin: 1%;
+	padding: 22px;
+	vertical-align: top;
+	background-color: #b1e2ed;
+	border-left: 5px solid var(--accent-color);
+}
+
+article a,
+#contact a {
+	color: var(--link-color);
+	font-weight: bold;
+}
+
+footer {
+	padding: 25px 20px;
+	color: var(--light-text-color);
+	background-color: var(--dark-color);
+	text-align: center;
+}
+
+/* On small screens, let project cards use the full available width. */
+@media (max-width: 600px) {
+	h1 {
+		font-size: 34px;
+	}
+
+	article {
+		display: block;
+		width: 100%;
+		margin: 15px 0;
+	}
+}
