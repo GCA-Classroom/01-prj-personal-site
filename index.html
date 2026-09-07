@@ -1,11 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A student portfolio for web development projects.">
+  <title>Alex Morgan | Web Development Student</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <!-- Add your HTML content here -->
+  <!-- The header contains the site name and the links to each section. -->
+  <header class="site-header">
+    <a class="logo" href="#top">AM<span>.</span></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- Hero section: the first thing visitors see. -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">WEB DEVELOPMENT STUDENT</p>
+        <h1>Building my skills, one project at a time.</h1>
+        <p class="intro">Hi, I’m Alex. I’m learning how to create useful, thoughtful websites with HTML, CSS, and a lot
+          of curiosity.</p>
+        <a class="button" href="#projects">See my projects <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-image">
+        <img src="img/me.png" alt="Portrait of Alex Morgan">
+      </div>
+    </section>
+
+    <!-- About section: a short introduction visitors can scan quickly. -->
+    <section class="about section" id="about">
+      <div class="section-label">01 / ABOUT ME</div>
+      <div class="section-content">
+        <h2>Curious by nature.<br>Learning by doing.</h2>
+        <p>I’m a web development student building a portfolio as I learn. I enjoy turning a blank page into something
+          clear, welcoming, and easy to use.</p>
+        <p>My goal is to keep experimenting, ask good questions, and create projects that show both my progress and my
+          personality.</p>
+      </div>
+    </section>
+
+    <!-- Skills section: update these as new skills are learned. -->
+    <section class="skills section" id="skills">
+      <div class="section-label">02 / SKILLS</div>
+      <div class="section-content">
+        <h2>Tools I’m exploring</h2>
+        <ul class="skill-list">
+          <li><span>01</span> HTML</li>
+          <li><span>02</span> CSS</li>
+          <li><span>03</span> Responsive design</li>
+          <li><span>04</span> Accessibility</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects section: replace the sample text and links as projects are completed. -->
+    <section class="projects section" id="projects">
+      <div class="section-label">03 / PROJECTS</div>
+      <div class="section-content">
+        <h2>Selected work</h2>
+        <div class="project-list">
+          <article class="project-card featured-project">
+            <img src="img/laptop.jpg" alt="Laptop on a desk">
+            <div class="project-details">
+              <p class="project-number">PROJECT 01</p>
+              <h3>Course project one</h3>
+              <p>A first responsive website made with clean HTML and CSS.</p>
+              <a href="#contact">Coming soon <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-placeholder">02</div>
+            <div class="project-details">
+              <p class="project-number">PROJECT 02</p>
+              <h3>Another idea</h3>
+              <p>A new project will go here as my skills grow.</p>
+              <a href="#contact">Coming soon <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact section: a simple invitation to connect. -->
+    <section class="contact section" id="contact">
+      <div class="section-label">04 / CONTACT</div>
+      <div class="section-content">
+        <p class="eyebrow">LET’S CONNECT</p>
+        <h2>Have a project idea?</h2>
+        <p>I’m always happy to talk about learning, design, and the web.</p>
+        <a class="email-link" href="mailto:alex@example.com">alex@example.com <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Alex Morgan</p>
+    <p>Made while learning on the web.</p>
+  </footer>
 </body>
+
 </html>
