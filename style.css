@@ -1,1 +1,435 @@
 /* Add you CSS here */
+/* =========================
+   BASIC RESET
+   Removes default browser spacing
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   GENERAL STYLES
+========================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background-color: #071a33;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+
+/* Keeps content from becoming too wide */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   NAVIGATION
+========================== */
+
+.navbar {
+    background-color: #172c49;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-content {
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: orange;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #08b9ed;
+}
+
+
+/* Navigation links */
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: orange;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    color: #08b9ed;
+}
+
+
+/* =========================
+   HERO SECTION
+========================== */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    /* The image you provided */
+    background-image:url(SpaceImage.jpg) ;
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Dark overlay makes the text easier to read */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        rgba(3, 14, 29, 0.35),
+        rgba(3, 14, 29, 0.75)
+    );
+}
+
+
+/* Hero text sits above the overlay */
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+
+.eyebrow,
+.section-label {
+    color: yellow;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+
+.hero h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 0.95;
+    margin-bottom: 25px;
+	color: orange;
+}
+
+
+.hero-text {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: orange;
+}
+
+
+/* =========================
+   BUTTON
+========================== */
+
+.button {
+    display: inline-block;
+
+    background-color: #08b9ed;
+    color: #ffffff;
+
+    padding: 13px 25px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #079dcc;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================== */
+
+.section {
+    padding: 100px 0;
+}
+
+.section h2 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    margin-bottom: 45px;
+}
+
+
+/* =========================
+   ABOUT ME
+========================== */
+
+.about {
+    background-color: #071a33;
+}
+
+
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+
+.about-text {
+    color: #c5d0dd;
+    font-size: 1.05rem;
+}
+
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+
+/* Small goal card */
+
+.about-card {
+    background-color: #102844;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.card-icon {
+    color: #08b9ed;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+
+.about-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+
+.about-card p {
+    color: #b8c5d4;
+}
+
+
+/* =========================
+   SKILLS
+========================== */
+
+.skills {
+    background-color: #0c223d;
+}
+
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+.skill-card {
+    background-color: #102844;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    transition: 0.3s;
+}
+
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: #08b9ed;
+}
+
+
+.skill-number {
+    color: #08b9ed;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0 10px;
+}
+
+
+.skill-card p {
+    color: #b8c5d4;
+}
+
+
+/* =========================
+   PROJECTS
+========================== */
+
+.projects {
+    background-color: #071a33;
+}
+
+
+.projects-intro {
+    color: #b8c5d4;
+    max-width: 650px;
+    margin-bottom: 35px;
+}
+
+
+.project-placeholder {
+    min-height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px;
+
+    border: 2px dashed #31506f;
+    border-radius: 12px;
+}
+
+
+.project-placeholder span {
+    color: #08b9ed;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+
+.project-placeholder h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+
+.project-placeholder p {
+    color: #b8c5d4;
+}
+
+
+/* =========================
+   FOOTER
+========================== */
+
+footer {
+    background-color: #172c49;
+    padding: 25px 0;
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    color: #aebdcd;
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+   MOBILE DESIGN
+========================== */
+
+@media (max-width: 700px) {
+
+    /* Stack navigation */
+
+    .nav-content {
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+    /* Smaller hero */
+
+    .hero {
+        min-height: 600px;
+    }
+
+
+    /* Stack About section */
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+
+    /* Stack skill cards */
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Stack footer */
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
