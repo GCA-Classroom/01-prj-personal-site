@@ -1,13 +1,16 @@
 /* These colors and sizes are kept in one place so they are easy to change. */
 :root {
-  --ink: #18352f;
-  --muted: #58716b;
-  --cream: #f6f1e8;
-  --paper: #fffdf8;
-  --coral: #e7795b;
-  --yellow: #f2c66d;
-  --line: #d7ddd3;
+
+  --ink: #111614;
+  --muted: #424c45;
+  --cream: #aaa88f;
+  --paper: #c9c6ad;
+  --coral: #672725;
+  --yellow: #776735;
+  --line: #64675d;
 }
+
+
 
 * {
   box-sizing: border-box;
@@ -18,10 +21,10 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 2;
   color: var(--ink);
   background: var(--cream);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Baskerville", "Baskerville Old Face", Georgia, "Times New Roman", serif;
   line-height: 1.6;
 }
 
@@ -43,22 +46,22 @@ a {
   text-decoration: none;
 }
 
-.logo span,
-.eyebrow,
-.project-number {
-  color: var(--coral);
+.logo span, .eyebrow, .project-number {
+  color: var(--yellow);
+  font-family: "Baskerville", "Baskerville Old Face", Georgia, serif;
 }
 
 nav a {
   margin-left: 24px;
   color: var(--muted);
-  font-family: Arial, sans-serif;
-  font-size: 0.8rem;
+  font-family: "Baskerville", "Baskerville Old Face", Georgia, serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   text-decoration: none;
 }
 
-nav a:hover,
-nav a:focus {
+nav a:hover, nav a:focus {
   color: var(--coral);
 }
 
@@ -89,19 +92,14 @@ nav a:focus {
   object-fit: cover;
 }
 
-.eyebrow,
-.section-label,
-.project-number {
-  font-family: Arial, sans-serif;
+.eyebrow, .section-label, .project-number {
+  font-family: "Baskerville", "Baskerville Old Face", Georgia, "Times New Roman", serif;
   font-size: 0.72rem;
   font-weight: bold;
   letter-spacing: 0.12em;
 }
 
-h1,
-h2,
-h3,
-p {
+h1, h2, h3, p {
   margin-top: 0;
 }
 
@@ -110,14 +108,16 @@ h1 {
   margin-bottom: 24px;
   font-size: clamp(3rem, 7vw, 6.4rem);
   font-weight: normal;
-  line-height: 0.98;
+  line-height: 0.9;
+  letter-spacing: -0.025em;
 }
 
 h2 {
   margin-bottom: 24px;
   font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: normal;
-  line-height: 1.05;
+  line-height: 1;
+  letter-spacing: -0.015em;
 }
 
 .intro {
@@ -132,13 +132,13 @@ h2 {
   padding: 13px 20px;
   color: var(--paper);
   background: var(--ink);
-  font-family: Arial, sans-serif;
+  font-family: "Baskerville", "Baskerville Old Face", Georgia, serif;
   font-size: 0.85rem;
+  letter-spacing: 0.04em;
   text-decoration: none;
 }
 
-.button:hover,
-.button:focus {
+.button:hover, .button:focus {
   background: var(--coral);
 }
 
@@ -186,7 +186,7 @@ h2 {
 
 .skill-list span {
   color: var(--coral);
-  font-family: Arial, sans-serif;
+  font-family: "Baskerville", "Baskerville Old Face", Georgia, serif;
   font-size: 0.75rem;
 }
 
@@ -221,12 +221,12 @@ h2 {
   color: var(--muted);
 }
 
-.project-details a,
-.email-link {
+.project-details a, .email-link {
   color: var(--coral);
-  font-family: Arial, sans-serif;
+  font-family: "Baskerville", "Baskerville Old Face", Georgia, serif;
   font-size: 0.8rem;
   font-weight: bold;
+  letter-spacing: 0.03em;
   text-decoration: none;
 }
 
@@ -244,16 +244,18 @@ h2 {
   background: var(--yellow);
 }
 
-.contact .eyebrow {
+.contact .eyebrow,
+.contact h2,
+.contact .section-content>p {
   color: var(--ink);
 }
 
 .email-link {
   display: inline-block;
-  margin-top: 12px;
+  margin-top: 10px;
   color: var(--ink);
   font-size: 1.1rem;
-  border-bottom: 2px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
 }
 
 footer {
@@ -261,22 +263,18 @@ footer {
   justify-content: space-between;
   padding: 24px 7%;
   color: var(--muted);
-  font-family: Arial, sans-serif;
+  font-family: "Baskerville", "Baskerville Old Face", Georgia, serif;
   font-size: 0.75rem;
 }
 
 @media (max-width: 700px) {
 
-  .site-header,
-  .hero,
-  .section,
-  footer {
+  .site-header, .hero, .section, footer {
     padding-right: 7%;
     padding-left: 7%;
   }
 
-  .site-header,
-  footer {
+  .site-header, footer {
     align-items: flex-start;
     flex-direction: column;
     gap: 18px;
@@ -286,9 +284,7 @@ footer {
     margin: 0 18px 0 0;
   }
 
-  .hero,
-  .section,
-  .project-list {
+  .hero, .section, .project-list {
     flex-direction: column;
   }
 
