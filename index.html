@@ -2,10 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antonio Ollis | Web Developer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <!-- The header introduces you and contains the page navigation. -->
+  <header class="site-header">
+    <p class="eyebrow">Personal Page</p>
+    <h1><a href="secret_page.html">Antonio Ollis</a></h1>
+    <p class="intro">I am a current undergraduate student pursuing a degree in Computer Science</p>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#goals">Goals</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Write a short introduction about yourself in this section. -->
+    <section id="about" class="section about-section">
+      <p class="section-label">About me</p>
+      <h2>Curious about how the web works.</h2>
+      <p>
+        Hello! I am a student beginning my web development journey. I enjoy
+        learning new things, solving problems, and turning ideas into webpages.
+        This site will grow as I complete projects in my college course.
+      </p>
+    </section>
+
+    <!-- List a few personal or career goals here. -->
+    <section id="goals" class="section goals-section">
+      <p class="section-label">My goals</p>
+      <h2>What I am working toward</h2>
+      <ul class="goal-list">
+        <li>Build a strong foundation in HTML and CSS.</li>
+        <li>Learn how to make websites work well on phones and computers.</li>
+        <li>Create a portfolio that shows my progress and creativity.</li>
+      </ul>
+    </section>
+
+    <!-- Add new skills to this list as you learn them. -->
+    <section id="skills" class="section skills-section">
+      <p class="section-label">Skills</p>
+      <h2>Tools I am learning</h2>
+      <div class="tool-list">
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>Java</p>
+        <p>C++</p>
+        <p>Javascript</p>
+        <p>React</p>
+        <p>SQL</p>
+        <p>Python</p>
+      </div>
+      <h2>Soft Skills</h2>
+      <ul class="skill-list">
+        <li>Collaboration and communication</li>
+        <li>Adaptability to frequently changing environments</li>
+        <li>Leadership and organization</li>
+      </ul>
+    </section>
+
+    <!-- Replace these example projects with your own course projects. -->
+    <section id="projects" class="section projects-section">
+      <p class="section-label">Projects</p>
+      <h2>Projects I've worked on</h2>
+
+      <div class="project-list">
+        <article class="project-card">
+          <p class="project-number">Project 1</p>
+          <h3>Ticketing App</h3>
+          <p>Hackathon project that works to create and manage OSHA tickets.</p>
+          <a href="https://github.com/AntonioOllis/iron-women-lib">View Github Repo</a>
+        </article>
+
+        <article class="project-card">
+          <p class="project-number">Project 2</p>
+          <h3>Trivia Party Game</h3>
+          <p>Simple terminal-based trivia game.</p>
+          <a href="https://github.com/AntonioOllis/Trivia-Party-Game">View Github Repo</a>
+        </article>
+
+        <article class="project-card">
+          <p class="project-number">Project 3</p>
+          <h3>Recipe App</h3>
+          <p>Recipe Sharing App designed for a course.</p>
+          <a href="https://github.com/AntonioOllis/Recipe-Sharing-App">View Github Repo</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Antonio Ollis</p>
+    <p><a href="mailto:antonio.ollis01@utrgv.edu">antonio.ollis01@utrgv.edu</a></p>
+  </footer>
 </body>
 </html>

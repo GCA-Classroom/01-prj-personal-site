@@ -1,1 +1,244 @@
-/* Add you CSS here */
+/* This keeps the sizing of the page easy to understand. */
+* {
+	box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+	margin: 0;
+	color: black;
+	background-color: #969cd9;
+	font-family: Georgia, "Times New Roman", serif;
+	line-height: 1.6;
+}
+
+.site-header {
+  text-align:center;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 70px 30px 45px;
+  color: #000965;
+}
+
+.eyebrow,
+.section-label,
+.project-number {
+	margin: 0 0 12px;
+	color: #000b7a;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 0.8rem;
+	font-weight: bold;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin-top: 0;
+}
+
+h1 {
+  margin-right: auto;
+  margin-left: auto;
+	max-width: 700px;
+	margin-bottom: 18px;
+	font-size: 4.5rem;
+	line-height: 1;
+}
+
+h1 a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.intro {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 500px;
+	margin-bottom: 35px;
+	color: #000539;
+	font-size: 1.25rem;
+}
+
+nav a,
+footer a,
+.project-card a {
+	color: black;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+}
+
+nav a {
+	display: inline-block;
+	margin-right: 24px;
+	text-decoration: none;
+}
+
+nav a:last-child {
+	margin-right: 0;
+}
+
+nav a:hover,
+footer a:hover,
+.project-card a:hover {
+	color: #2e3eff;
+}
+
+.section {
+	padding: 75px 30px;
+}
+
+.section h2,
+.section > p:not(.section-label) {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 670px;
+}
+
+.section h2 {
+	margin-bottom: 20px;
+	font-size: 2.5rem;
+	line-height: 1.15;
+}
+
+.about-section,
+.skills-section {
+	background-color: #e9ebff;
+}
+
+.projects-section,
+.goals-section {
+	background-color: #cbd0ff;
+}
+
+.goal-list {
+	max-width: 680px;
+	margin: 0 auto;
+	padding-left: 24px;
+	font-size: 1.15rem;
+}
+
+.skill-list {
+	max-width: 680px;
+	margin: 0 auto;
+	padding-left: 24px;
+	font-size: 1.15rem;
+}
+
+.goal-list li {
+	margin-bottom: 10px;
+}
+
+.tool-list p {
+	display: inline-block;
+	margin: 0 8px 8px 0;
+	padding: 10px 16px;
+	border: 2px solid black;
+	border-radius: 20px;
+	font-family: Arial, sans-serif;
+	font-size: 0.95rem;
+}
+
+.project-list {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.project-card {
+	display: inline-block;
+	width: 31.5%;
+	min-height: 245px;
+	margin: 0 1.5% 20px 0;
+	padding: 25px;
+	vertical-align: top;
+	background-color: #e9ebff;
+	border-top: 5px #000b7a solid;
+}
+
+.project-card:last-child {
+	margin-right: 0;
+}
+
+.project-card h3 {
+	margin-bottom: 12px;
+	font-size: 1.45rem;
+}
+
+.project-card p:not(.project-number) {
+	min-height: 72px;
+	color: black;
+}
+
+.project-card a {
+	text-decoration: none;
+}
+
+.secret-header {
+	padding-bottom: 30px;
+}
+
+.secret-gallery {
+	padding: 20px 30px 75px;
+	text-align: center;
+}
+
+.secret-gallery img {
+	width: 400px;
+  height: 700px;
+  margin: 5px;
+  border: 10px solid #4e57b5;
+  border-radius: 10px;;
+}
+
+footer {
+	padding: 35px 30px;
+	color: white;
+	background-color: #4e57b5;
+	text-align: center;
+}
+
+footer p {
+	display: inline-block;
+	margin: 0 18px;
+}
+
+footer a {
+	color: #fff1a8;
+}
+
+/* On smaller screens, stack the project cards and reduce the large heading. */
+@media (max-width: 700px) {
+	.site-header {
+		padding-top: 45px;
+	}
+
+	h1 {
+		font-size: 3.3rem;
+	}
+
+	.section h2 {
+		font-size: 2rem;
+	}
+
+	.project-card {
+		display: block;
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.secret-gallery img {
+		display: block;
+		width: 100%;
+		height: auto;
+		max-height: 350px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	footer p {
+		display: block;
+		margin-bottom: 8px;
+	}
+}
