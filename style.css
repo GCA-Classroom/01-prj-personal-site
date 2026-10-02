@@ -1,1 +1,378 @@
-/* Add you CSS here */
+/* This sets the page background and text color */
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #eaf1f7;
+  color: #1f2933;
+  min-height: 100vh;
+}
+
+/* The hero section gives the title space at the top of the page */
+.hero {
+  position: relative;
+  background-color: #dfeaf7;
+  background-image: url("img/PXL_20240705_013202959.jpg");
+  background-size: cover;
+  background-position: center top;
+  padding: 40px 20px 60px;
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Style the profile picture so it looks like a small framed headshot */
+.profile-pic {
+  display: block;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  border: 6px solid #123456;
+  background-color: white;
+}
+
+/* Make the main title large and easy to read */
+h1 {
+  margin: 0;
+  font-size: 3rem;
+  color: white;
+  line-height: 1.2;
+}
+
+/* Center the single subtitle under the name */
+.subtitle-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Align the h2 and h3 headings in one centered row with lots of room for pictures/content underneath */
+.skill-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 500px;
+  margin-top: 24px;
+  padding: 0 20px;
+}
+
+.skill-row h2,
+.skill-row h3 {
+  margin: 0;
+  font-size: 2rem;
+  color: #123456;
+  text-align: center;
+}
+
+/* Make a centered three-column section with text on both sides and an image in the middle */
+.work-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin: -30px auto 0;
+  padding: 0 40px 40px;
+  max-width: 1200px;
+}
+
+.work-section::before,
+.work-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #123456;
+}
+
+.work-section::before {
+  top: 30px;
+}
+
+.work-section::after {
+  bottom: 0;
+}
+
+.work-column {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.work-section > .work-column:first-child,
+.work-section > .work-column:last-child {
+  position: relative;
+}
+
+.work-column h2,
+.work-column h3 {
+  position: relative;
+  top: 60px;
+  margin: 0 0 12px;
+  font-size: 2rem;
+  color: #123456;
+}
+
+.work-column p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #374151;
+  text-align: center;
+}
+
+/* Give each skill its own light blue row */
+.skill-list {
+  position: relative;
+  top: 60px;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: #374151;
+}
+
+.skill-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  background-color: #dceefb;
+  text-align: left;
+}
+
+.skill-icon {
+  display: flex;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #1f2933;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.icon-indesign {
+  color: #ff4b9b;
+}
+
+.icon-photoshop {
+  color: #31a8ff;
+}
+
+.icon-illustrator {
+  color: #ff9a00;
+}
+
+.icon-premiere {
+  color: #9999ff;
+}
+
+.icon-audition {
+  color: #00e4bb;
+}
+
+.icon-html {
+  background-color: #e34f26;
+}
+
+.icon-css {
+  background-color: #1572b6;
+}
+
+.icon-javascript {
+  background-color: #f7df1e;
+  color: #1f2933;
+}
+
+.icon-python {
+  background-color: #3776ab;
+  color: #ffd43b;
+}
+
+.icon-ai {
+  background-color: #10a37f;
+}
+
+.work-image-column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  margin-top: 120px;
+}
+
+.work-image-column > .work-image-wrap,
+.work-image-column > .work-row {
+  position: relative;
+  top: -20px;
+}
+
+.artwork-heading {
+  width: 100%;
+  margin: 20px 0 10px;
+  font-size: 2rem;
+  color: #123456;
+  text-align: center;
+}
+
+.about-me {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 0;
+  padding: 12px 16px;
+  background-color: #f3f8ff;
+  border: 2px solid #dfeaf7;
+  border-radius: 10px;
+  color: #123456;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.work-image-wrap {
+  width: 300px;
+  height: 450px;
+  border: 6px solid #123456;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.work-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border: 0;
+  background-color: white;
+}
+
+.work-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.work-row h4 {
+  margin: 0;
+  color: #123456;
+  text-align: center;
+}
+
+.photoshop-image-wrap {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 300px;
+  margin-top: 80px;
+}
+
+.artwork-image-frame {
+  height: 400px;
+  border: 6px solid #123456;
+  overflow: hidden;
+}
+
+.coding-image-wrap {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 300px;
+  margin-top: 80px;
+}
+
+.illustrator-image,
+.coding-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border: 0;
+  background-color: white;
+}
+
+.additional-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 220px;
+  padding: 32px 40px;
+  background-color: #123456;
+  background-image: url("img/PXL_20240705_013202959.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  text-align: center;
+}
+
+.additional-section h2 {
+  margin: 0;
+  color: white;
+  text-decoration: underline;
+}
+
+.contact-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 24px;
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  color: white;
+}
+
+.contact-list li {
+  flex: 1;
+  min-width: 140px;
+}
+
+.contact-list strong {
+  display: inline-block;
+  margin-bottom: 8px;
+}
